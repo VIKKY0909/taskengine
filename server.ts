@@ -12,6 +12,23 @@ const PORT = 3000;
 
 app.use(express.json());
 
+// Lazy-initialize MongoDB connection in serverless / Vercel environments on the first request
+let mongoInitPromise: Promise<void> | null = null;
+app.use(async (req, res, next) => {
+  if (!isConnected && MONGODB_URI) {
+    if (!mongoInitPromise) {
+      console.log('[Database] First request incoming. Lazy-initializing MongoDB connection...');
+      mongoInitPromise = initMongo();
+    }
+    try {
+      await mongoInitPromise;
+    } catch (err) {
+      console.error('[Database] Failed to await lazy-loaded MongoDB connection:', err);
+    }
+  }
+  next();
+});
+
 // Database state
 let mongoClient: MongoClient | null = null;
 let isConnected = false;
@@ -451,7 +468,7 @@ async function startServer() {
   await initMongo();
 
   // If in development mode, load Vite server
-  if (process.env.NODE_ENV !== 'production') {
+  if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: 'spa',
@@ -466,9 +483,14 @@ async function startServer() {
     });
   }
 
-  app.listen(PORT, '0.0.0.0', () => {
-    console.log(`[Server] KTHP Task Manager listening on http://0.0.0.0:${PORT}`);
-  });
+  // Only listen on port if not running in a Serverless Environment (Vercel/AWS Lambda)
+  if (process.env.VERCEL !== '1' && !process.env.AWS_LAMBDA_FUNCTION_NAME) {
+    app.listen(PORT, '0.0.0.0', () => {
+      console.log(`[Server] KTHP Task Manager listening on http://0.0.0.0:${PORT}`);
+    });
+  }
 }
 
 startServer();
+
+export default app;
