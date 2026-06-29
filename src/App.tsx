@@ -42,9 +42,16 @@ export default function App() {
     setLoading(true);
     setError(null);
     try {
-      // 1. Fetch DB Status
+  // Fetch DB Status
       const statusRes = await fetch('/api/db-status');
-      if (!statusRes.ok) throw new Error('Failed to retrieve database configuration status.');
+      if (!statusRes.ok) {
+        const errBody = await statusRes.json().catch(() => ({}));
+        throw new Error(
+          errBody.connectionError ||
+            errBody.error ||
+            `API returned ${statusRes.status}. Ensure MONGODB_URI is set in Vercel environment variables.`
+        );
+      }
       const statusData: DBConfig = await statusRes.json();
       setDbConfig(statusData);
 

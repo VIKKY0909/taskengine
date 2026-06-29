@@ -1,7 +1,7 @@
 import express from 'express';
 import path from 'path';
 import fs from 'fs/promises';
-import { createServer as createViteServer } from 'vite';
+import { fileURLToPath } from 'url';
 import { MongoClient, ObjectId } from 'mongodb';
 import dotenv from 'dotenv';
 
@@ -64,6 +64,26 @@ function getProgramDetails(programParam?: any) {
   };
 }
 
+// Try multiple paths — Vercel serverless cwd differs from local dev
+async function readLocalSeedFile(localPathName: string): Promise<any[] | null> {
+  const candidates = [
+    path.join(process.cwd(), 'data', localPathName),
+    path.join(process.cwd(), '..', 'data', localPathName),
+    path.join(fileURLToPath(new URL('.', import.meta.url)), 'data', localPathName),
+    path.join(fileURLToPath(new URL('..', import.meta.url)), 'data', localPathName),
+  ];
+
+  for (const candidate of candidates) {
+    try {
+      const rawData = await fs.readFile(candidate, 'utf-8');
+      return JSON.parse(rawData);
+    } catch {
+      // try next candidate
+    }
+  }
+  return null;
+}
+
 // Initialize MongoDB Connection if URI is provided
 async function initMongo() {
   if (!MONGODB_URI) {
@@ -84,65 +104,32 @@ async function initMongo() {
 
     const db = mongoClient.db('kthp_seo');
 
-    // 1. Initialize KTHP collection if empty
-    const kthpCollection = db.collection('tasks');
-    const kthpCount = await kthpCollection.countDocuments();
-    if (kthpCount === 0) {
-      console.log('[Database] KTHP collection is empty. Seeding with default tasks from local tasks.json...');
+    async function seedCollectionIfEmpty(collectionName: string, seedFileName: string, label: string) {
+      const collection = db.collection(collectionName);
+      const count = await collection.countDocuments();
+      if (count > 0) return;
+
+      console.log(`[Database] ${label} collection is empty. Seeding from ${seedFileName}...`);
       try {
-        const kthpPath = path.join(process.cwd(), 'data', 'tasks.json');
-        const rawLocalData = await fs.readFile(kthpPath, 'utf-8');
-        const defaultTasks = JSON.parse(rawLocalData);
+        const defaultTasks = await readLocalSeedFile(seedFileName);
+        if (!defaultTasks?.length) {
+          console.error(`[Database] No seed data found for ${seedFileName}`);
+          return;
+        }
         const seededTasks = defaultTasks.map((t: any) => {
           const { _id, ...rest } = t;
           return rest;
         });
-        await kthpCollection.insertMany(seededTasks);
-        console.log(`[Database] Seeded ${seededTasks.length} KTHP tasks successfully into MongoDB Atlas.`);
+        await collection.insertMany(seededTasks);
+        console.log(`[Database] Seeded ${seededTasks.length} ${label} tasks into MongoDB Atlas.`);
       } catch (seedErr) {
-        console.error('[Database] Seeding default KTHP tasks failed:', seedErr);
+        console.error(`[Database] Seeding ${label} tasks failed:`, seedErr);
       }
     }
 
-    // 2. Initialize SymConverge collection if empty
-    const symCollection = db.collection('symconverge_tasks');
-    const symCount = await symCollection.countDocuments();
-    if (symCount === 0) {
-      console.log('[Database] SymConverge collection is empty. Seeding with default tasks from local symconverge_tasks.json...');
-      try {
-        const symPath = path.join(process.cwd(), 'data', 'symconverge_tasks.json');
-        const rawLocalData = await fs.readFile(symPath, 'utf-8');
-        const defaultTasks = JSON.parse(rawLocalData);
-        const seededTasks = defaultTasks.map((t: any) => {
-          const { _id, ...rest } = t;
-          return rest;
-        });
-        await symCollection.insertMany(seededTasks);
-        console.log(`[Database] Seeded ${seededTasks.length} SymConverge tasks successfully into MongoDB Atlas.`);
-      } catch (seedErr) {
-        console.error('[Database] Seeding default SymConverge tasks failed:', seedErr);
-      }
-    }
-
-    // 3. Initialize Databook collection if empty
-    const databookCollection = db.collection('databook_tasks');
-    const databookCount = await databookCollection.countDocuments();
-    if (databookCount === 0) {
-      console.log('[Database] Databook collection is empty. Seeding with default tasks from local databook_tasks.json...');
-      try {
-        const databookPath = path.join(process.cwd(), 'data', 'databook_tasks.json');
-        const rawLocalData = await fs.readFile(databookPath, 'utf-8');
-        const defaultTasks = JSON.parse(rawLocalData);
-        const seededTasks = defaultTasks.map((t: any) => {
-          const { _id, ...rest } = t;
-          return rest;
-        });
-        await databookCollection.insertMany(seededTasks);
-        console.log(`[Database] Seeded ${seededTasks.length} Databook tasks successfully into MongoDB Atlas.`);
-      } catch (seedErr) {
-        console.error('[Database] Seeding default Databook tasks failed:', seedErr);
-      }
-    }
+    await seedCollectionIfEmpty('tasks', 'tasks.json', 'KTHP');
+    await seedCollectionIfEmpty('symconverge_tasks', 'symconverge_tasks.json', 'SymConverge');
+    await seedCollectionIfEmpty('databook_tasks', 'databook_tasks.json', 'Databook');
   } catch (err: any) {
     mongoClient = null;
     isConnected = false;
@@ -171,8 +158,12 @@ async function readTasks(program?: string): Promise<any[]> {
 
   // Local JSON File Fallback
   try {
-    const rawData = await fs.readFile(localPath, 'utf-8');
-    const tasks = JSON.parse(rawData);
+    const fileName = path.basename(localPath);
+    const tasks = (await readLocalSeedFile(fileName)) ?? [];
+    if (tasks.length === 0) {
+      console.error(`[Database] No local seed data found for ${fileName}`);
+      return [];
+    }
     let changed = false;
     const normalizedTasks = tasks.map((task: any, index: number) => {
       if (!task._id) {
@@ -182,7 +173,11 @@ async function readTasks(program?: string): Promise<any[]> {
       return task;
     });
     if (changed) {
-      await fs.writeFile(localPath, JSON.stringify(normalizedTasks, null, 2), 'utf-8');
+      try {
+        await fs.writeFile(localPath, JSON.stringify(normalizedTasks, null, 2), 'utf-8');
+      } catch {
+        // read-only filesystem on Vercel — skip write
+      }
     }
     return normalizedTasks;
   } catch (err) {
@@ -274,15 +269,39 @@ async function deleteTaskFromDb(id: string, program?: string): Promise<boolean> 
 
 // API Endpoints
 
+// Ensure MongoDB is initialized before reporting status (important on Vercel cold starts)
+async function ensureMongoReady() {
+  if (!MONGODB_URI || isConnected) return;
+  if (!mongoInitPromise) {
+    mongoInitPromise = initMongo();
+  }
+  try {
+    await mongoInitPromise;
+  } catch {
+    // connectionError is set inside initMongo
+  }
+}
+
 // 1. Get database connection status
-app.get('/api/db-status', (req, res) => {
-  res.json({
-    isConnected,
-    dbType: isConnected ? 'MongoDB Atlas' : 'Local JSON Fallback',
-    connectionUriProvided: !!MONGODB_URI,
-    connectionError: connectionError,
-    uriMasked: MONGODB_URI ? MONGODB_URI.replace(/:([^@]+)@/, ':******@') : null
-  });
+app.get('/api/db-status', async (req, res) => {
+  try {
+    await ensureMongoReady();
+    res.json({
+      isConnected,
+      dbType: isConnected ? 'MongoDB Atlas' : 'Local JSON Fallback',
+      connectionUriProvided: !!MONGODB_URI,
+      connectionError: connectionError,
+      uriMasked: MONGODB_URI ? MONGODB_URI.replace(/:([^@]+)@/, ':******@') : null
+    });
+  } catch (err: any) {
+    res.status(500).json({
+      isConnected: false,
+      dbType: 'Error',
+      connectionUriProvided: !!MONGODB_URI,
+      connectionError: err.message || String(err),
+      uriMasked: null
+    });
+  }
 });
 
 // 2. Fetch all tasks
@@ -462,20 +481,19 @@ app.post('/api/db-sync', async (req, res) => {
   }
 });
 
-// Start express server and hook Vite in development
+// Start express server and hook Vite in development (not when imported by Vercel api/index.ts)
 async function startServer() {
-  // Try connecting to MongoDB first
   await initMongo();
 
-  // If in development mode, load Vite server
-  if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
+  const isDev = process.env.NODE_ENV !== 'production' && !process.env.VERCEL;
+  if (isDev) {
+    const { createServer: createViteServer } = await import('vite');
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: 'spa',
     });
     app.use(vite.middlewares);
-  } else {
-    // Serve static files in production
+  } else if (!process.env.VERCEL) {
     const distPath = path.join(process.cwd(), 'dist');
     app.use(express.static(distPath));
     app.get('*', (req, res) => {
@@ -483,7 +501,6 @@ async function startServer() {
     });
   }
 
-  // Only listen on port if not running in a Serverless Environment (Vercel/AWS Lambda)
   if (process.env.VERCEL !== '1' && !process.env.AWS_LAMBDA_FUNCTION_NAME) {
     app.listen(PORT, '0.0.0.0', () => {
       console.log(`[Server] KTHP Task Manager listening on http://0.0.0.0:${PORT}`);
@@ -491,6 +508,15 @@ async function startServer() {
   }
 }
 
-startServer();
+function isDirectRun(): boolean {
+  if (!process.argv[1]) return false;
+  const entry = path.resolve(process.argv[1]);
+  const self = fileURLToPath(import.meta.url);
+  return path.resolve(self) === entry;
+}
+
+if (isDirectRun()) {
+  startServer();
+}
 
 export default app;
