@@ -1,6 +1,5 @@
 {
   "name": "KTHP SEO & Revenue Task Manager",
   "description": "Comprehensive task management system for Kila The Heritage Palace (KTHP) SEO, Funnel, and Content Strategy, supporting team roles, progress tracking, and live audit trailing.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "requestFramePermissions": []
 }
