@@ -38,11 +38,21 @@ export default function App() {
   const [showCreateModal, setShowCreateModal] = useState(false);
 
   // Initial fetch of data
+  const parseApiJson = async (res: Response, label: string) => {
+    const contentType = res.headers.get('content-type') || '';
+    if (!contentType.includes('application/json')) {
+      const preview = (await res.text()).slice(0, 80);
+      throw new Error(
+        `${label} returned non-JSON (${res.status}). Backend may not be routed correctly. Preview: ${preview}`
+      );
+    }
+    return res.json();
+  };
+
   const fetchData = async () => {
     setLoading(true);
     setError(null);
     try {
-  // Fetch DB Status
       const statusRes = await fetch('/api/db-status');
       if (!statusRes.ok) {
         const errBody = await statusRes.json().catch(() => ({}));
@@ -52,13 +62,12 @@ export default function App() {
             `API returned ${statusRes.status}. Ensure MONGODB_URI is set in Vercel environment variables.`
         );
       }
-      const statusData: DBConfig = await statusRes.json();
+      const statusData: DBConfig = await parseApiJson(statusRes, 'Database status');
       setDbConfig(statusData);
 
-      // 2. Fetch Tasks with program query parameter
       const tasksRes = await fetch(`/api/tasks?program=${program}`);
       if (!tasksRes.ok) throw new Error('Failed to retrieve task board parameters.');
-      const tasksData: Task[] = await tasksRes.json();
+      const tasksData: Task[] = await parseApiJson(tasksRes, 'Tasks');
       setTasks(tasksData);
     } catch (err: any) {
       console.error('[App] Initial load error:', err);
