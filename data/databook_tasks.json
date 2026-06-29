@@ -1,0 +1,534 @@
+[
+  {
+    "title": "DBK-01: Fix twitter:title brand configuration",
+    "description": "src/routes/__root.tsx:40 — Update the hardcoded 'Lumen' brand string to 'Databook — AI reports for Cin7Core' to repair social sharing alignment.",
+    "role": "Developer",
+    "week": "Week 1",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-02: Fix twitter:site handle configuration",
+    "description": "src/routes/__root.tsx:39 — Correct the site attribution handle from '@Lovable' to the proper Databook handle (or safely remove).",
+    "role": "Developer",
+    "week": "Week 1",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-03: Update twitter:card to large image card",
+    "description": "src/routes/__root.tsx:38 — Update 'twitter:card' metadata parameter from 'summary' to 'summary_large_image' for visually rich preview cards.",
+    "role": "Developer",
+    "week": "Week 1",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-04: Create robots.txt disallow policies",
+    "description": "public/robots.txt — Setup disallow directives to prevent search engine crawl of auth and app routes (/signin, /signup, /onboarding, /app/*).",
+    "role": "Developer",
+    "week": "Week 1",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-05: Add noindex parameters to auth entry routes",
+    "description": "Signin/Signup routes — Inject a robots: 'noindex, nofollow' head tag parameter to keep registration procedures out of public SERP lists.",
+    "role": "Developer",
+    "week": "Week 1",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-06: Hide internal /app/brain debug route",
+    "description": "src/routes/app.brain.tsx — Protect and obscure the internal system brain debug utility with robots: 'noindex' to guarantee secure isolation.",
+    "role": "Developer",
+    "week": "Week 1",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-07: Deploy production OpenGraph image files",
+    "description": "Design Assets — Export and map a premium 1200x630px social OpenGraph card instead of the default temporary CDN address.",
+    "role": "Operations",
+    "week": "Week 1",
+    "category": "On-Page",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-08: Optimize Homepage head metadata",
+    "description": "src/routes/index.tsx — Rewrite the title tag to match exact-match target queries: 'Cin7Core Reporting Tool — Databook | AI-powered inventory reports'.",
+    "role": "SEO Lead",
+    "week": "Week 1",
+    "category": "On-Page",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-09: Optimize Pricing page metadata params",
+    "description": "src/routes/pricing.tsx — Integrate a high-commercial description: 'Databook Pricing — Free & Pro Plans | Cin7Core Reporting Tool' to elevate clicks.",
+    "role": "SEO Lead",
+    "week": "Week 1",
+    "category": "On-Page",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-10: Connect and verify Google Search Console",
+    "description": "Google Search Console — Initialize domain verification on Databook.io, monitor sitemap status, and coordinate indexing priorities.",
+    "role": "SEO Lead",
+    "week": "Week 1",
+    "category": "Local SEO",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-11: Integrate Google Analytics 4 tracking script",
+    "description": "Root Layout — Install GA4 tag tracking. Initialize custom events tracking for client signups and subscription upgrade checkouts.",
+    "role": "Developer",
+    "week": "Week 1",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-12: Standardize worker names in wrangler parameters",
+    "description": "wrangler.jsonc:3 — Rename the fallback Lovable worker name from 'super-duper-chainsaw' to 'databook' for system logging coherence.",
+    "role": "Developer",
+    "week": "Week 1",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-13: Build automated sitemap.xml route generator",
+    "description": "src/routes/api/sitemap.xml.ts — Build a TanStack Start API route to output structured index maps for primary conversion pages.",
+    "role": "Developer",
+    "week": "Week 2",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-14: Inject canonical meta links on key views",
+    "description": "Header Metadata — Add self-referencing canonical links on / and /pricing routes to prevent URL-duplication conflicts.",
+    "role": "Developer",
+    "week": "Week 2",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-15: Deploy Organization and WebSite schema graph",
+    "description": "Homepage — Embed structured JSON-LD schema describing Databook as a SoftwareApplication to qualify for Google rich snippet rankings.",
+    "role": "SEO Lead",
+    "week": "Week 2",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-16: Embed product Offer metadata on pricing cards",
+    "description": "Pricing view — Deploy Product/Offer schema marking up the Free plan ($0) and the Pro subscription ($29) to trigger rich pricing SERP displays.",
+    "role": "SEO Lead",
+    "week": "Week 2",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-17: Deploy complete favicon suite packages",
+    "description": "Design Assets — Export apple-touch-icon, SVG favicon, and fallback favicon.ico layouts to establish Knowledge Graph entity trust.",
+    "role": "Operations",
+    "week": "Week 2",
+    "category": "On-Page",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-18: Programmatic page generation planning & setup",
+    "description": "Programmatic SEO — Formulate template directories to support automated landing pages using tools like Slate or custom JSX routers.",
+    "role": "SEO Lead",
+    "week": "Week 2",
+    "category": "Strategy",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-19: Create optimized /cin7core-reporting landing page",
+    "description": "New Page Route — Write and deploy an explicit use-case landing page targeting 'cin7core reporting tool' query parameters with 800+ words.",
+    "role": "SEO Lead",
+    "week": "Week 3",
+    "category": "Content",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-20: Create optimized /cin7core-export solution page",
+    "description": "New Page Route — Write and deploy a highly converting informational page focused on 'cin7core export to excel' with precise action CTAs.",
+    "role": "SEO Lead",
+    "week": "Week 3",
+    "category": "Content",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-21: Deploy legal Privacy and Terms guidelines",
+    "description": "/privacy and /terms Routes — Standardize SaaS operational agreements to resolve compliance gaps and strengthen trust signals.",
+    "role": "Founder",
+    "week": "Week 3",
+    "category": "Strategy",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-22: Deploy shared footer component links",
+    "description": "Layout Architecture — Migrate the inline homepage-only footer into a shared layout component. Ensure pricing/legal paths are fully indexable.",
+    "role": "Developer",
+    "week": "Week 3",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-23: Launch blog system & publish Article 1",
+    "description": "/blog Route — Setup resource index view. Write and publish Article 1: 'How to Export Inventory Reports from Cin7Core (The Easy Way)'.",
+    "role": "SEO Lead",
+    "week": "Week 3",
+    "category": "Content",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-24: Establish primary keyword rank tracker",
+    "description": "Rank Tracking — Configure keyword tracking across 10 core targets (e.g., 'cin7core reporting', 'cin7core export messy') to set historical benchmarks.",
+    "role": "SEO Lead",
+    "week": "Week 3",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-25: Publish high-intent Blog Article 2",
+    "description": "Content Moat — Write and deploy Blog Article 2: 'Cin7Core Stock on Hand Report: Step-by-Step Guide' focusing on long-tail searchers.",
+    "role": "SEO Lead",
+    "week": "Week 4",
+    "category": "Content",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-26: Amplify new assets on Founder LinkedIn",
+    "description": "Social Amplification — Share screenshot use-cases and deep articles on LinkedIn. Direct high-intent referral traffic into the sign-up funnel.",
+    "role": "Founder",
+    "week": "Week 4",
+    "category": "Strategy",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-27: Partner outreach & backlink generation",
+    "description": "Off-Page Authority — Engage with 5 external Cin7Core consultants/agencies to pitch co-marketing, guest publications, and link inclusions.",
+    "role": "SEO Lead",
+    "week": "Week 4",
+    "category": "Strategy",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  },
+  {
+    "title": "DBK-28: Connect G2, Capterra & ProductHunt listings",
+    "description": "Review Strategy — Claim and launch listings on product lists. Ask early core users to submit 5-star verified usage feedback.",
+    "role": "SEO Lead",
+    "week": "Week 4",
+    "category": "Strategy",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:58:26-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from Databook SEO Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:58:26-07:00"
+  }
+]

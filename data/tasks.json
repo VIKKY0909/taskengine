@@ -1,0 +1,970 @@
+[
+  {
+    "title": "AUD-01: GSAP curtain SSR-safe initial state",
+    "description": "app/template.tsx — GSAP curtain initial state overlay style set so Googlebot can crawl the homepage without executing JS. Avoids blank screens in crawler indexing.",
+    "role": "Developer",
+    "week": "Week 1",
+    "category": "Technical",
+    "status": "Completed",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      },
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "Developer",
+        "action": "Completed Task",
+        "details": "Verified GSAP curtain initial styles are SSR-safe"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "AUD-02: robots.ts + sitemap.ts deployed",
+    "description": "app/robots.ts created to allow search engines to crawl useful routes and disallow sensitive ones. sitemap.ts created to provide indexation pointers.",
+    "role": "Developer",
+    "week": "Week 1",
+    "category": "Technical",
+    "status": "Completed",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      },
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "Developer",
+        "action": "Completed Task",
+        "details": "robots.ts and sitemap.ts deployed and active"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "AUD-04: Unique metadata on /about and /reserve",
+    "description": "Ensure /about and /reserve use server components to export custom Page Metadata instead of inheriting the generic homepage title and description. Prevents keyword cannibalization.",
+    "role": "Developer",
+    "week": "Week 1",
+    "category": "On-Page",
+    "status": "Completed",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      },
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "Developer",
+        "action": "Completed Task",
+        "details": "Separated pages to extract server metadata properly"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "AUD-03: Staging/preview noindex headers",
+    "description": "In next.config.ts, configure custom middleware or response headers to serve X-Robots-Tag: noindex, nofollow on all non-production staging or preview URLs (e.g. Vercel/Cloud Run staging). Prevents index duplication.",
+    "role": "Developer",
+    "week": "Week 1",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "AUD-06: GA4 + GTM conversion events live",
+    "description": "Hook custom events into GTM container (enquiry_form_submit, whatsapp_click, reserve_click, razorpay_verify_success, booking_complete) to track performance metrics properly in GA4.",
+    "role": "Developer",
+    "week": "Week 1",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Create GA4 property + verify Google Search Console",
+    "description": "Establish the domain property for kilatheheritagepalace.com. Link Google Analytics 4 property to Google Search Console. Submit the existing sitemap and record the baseline index coverage report.",
+    "role": "SEO Lead",
+    "week": "Week 1",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Grant admin access: GSC, GA4, GBP, TripAdvisor",
+    "description": "Provide administrative delegation or workspace access for Google Search Console, Google Analytics 4, Google Business Profile, and TripAdvisor to the SEO Lead for monitoring, reporting, and optimizations.",
+    "role": "Founder",
+    "week": "Week 1",
+    "category": "Local SEO",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "GBP + TripAdvisor audit + NAP master record",
+    "description": "Perform a exhaustive audit of brand NAP (Name, Address, Phone number) consistency across website, GBP, TripAdvisor, and Instagram. Record any inconsistencies and establish a single master record.",
+    "role": "SEO Lead",
+    "week": "Week 1",
+    "category": "Local SEO",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Unify brand entity: Kila The Heritage Palace everywhere",
+    "description": "Standardize display name on Google Business Profile, TripAdvisor, Instagram bio, and Facebook to read: 'KTHP — Kila The Heritage Palace'. Unifies brand entity for AI (GEO) and search engines.",
+    "role": "SEO Lead",
+    "week": "Week 1",
+    "category": "Local SEO",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Footer: add /reserve, TripAdvisor, Instagram, WhatsApp links",
+    "description": "Expand SiteFooter.tsx layout to include indexable links to /reserve, TripAdvisor, Instagram, and WhatsApp direct chat. Replaces footer '#' placeholders to fix visual and conversion leak.",
+    "role": "Developer",
+    "week": "Week 1",
+    "category": "On-Page",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "On-page audit: homepage, /about, /reserve",
+    "description": "Inspect homepage, /about, and /reserve for H1-H4 heading hierarchy correctness, internal links, image descriptive alt attributes, and structural layout consistency. Deliver actionable feedback list to dev.",
+    "role": "SEO Lead",
+    "week": "Week 1",
+    "category": "On-Page",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Link homepage Discover cards (Maihar, Bandhavgarh)",
+    "description": "Hook up discover section cards to future /maihar-bandhavgarh destinations or interim anchors so they are no longer unlinked, preserving internal link juice flow.",
+    "role": "Developer",
+    "week": "Week 1",
+    "category": "On-Page",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Deliver palace facts sheet for all page copy",
+    "description": "Compile a detailed list of property facts: actual historical records, suite names, room dimensions, precise capacities, pre-wedding packages details, and official contact coordinates. Avoid fictional numbers.",
+    "role": "Founder",
+    "week": "Week 2",
+    "category": "Content",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Write copy briefs: /wedding-shoot, /staycation, /homestay, 4× /rooms",
+    "description": "Establish search-engine-optimized heading structures, title tags, meta descriptions, FAQ sections, and conversion CTAs for the launch pages, matching high-intent keywords.",
+    "role": "SEO Lead",
+    "week": "Week 2",
+    "category": "On-Page",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "FAQ bank v1 — 30 Q&As (schema-ready)",
+    "description": "Assemble a core list of 30 FAQs split by user intent (wedding, staycations, heritage). Format them with clean markdown and HTML elements for easy FAQPage JSON-LD integration.",
+    "role": "SEO Lead",
+    "week": "Week 2",
+    "category": "On-Page",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Build + deploy /wedding-shoot (extract from /reserve tab)",
+    "description": "Implement a dedicated, crawlable /wedding-shoot landing page. Extract existing package lists from the reserve client to serve as indexable text with custom booking CTA. Replaces tab-only constraint.",
+    "role": "Developer",
+    "week": "Week 2",
+    "category": "On-Page",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Build /staycation + /homestay + 4× /rooms/[slug]",
+    "description": "Create separate routes for /staycation, /homestay, and individual suites (Royal Suite, Courtyard, etc.) with proper keyword clustering, photo layouts, and reservation CTAs.",
+    "role": "Developer",
+    "week": "Week 2",
+    "category": "On-Page",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Expand robots.ts + sitemap.ts with new funnel URLs",
+    "description": "Update the robots.ts whitelist rules and the dynamic sitemap generation array to include /wedding-shoot, /staycation, /homestay, /rooms/* and /blog paths.",
+    "role": "Developer",
+    "week": "Week 2",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Launch /blog route + publish Post 1",
+    "description": "Create the /blog framework. Draft and publish Post 1: 'Palace Pre-Wedding Shoot Locations in Madhya Pradesh' with clear internal links to /wedding-shoot and proper Article schema.",
+    "role": "Developer",
+    "week": "Week 2",
+    "category": "On-Page",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "GBP: categories, description rewrite, 10 Q&As, services menu",
+    "description": "Rewrite Google Business Profile description to integrate keywords naturally. Add secondary categories (Wedding Venue, Film Location) and populate the services listing menu.",
+    "role": "SEO Lead",
+    "week": "Week 2",
+    "category": "Local SEO",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Instagram: 6 posts + 4 Reels · Pinterest: 15 pins",
+    "description": "Schedule a coordinated content push featuring palace architecture, heritage lineage stories, and photoshoot setups. Pins should link directly to the new /wedding-shoot page with UTM parameters.",
+    "role": "SEO Lead",
+    "week": "Week 2",
+    "category": "Content",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Start Ahrefs — baseline keyword tracking",
+    "description": "Configure rank tracking in Ahrefs/Semrush for terms like 'heritage hotel maihar', 'palace pre wedding shoot MP', and 'kila heritage palace' to monitor SEO position movements.",
+    "role": "SEO Lead",
+    "week": "Week 2",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "AUD-05: Hero next/image + WebP/AVIF conversion",
+    "description": "Optimize HeroSlideshow.tsx by replacing standard HTML <img> tags with Next.js next/image components. Mark the first slide with 'priority' and serve images in AVIF/WebP formats to solve mobile LCP.",
+    "role": "Developer",
+    "week": "Week 3",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "AUD-08: Per-page OG images (1200×630 absolute URLs)",
+    "description": "Configure unique OpenGraph meta tags for the homepage, /wedding-shoot, and /staycation. Use absolute 1200×630px image URLs to enable attractive rich preview cards on WhatsApp/Facebook sharing.",
+    "role": "Developer",
+    "week": "Week 3",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "AUD-10: Hotel + LocalBusiness JSON-LD on homepage",
+    "description": "Inject structured JSON-LD data onto the homepage covering properties like latitude/longitude, total rooms (4), official telephone, address in Maihar, founding year (1738), and brand social links.",
+    "role": "SEO Lead",
+    "week": "Week 3",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "FAQPage + HotelRoom schema on funnel pages",
+    "description": "Deploy customized FAQPage and HotelRoom structured schemas onto /wedding-shoot, /staycation, and /homestay pages to capture high-value rich snippets in SERPs.",
+    "role": "SEO Lead",
+    "week": "Week 3",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Approve styled photo shoot on property",
+    "description": "Allocate marketing budget and authorize a styled pre-wedding and lifestyle shoot on property to generate 30+ high-resolution, geotagged assets for the website and GMB.",
+    "role": "Founder",
+    "week": "Week 3",
+    "category": "Content",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "GBP full optimization: 30 photos + biweekly posts",
+    "description": "Upload at least 30 optimized property photos to Google Business Profile (including suite interiors and sandstone gate). Keep the profile fresh with weekly updates and offers posts.",
+    "role": "SEO Lead",
+    "week": "Week 3",
+    "category": "Local SEO",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "TripAdvisor: link site-wide + 5 new photos + review widget",
+    "description": "Verify and claim the TripAdvisor property. Embed TripAdvisor's rating widget on /staycation and /wedding-shoot pages to display authentic reviews and boost bookings trust.",
+    "role": "SEO Lead",
+    "week": "Week 3",
+    "category": "Local SEO",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Respond to 100% of GBP + TripAdvisor reviews",
+    "description": "Adopt structured SEO-optimized templates to reply to all existing visitor feedback on Google and TripAdvisor, mentioning keywords ('Kila The Heritage Palace', 'Satna homestay') within the responses.",
+    "role": "Operations",
+    "week": "Week 3",
+    "category": "Local SEO",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Wedding Planning Kit PDF + Brevo capture on /wedding-shoot",
+    "description": "Publish a Planning Kit PDF download. Create an email sign-up capture form on /wedding-shoot wired to Brevo/Mailerlite to build an email lead list.",
+    "role": "SEO Lead",
+    "week": "Week 3",
+    "category": "Content",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Blog posts 2–3 + YouTube palace walkthrough",
+    "description": "Publish two long-form itineraries (e.g. 'Weekend at KTHP' and 'Maihar + Bandhavgarh 3-Day Tour guide'). Coordinate with video editor to embed a 3-minute walking tour video on the /about page.",
+    "role": "SEO Lead",
+    "week": "Week 3",
+    "category": "Content",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Build /maihar-bandhavgarh itinerary page",
+    "description": "Develop a dedicated itinerary guide destination page targeting regional tourists, complete with travel directions, maps, and private booking enquiry form.",
+    "role": "Developer",
+    "week": "Week 3",
+    "category": "On-Page",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Deploy /privacy + /terms — replace login href='#'",
+    "description": "Create proper /privacy and /terms router pages detailing standard hotel policies and terms of service. Replace all footer and login popup dummy links for Razorpay compatibility.",
+    "role": "Developer",
+    "week": "Week 4",
+    "category": "On-Page",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Submit expanded sitemap to GSC + Bing Webmaster",
+    "description": "Submit sitemap.xml containing all 15+ newly deployed routes to Google Search Console and Bing. Fix any potential indexing blockages immediately.",
+    "role": "SEO Lead",
+    "week": "Week 4",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "QA all GA4 conversion events in GTM Preview",
+    "description": "Use GTM Preview and GA4 Real-time debugger to test form entries, booking queries, and WhatsApp redirect flows to ensure clean analytic attribution reports.",
+    "role": "Developer",
+    "week": "Week 4",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "GEO baseline: 20 queries × 3 AI engines",
+    "description": "Record baseline citation rankings inside ChatGPT Search, Perplexity, and Gemini AI. Query terms like 'heritage stays in Satna' to document current mention gaps.",
+    "role": "SEO Lead",
+    "week": "Week 4",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Blog post 4: Intimate Palace Wedding in MP (4 Chambers)",
+    "description": "Publish Post 4 detailing micro-wedding advantages at KTHP to drive highly target interest in complete property buyouts.",
+    "role": "SEO Lead",
+    "week": "Week 4",
+    "category": "Content",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Email: planner outreach (20 MP wedding planners)",
+    "description": "Execute a highly professional email sequence targeting 20 regional luxury wedding coordinators, attaching the newly completed Planning Kit PDF.",
+    "role": "SEO Lead",
+    "week": "Week 4",
+    "category": "Content",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Deliver Month 1 performance report to owner",
+    "description": "Compile organic search impression volumes, click performance, TripAdvisor positioning leaps, social engagement lifts, and tracked direct booking numbers. Establish Month 2 parameters.",
+    "role": "SEO Lead",
+    "week": "Week 4",
+    "category": "Content",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Activate post-stay WhatsApp review request loop",
+    "description": "Implement a post-checkout guest satisfaction sequence on WhatsApp, sending a friendly request and review link within 24 hours of guest departure.",
+    "role": "Operations",
+    "week": "Week 4",
+    "category": "Local SEO",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Distribute Wedding Kit to 10 photographers/planners",
+    "description": "Founder-led high-touch outreach sharing the shoot planning guide with premier regional wedding photographers, driving booking awareness.",
+    "role": "Founder",
+    "week": "Week 4",
+    "category": "Content",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Build structured citable Heritage Knowledge Base (HKB)",
+    "description": "Compile a citable list of 50+ property facts (genealogy, gate carving specifications, room records, timeline dates) as raw structural input for AI engine mentions.",
+    "role": "SEO Lead",
+    "week": "Suggested/Optional",
+    "category": "Strategy",
+    "status": "Pending",
+    "isOptional": true,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported optional task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Set up UTM parameters for Instagram link in bio",
+    "description": "Inject dynamic UTM codes in Instagram link (e.g. ?utm_source=instagram&utm_medium=bio) pointing to /wedding-shoot to accurately attribute visual inspiration leads.",
+    "role": "SEO Lead",
+    "week": "Suggested/Optional",
+    "category": "Local SEO",
+    "status": "Pending",
+    "isOptional": true,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported optional task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Claim and verify official TripAdvisor profile",
+    "description": "Initiate property listing claim sequence on tripadvisor.com/Owners for Kila Kothi, ensuring NAP coordinates match GBP.",
+    "role": "SEO Lead",
+    "week": "Suggested/Optional",
+    "category": "Local SEO",
+    "status": "Pending",
+    "isOptional": true,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported optional task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "GBP: pre-seed 10 customer Q&As",
+    "description": "Self-publish 10 typical customer queries on Google Business Profile regarding parking, pets, shoots, and direct payment. Replied immediately with keywords.",
+    "role": "SEO Lead",
+    "week": "Suggested/Optional",
+    "category": "Local SEO",
+    "status": "Pending",
+    "isOptional": true,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported optional task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Apply for listing on mptourism.gov.in and incredibleindia.org",
+    "description": "Submit registration requests to state and central tourism directories to secure official government domain backlinks, supercharging entity authority.",
+    "role": "SEO Lead",
+    "week": "Suggested/Optional",
+    "category": "Strategy",
+    "status": "Pending",
+    "isOptional": true,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported optional task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Register on WedMeGood and ShaadiSaga",
+    "description": "Establish a niche venue profile on premier Indian wedding planning sites, linking directly to the new indexable /wedding-shoot URL.",
+    "role": "SEO Lead",
+    "week": "Suggested/Optional",
+    "category": "Local SEO",
+    "status": "Pending",
+    "isOptional": true,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported optional task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Embed 360° virtual tour page (/virtual-tour)",
+    "description": "Build an engaging /virtual-tour route utilizing street-view embeds or smartphone panoramic tours to maximize page session dwell times.",
+    "role": "Developer",
+    "week": "Suggested/Optional",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": true,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported optional task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  },
+  {
+    "title": "Configure Google Consent Mode V2",
+    "description": "Implement structural Consent Mode V2 cookie flags in Google Tag Manager to comply with European and modern privacy regulations, maintaining tracking accuracy.",
+    "role": "Developer",
+    "week": "Suggested/Optional",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": true,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T00:40:42-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Initial system-imported optional task"
+      }
+    ],
+    "updatedAt": "2026-06-29T00:40:42-07:00"
+  }
+]

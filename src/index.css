@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "Fira Code", monospace;
+
+  /* Custom Colors for Geometric Balance Theme */
+  --color-geom-bg: #f8fafc;
+  --color-geom-dark: #0f172a;
+  --color-geom-emerald: #10b981;
+  --color-geom-emerald-dark: #059669;
+  --color-geom-emerald-light: #ecfdf5;
+  --color-geom-amber: #f59e0b;
+  --color-geom-slate-gray: #e2e8f0;
+}
+
+body {
+  background-color: var(--color-geom-bg);
+  color: var(--color-geom-dark);
+  font-family: var(--font-sans);
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Custom Neo-Brutalist flat styling variables */
+.geom-thick-border {
+  border: 2px solid var(--color-geom-dark);
+}
+
+.geom-shadow {
+  box-shadow: 4px 4px 0px 0px var(--color-geom-dark);
+}
+
+.geom-shadow-sm {
+  box-shadow: 2px 2px 0px 0px var(--color-geom-dark);
+}
+
+.geom-shadow-lg {
+  box-shadow: 8px 8px 0px 0px var(--color-geom-dark);
+}
+
+.transition-geom {
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}

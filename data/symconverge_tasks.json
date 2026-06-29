@@ -1,0 +1,344 @@
+[
+  {
+    "title": "SYM-01: Fix global canonical layout inheritance",
+    "description": "layout.tsx:14 — Remove global hardcoded canonical URL from layout.tsx. Implement page-specific canonical links for /cin7, /privacy, and /terms to avoid homepage duplicates.",
+    "role": "Developer",
+    "week": "Week 1",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:46:50-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from SymConverge SEO Audit Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:46:50-07:00"
+  },
+  {
+    "title": "SYM-02: Create robots.txt and sitemap.ts files",
+    "description": "public/robots.txt and src/app/sitemap.ts — Deploy XML sitemaps to coordinate Googlebot search discoverability. Point robots.txt to the live sitemap URL.",
+    "role": "Developer",
+    "week": "Week 1",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:46:50-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from SymConverge SEO Audit Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:46:50-07:00"
+  },
+  {
+    "title": "SYM-03: Install GA4 and tracking tags",
+    "description": "Root Layout — Setup Google Analytics 4 integration using @next/third-parties/google. Map conversion tags for Calendly link clicks and contact form submissions.",
+    "role": "Developer",
+    "week": "Week 1",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:46:50-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from SymConverge SEO Audit Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:46:50-07:00"
+  },
+  {
+    "title": "SYM-04: Configure Google Search Console integration",
+    "description": "Google Search Console — Complete domain verification, configure DNS TXT records, connect GSC to the Google Analytics 4 property, and queue the sitemap for indexing.",
+    "role": "SEO Lead",
+    "week": "Week 1",
+    "category": "Local SEO",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:46:50-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from SymConverge SEO Audit Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:46:50-07:00"
+  },
+  {
+    "title": "SYM-05: Clean up schema duplicates & performance issues",
+    "description": "Entire Codebase — Fix duplicate FAQPage schemas. Set up proper next/font configurations to improve Largest Contentful Paint (LCP) and eradicate dead anchor links.",
+    "role": "Developer",
+    "week": "Week 1",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:46:50-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from SymConverge SEO Audit Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:46:50-07:00"
+  },
+  {
+    "title": "SYM-06: Create optimized OpenGraph images",
+    "description": "Design Assets — Export 1200x630px social preview cards for the Homepage and /cin7 routes. Assures professional, clickable preview snippets on LinkedIn and Facebook.",
+    "role": "Operations",
+    "week": "Week 1",
+    "category": "On-Page",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:46:50-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from SymConverge SEO Audit Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:46:50-07:00"
+  },
+  {
+    "title": "SYM-07: Set up & verify Google Business Profile",
+    "description": "Google Maps — Claim, verify, and fill the Google Maps local listing for Ahmedabad office. Crucial for establishing localized trust and domain authority signals.",
+    "role": "Founder",
+    "week": "Week 1",
+    "category": "Local SEO",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:46:50-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from SymConverge SEO Audit Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:46:50-07:00"
+  },
+  {
+    "title": "SYM-08: Expand /cin7 page to 3,000+ words",
+    "description": "/cin7 Route — Bulk expand content covering implementation costs, setup timelines, custom report guidelines, and a comprehensive client guide to win high-revenue terms.",
+    "role": "SEO Lead",
+    "week": "Week 2",
+    "category": "Content",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:46:50-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from SymConverge SEO Audit Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:46:50-07:00"
+  },
+  {
+    "title": "SYM-09: Implement structured schema graphs",
+    "description": "Technical SEO — Deploy Organization, LocalBusiness, and Service structured schema markup to clarify entity structures for crawlers.",
+    "role": "SEO Lead",
+    "week": "Week 2",
+    "category": "Technical",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:46:50-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from SymConverge SEO Audit Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:46:50-07:00"
+  },
+  {
+    "title": "SYM-10: Build blog index & publish Post 1",
+    "description": "/blog Route — Structure the post grid and publish initial blog entry: 'How to Choose a Cin7 Implementation Partner (8-Point Checklist)'.",
+    "role": "SEO Lead",
+    "week": "Week 2",
+    "category": "Content",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:46:50-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from SymConverge SEO Audit Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:46:50-07:00"
+  },
+  {
+    "title": "SYM-11: Align project statistics across marketing layers",
+    "description": "Entire Site — Confirm whether historical client projects completed stands at '50+' or '100+' and standardize across both homepage and /cin7 layouts.",
+    "role": "Founder",
+    "week": "Week 2",
+    "category": "Strategy",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:46:50-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from SymConverge SEO Audit Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:46:50-07:00"
+  },
+  {
+    "title": "SYM-12: Build 4 foundational service route pages",
+    "description": "/services/* — Deploy highly optimized text layouts for: AI Automation, App Development, SaaS Development, and Workflow Automation. 500+ words each.",
+    "role": "SEO Lead",
+    "week": "Week 3",
+    "category": "On-Page",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:46:50-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from SymConverge SEO Audit Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:46:50-07:00"
+  },
+  {
+    "title": "SYM-13: Set up Brevo email collection & Lead Magnet",
+    "description": "Email Marketing — Configure Brevo list forms for a free 'Cin7 Health Check' audit. Write a 4-step autoresponder sequence focusing on conversion paths.",
+    "role": "SEO Lead",
+    "week": "Week 3",
+    "category": "Strategy",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:46:50-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from SymConverge SEO Audit Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:46:50-07:00"
+  },
+  {
+    "title": "SYM-14: Publish Styailist success story",
+    "description": "/case-studies/styailist — Detail technical bottlenecks, custom ERP integration pipeline, and client success metrics as a key bottom-of-funnel conversion asset.",
+    "role": "SEO Lead",
+    "week": "Week 4",
+    "category": "Content",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:46:50-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from SymConverge SEO Audit Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:46:50-07:00"
+  },
+  {
+    "title": "SYM-15: Construct /about page detailing E-E-A-T background",
+    "description": "/about Page — Highlight founder history, official certifications, and technical capabilities to fulfill trust requirements for Google's E-E-A-T evaluation guidelines.",
+    "role": "SEO Lead",
+    "week": "Week 4",
+    "category": "Strategy",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:46:50-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from SymConverge SEO Audit Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:46:50-07:00"
+  },
+  {
+    "title": "SYM-16: Register profiles on G2 & Capterra",
+    "description": "Reviews Strategy — Submit profiles to G2 and Capterra lists. Prepare outreach templates for past clients to submit verified project feedback.",
+    "role": "SEO Lead",
+    "week": "Week 4",
+    "category": "Strategy",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:46:50-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from SymConverge SEO Audit Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:46:50-07:00"
+  },
+  {
+    "title": "SYM-17: Initiate active backlink outreach program",
+    "description": "Off-Page SEO — Coordinate 10 manual outreach pitches to industry-relevant inventory blogs, logistics directories, and supply chain magazines targeting high-quality link placements.",
+    "role": "SEO Lead",
+    "week": "Week 4",
+    "category": "Strategy",
+    "status": "Pending",
+    "isOptional": false,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:46:50-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from SymConverge SEO Audit Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:46:50-07:00"
+  },
+  {
+    "title": "SYM-18: Record first screen-capture video tutorial",
+    "description": "YouTube Channel — Record a structured 10-minute screencast on: 'Cin7 Custom Reports Limitations & Workarounds' following the provided video script outline.",
+    "role": "Founder",
+    "week": "Suggested/Optional",
+    "category": "Content",
+    "status": "Pending",
+    "isOptional": true,
+    "contributor": "SEO Task Bot",
+    "history": [
+      {
+        "date": "2026-06-29T02:46:50-07:00",
+        "contributor": "System",
+        "action": "Created Task",
+        "details": "Imported from SymConverge SEO Audit Plan."
+      }
+    ],
+    "updatedAt": "2026-06-29T02:46:50-07:00"
+  }
+]
