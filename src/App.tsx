@@ -132,11 +132,17 @@ export default function App() {
 
   // Quick Inline Status Selector Update
   const handleQuickStatusChange = async (task: Task, newStatus: TaskStatus) => {
+    const contributorName = window.prompt("Please enter your name to confirm this status change:");
+    if (!contributorName || contributorName.trim() === '') {
+      alert("Name is required to update task status.");
+      return;
+    }
+
     try {
       const updatedTask: Task = {
         ...task,
         status: newStatus,
-        contributor: 'Quick Toggle', // simple automated update log label
+        contributor: contributorName.trim(),
       };
 
       await handleUpdateTask(updatedTask);

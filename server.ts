@@ -306,6 +306,11 @@ app.get('/api/db-status', async (req, res) => {
 
 // 2. Fetch all tasks
 app.get('/api/tasks', async (req, res) => {
+  // Prevent direct browser access
+  if (req.headers['sec-fetch-mode'] === 'navigate' || req.headers.accept?.includes('text/html')) {
+    return res.status(403).json({ error: 'Direct browser access to this API route is forbidden. System access only.' });
+  }
+
   try {
     const program = req.query.program as string;
     const tasks = await readTasks(program);
