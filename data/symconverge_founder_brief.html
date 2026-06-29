@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SymConverge · 30-Day SEO Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#f7f8fa;--surface:#fff;--surface2:#f0f2f5;
+  --border:#e4e7ec;--border2:#d0d5dd;
+  --text:#1a1d26;--text2:#4b5563;--text3:#8b95a5;
+  --blue:#2563eb;--blue-lt:#eff6ff;--blue-bd:#bfdbfe;
+  --red:#dc2626;--red-lt:#fef2f2;--red-bd:#fecaca;
+  --amber:#d97706;--amber-lt:#fffbeb;--amber-bd:#fde68a;
+  --green:#059669;--green-lt:#ecfdf5;--green-bd:#a7f3d0;
+  --purple:#7c3aed;--purple-lt:#f5f3ff;--purple-bd:#ddd6fe;
+  --r:10px;--shadow:0 1px 3px rgba(16,24,40,.06),0 1px 2px rgba(16,24,40,.04);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',-apple-system,sans-serif;font-size:14.5px;line-height:1.6}
+.shell{display:flex;min-height:100vh}
+.sidebar{width:240px;flex-shrink:0;background:var(--surface);border-right:1px solid var(--border);position:sticky;top:0;height:100vh;overflow-y:auto;padding:20px 0}
+.main{flex:1;overflow-y:auto;height:100vh}
+.sb-brand{padding:0 22px 20px;border-bottom:1px solid var(--border);margin-bottom:4px}
+.sb-brand .logo{font-size:15px;font-weight:700;color:var(--text);letter-spacing:-.02em}
+.sb-brand .sub{font-size:12px;color:var(--text3);margin-top:2px}
+.sb-section{padding:14px 22px 5px;font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text3)}
+.sb-link{display:flex;align-items:center;gap:9px;padding:9px 22px;font-size:13px;color:var(--text2);cursor:pointer;border-left:3px solid transparent;transition:.12s}
+.sb-link:hover{background:var(--surface2);color:var(--text)}
+.sb-link.active{background:var(--blue-lt);color:var(--blue);border-left-color:var(--blue);font-weight:500}
+.sb-link .ic{width:18px;text-align:center;font-size:13px;opacity:.7}
+.panel{display:none;padding:36px 44px 56px;max-width:920px}
+.panel.active{display:block}
+h1{font-size:26px;font-weight:700;letter-spacing:-.03em;color:var(--text);margin-bottom:5px}
+h2{font-size:16px;font-weight:600;color:var(--text);margin:32px 0 14px;letter-spacing:-.01em}
+h2:first-of-type{margin-top:0}
+h3{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--text3);margin:20px 0 10px}
+.page-sub{font-size:14px;color:var(--text2);margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--border);max-width:640px}
+.tag{display:inline-flex;font-size:11px;font-weight:500;padding:3px 9px;border-radius:6px}
+.t-red{background:var(--red-lt);color:var(--red);border:1px solid var(--red-bd)}
+.t-amber{background:var(--amber-lt);color:var(--amber);border:1px solid var(--amber-bd)}
+.t-green{background:var(--green-lt);color:var(--green);border:1px solid var(--green-bd)}
+.t-blue{background:var(--blue-lt);color:var(--blue);border:1px solid var(--blue-bd)}
+.t-gray{background:var(--surface2);color:var(--text2);border:1px solid var(--border)}
+.note{border-radius:var(--r);padding:14px 16px;margin-bottom:16px;font-size:13.5px;line-height:1.55}
+.note-warn{background:var(--red-lt);border:1px solid var(--red-bd);color:#7f1d1d}
+.note-info{background:var(--blue-lt);border:1px solid var(--blue-bd);color:#1e3a5f}
+.note-ok{background:var(--green-lt);border:1px solid var(--green-bd);color:#064e3b}
+.note strong{font-weight:600}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--shadow)}
+.card h3{margin-top:0}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px 16px;box-shadow:var(--shadow)}
+.kpi-n{font-size:30px;font-weight:700;letter-spacing:-.03em;line-height:1}
+.kpi-l{font-size:11px;color:var(--text3);margin-top:4px;font-weight:500}
+.tbl{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:16px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.tbl th{text-align:left;padding:10px 14px;font-size:10.5px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;background:var(--surface2);border-bottom:1px solid var(--border)}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--border);vertical-align:top;color:var(--text2);line-height:1.5}
+.tbl tr:last-child td{border-bottom:none}
+.tbl td:first-child{color:var(--text);font-weight:500}
+.tbl code{font-size:12px;background:var(--surface2);padding:2px 6px;border-radius:4px;color:var(--blue);font-weight:400}
+ul.clean{list-style:none;padding:0}
+ul.clean li{padding:5px 0 5px 16px;position:relative;color:var(--text2);font-size:13.5px}
+ul.clean li::before{content:'';position:absolute;left:0;top:11px;width:5px;height:5px;border-radius:50%;background:var(--border2)}
+ul.clean li strong{color:var(--text)}
+.week-row{display:grid;grid-template-columns:72px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--border);align-items:start}
+.week-row:last-child{border-bottom:none}
+.week-num{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--blue);padding-top:2px}
+.week-body h4{font-size:14px;font-weight:600;color:var(--text);margin-bottom:4px}
+.week-body p{font-size:13px;color:var(--text2);margin:0}
+.funnel{margin-bottom:20px}
+.funnel-step{border-radius:var(--r);padding:16px 18px;margin-bottom:6px;border:1px solid}
+.funnel-step .fl{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;margin-bottom:4px}
+.funnel-step .fd{font-size:12.5px;color:var(--text2);margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12px;padding:4px 11px;border-radius:20px;border:1px solid;background:var(--surface)}
+.channel-card{border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;margin-bottom:10px;background:var(--surface);box-shadow:var(--shadow)}
+.channel-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px}
+.channel-name{font-size:14px;font-weight:600;color:var(--text)}
+.channel-desc{font-size:13px;color:var(--text2);line-height:1.5;margin-bottom:10px}
+.channel-meta{display:flex;flex-wrap:wrap;gap:6px}
+.ask-box{background:var(--amber-lt);border:1px solid var(--amber-bd);border-radius:var(--r);padding:16px 18px;margin:16px 0}
+.ask-box h3{color:var(--amber);margin:0 0 8px}
+.phase{border:1px solid var(--border);border-radius:var(--r);margin-bottom:8px;background:var(--surface);overflow:hidden;box-shadow:var(--shadow)}
+.phase-h{padding:13px 16px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--surface)}
+.phase-h:hover{background:var(--surface2)}
+.phase-h strong{font-size:13.5px}
+.phase-b{padding:12px 16px 14px;border-top:1px solid var(--border);display:none;font-size:13px}
+.phase.open .phase-b{display:block}
+.phase.open .chev{transform:rotate(90deg)}
+.chev{transition:.2s;color:var(--text3);font-size:14px}
+.task{padding:7px 0;border-bottom:1px solid var(--border);display:flex;gap:10px;font-size:13px;color:var(--text2)}
+.task:last-child{border-bottom:none}
+.task strong{color:var(--text);display:block;margin-bottom:1px}
+.pg-pre{border-left:3px solid var(--red)}
+.pg-wk{border-left:3px solid var(--amber)}
+.pg-later{border-left:3px solid var(--border2)}
+.decision{border:1px solid var(--border);border-radius:var(--r);margin-bottom:10px;background:var(--surface);overflow:hidden;box-shadow:var(--shadow)}
+.decision-h{padding:14px 16px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;background:var(--surface2)}
+.decision-b{padding:12px 16px 14px;font-size:13px;color:var(--text2);line-height:1.55;border-top:1px solid var(--border)}
+.decision-t{font-size:14px;font-weight:600;color:var(--text)}
+.kw-block{margin-bottom:14px}
+.kw-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.kw-title{font-size:13.5px;font-weight:600;color:var(--text)}
+@media(max-width:860px){
+  .shell{flex-direction:column}
+  .sidebar{width:100%;height:auto;position:relative}
+  .main{height:auto}
+  .grid-4,.grid-3,.grid-2{grid-template-columns:1fr}
+  .panel{padding:24px 18px}
+}
+@media print{
+  .sidebar{display:none}
+  .panel{display:block!important;page-break-after:always}
+  body{background:#fff}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+
+<nav class="sidebar">
+  <div class="sb-brand">
+    <div class="logo">SymConverge</div>
+    <div class="sub">30-Day SEO Plan · June 2026</div>
+  </div>
+  <div class="sb-section">Start</div>
+  <div class="sb-link active" onclick="go('overview')"><span class="ic">◉</span>Overview</div>
+  <div class="sb-link" onclick="go('decisions')"><span class="ic">!</span>Your Decisions</div>
+  <div class="sb-link" onclick="go('positioning')"><span class="ic">◎</span>Positioning & ICPs</div>
+  <div class="sb-link" onclick="go('roadmap')"><span class="ic">▸</span>4-Week Roadmap</div>
+  <div class="sb-section">SEO Strategy</div>
+  <div class="sb-link" onclick="go('pages')"><span class="ic">▣</span>Pages to Build</div>
+  <div class="sb-link" onclick="go('funnel')"><span class="ic">▽</span>Funnel & Channels</div>
+  <div class="sb-link" onclick="go('content')"><span class="ic">✎</span>Content Plan</div>
+  <div class="sb-link" onclick="go('keywords')"><span class="ic">#</span>Keywords</div>
+  <div class="sb-section">Execution</div>
+  <div class="sb-link" onclick="go('roles')"><span class="ic">◫</span>Roles & Access</div>
+  <div class="sb-link" onclick="go('tools')"><span class="ic">⚙</span>Tools & Budget</div>
+  <div class="sb-link" onclick="go('tech')"><span class="ic">⌗</span>Technical Reference</div>
+</nav>
+
+<div class="main">
+
+<!-- ═══════════════ OVERVIEW ═══════════════ -->
+<div id="p-overview" class="panel active">
+  <h1>30-Day SEO Plan — Overview</h1>
+  <p class="page-sub">Everything on one page. SymConverge is already an official Cin7 partner — this plan turns that into searchable, measurable inbound growth in 30 days.</p>
+
+  <div class="note note-warn">
+    <strong>Do not launch until Week 1 technical fixes are done.</strong> Code audit found 12 blockers. The worst: every page tells Google it is the homepage, so /cin7 would be suppressed. No GA4 or Google Search Console exists yet — we launch blind without fixes.
+  </div>
+
+  <div class="grid-4">
+    <div class="kpi"><div class="kpi-n" style="color:var(--red)">12</div><div class="kpi-l">Launch blockers</div></div>
+    <div class="kpi"><div class="kpi-n" style="color:var(--amber)">47</div><div class="kpi-l">Total audit issues</div></div>
+    <div class="kpi"><div class="kpi-n" style="color:var(--blue)">10+</div><div class="kpi-l">Pages to build (Month 1)</div></div>
+    <div class="kpi"><div class="kpi-n" style="color:var(--green)">30</div><div class="kpi-l">Days to execute</div></div>
+  </div>
+
+  <h2>SEO Positioning</h2>
+  <div class="card" style="border-color:var(--blue-bd);background:var(--blue-lt)">
+    <p style="color:#1e3a5f;margin:0;font-size:14.5px"><strong>Official Cin7 Growth, Automation & Integration Partner</strong> — plus custom AI and SaaS on top of ERP. We do not compete for generic "AI development company" terms. We own Cin7 implementation, integration, reporting, and inventory automation keywords where buyers already spend money.</p>
+  </div>
+
+  <h2>30-Day Timeline at a Glance</h2>
+  <div class="card" style="padding:8px 20px">
+    <div class="week-row">
+      <div class="week-num">Week 1</div>
+      <div class="week-body"><h4>Pre-Launch Gate</h4><p>Fix 12 blockers · GA4 + GSC setup · robots.txt + sitemap · launch safely</p></div>
+    </div>
+    <div class="week-row">
+      <div class="week-num">Week 2</div>
+      <div class="week-body"><h4>Index & Structure</h4><p>Submit sitemap to GSC · expand /cin7 · schema · blog live · first post published</p></div>
+    </div>
+    <div class="week-row">
+      <div class="week-num">Week 3</div>
+      <div class="week-body"><h4>Service Pages + Content</h4><p>4 service pages · case-studies hub · LinkedIn + Facebook content starts · email capture live</p></div>
+    </div>
+    <div class="week-row">
+      <div class="week-num">Week 4</div>
+      <div class="week-body"><h4>Authority & Distribution</h4><p>First case study · backlink outreach · newsletter #1 · G2 listing · month-1 report</p></div>
+    </div>
+  </div>
+
+  <h2>Pages — What Exists vs What We Build</h2>
+  <table class="tbl">
+    <thead><tr><th>Status</th><th>URL</th><th>When</th></tr></thead>
+    <tbody>
+      <tr><td><span class="tag t-gray">Fix only</span></td><td><code>/</code> <code>/cin7</code> <code>/privacy</code> <code>/terms</code></td><td>Week 1 — before launch</td></tr>
+      <tr><td><span class="tag t-red">Build</span></td><td><code>/blog</code></td><td>Week 2</td></tr>
+      <tr><td><span class="tag t-red">Build</span></td><td><code>/services/ai-automation</code> <code>/services/app-development</code></td><td>Week 3</td></tr>
+      <tr><td><span class="tag t-red">Build</span></td><td><code>/services/saas-development</code> <code>/services/workflow-automation</code></td><td>Week 3</td></tr>
+      <tr><td><span class="tag t-red">Build</span></td><td><code>/case-studies</code> + first case study</td><td>Week 3–4</td></tr>
+      <tr><td><span class="tag t-red">Build</span></td><td><code>/about</code></td><td>Week 4</td></tr>
+      <tr><td><span class="tag t-amber">Expand</span></td><td><code>/cin7-guide</code> → 3,000+ word implementation guide</td><td>Week 2</td></tr>
+      <tr><td><span class="tag t-blue">Build</span></td><td><code>/cin7/implementation</code> <code>/cin7/integration</code> <code>/tools/migr8</code></td><td>After Month 1</td></tr>
+    </tbody>
+  </table>
+
+  <h2>What You Provide (Founder)</h2>
+  <div class="ask-box">
+    <h3>Required Before Week 1</h3>
+    <ul class="clean">
+      <li><strong>Official company email + password</strong> — to create Google Analytics 4 and Google Search Console accounts (e.g. <code>hello@symconverge.com</code> or your domain email). I set up both; you retain ownership.</li>
+      <li><strong>Google Business Profile verification</strong> — one-time, ~30 min</li>
+      <li><strong>Confirm project count</strong> — homepage says 50+, /cin7 says 100+. Pick one real number.</li>
+      <li><strong>Case study metrics</strong> — Styailist or other project numbers for Week 4</li>
+      <li><strong>3–5 client contacts</strong> — for G2 reviews in Week 4</li>
+      <li><strong>LinkedIn + Facebook</strong> — post 2–3×/week from briefs I provide (~30 min/week)</li>
+    </ul>
+  </div>
+
+  <h2>What I Own (SEO Lead)</h2>
+  <div class="grid-2">
+    <div class="card">
+      <ul class="clean">
+        <li>All technical SEO specs for developer</li>
+        <li>GA4 + GSC setup and configuration</li>
+        <li>Keyword strategy and content writing</li>
+        <li>Blog, email, and social briefs</li>
+        <li>Schema markup specifications</li>
+        <li>Backlink outreach and directory listings</li>
+      </ul>
+    </div>
+    <div class="card">
+      <ul class="clean">
+        <li>Monthly performance report (end of Month 1)</li>
+        <li>Cin7 community engagement (Reddit, FB groups)</li>
+        <li>G2 / Capterra profile setup</li>
+        <li>Newsletter setup and first send</li>
+        <li>Competitor tracking via Ahrefs</li>
+        <li>Funnel and conversion event mapping</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Month 1 Outcomes</h2>
+  <table class="tbl">
+    <thead><tr><th>Outcome</th><th>How We Measure</th></tr></thead>
+    <tbody>
+      <tr><td>Site launched without SEO blockers</td><td>GSC — no canonical errors, all pages indexed</td></tr>
+      <tr><td>Every lead is trackable</td><td>GA4 — form_submit + calendly_click events</td></tr>
+      <tr><td>10+ indexable pages live</td><td>Sitemap URL count in GSC</td></tr>
+      <tr><td>4 blog posts published</td><td>Content inventory</td></tr>
+      <tr><td>Email list started</td><td>Brevo subscriber count</td></tr>
+      <tr><td>First backlinks acquired</td><td>Ahrefs / manual log (target: 5–10)</td></tr>
+      <tr><td>Social presence active</td><td>8+ LinkedIn posts, 4+ Facebook posts</td></tr>
+      <tr><td>First organic impressions on Cin7 terms</td><td>GSC Performance report</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Budget</h2>
+  <table class="tbl">
+    <thead><tr><th>Tool</th><th>Cost</th><th>Needed?</th></tr></thead>
+    <tbody>
+      <tr><td>GA4 + Google Search Console</td><td><span class="tag t-green">Free</span></td><td>Yes — Week 1</td></tr>
+      <tr><td>Google Business Profile</td><td><span class="tag t-green">Free</span></td><td>Yes — Week 1</td></tr>
+      <tr><td>Brevo (email / newsletter)</td><td><span class="tag t-green">Free</span></td><td>Yes — Week 3</td></tr>
+      <tr><td>Ahrefs Starter</td><td><span class="tag t-amber">~₹2,500/mo</span></td><td>Recommended — Week 2</td></tr>
+      <tr><td><strong>Total</strong></td><td><strong>~₹2,500/mo</strong></td><td>No Screaming Frog needed at this stage</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Top Risks Right Now</h2>
+  <div class="grid-2">
+    <div class="card"><strong>All pages claim they are the homepage</strong><p style="margin:6px 0 0;font-size:13px;color:var(--text2)">Root layout canonical inherited by /cin7 — Google suppresses your revenue page as a duplicate.</p></div>
+    <div class="card"><strong>Zero analytics — launch blind</strong><p style="margin:6px 0 0;font-size:13px;color:var(--text2)">No GA4 or GTM. Every lead and Calendly click is invisible. Cannot prove ROI.</p></div>
+    <div class="card"><strong>No sitemap or robots.txt</strong><p style="margin:6px 0 0;font-size:13px;color:var(--text2)">Google has no crawl map. Site depends on manual link discovery.</p></div>
+    <div class="card"><strong>Content too thin to rank</strong><p style="margin:6px 0 0;font-size:13px;color:var(--text2)">2 indexable pages vs competitors with 100+. No service pages, blog, or case studies.</p></div>
+  </div>
+
+  <h2>What Is Already Working</h2>
+  <div class="card" style="border-color:var(--green-bd);background:var(--green-lt)">
+    <ul class="clean">
+      <li>Already an <strong>official Cin7 partner</strong> — credibility is there, discoverability is not</li>
+      <li>Server-side rendering via Next.js — Google sees full HTML</li>
+      <li>Meta descriptions exist on homepage and /cin7</li>
+      <li>Calendly + contact forms in place — conversion paths exist</li>
+      <li>Strong /cin7 H1: "Cin7 Implementation Partner Setup, Integration & Support"</li>
+      <li>Proper 404 page, alt text on images, lang="en" set correctly</li>
+    </ul>
+  </div>
+
+  <h2>Real Risk vs Low Priority</h2>
+  <table class="tbl">
+    <thead><tr><th>Fix This (Business Risk)</th><th>Ignore for Now (Technical Noise)</th></tr></thead>
+    <tbody>
+      <tr><td>Wrong canonicals → /cin7 never ranks</td><td>Breadcrumb schema on legal pages</td></tr>
+      <tr><td>No GA4/GSC → no measurement</td><td>GSAP bundle audit</td></tr>
+      <tr><td>Only 2 pages → cannot compete</td><td>Unused FloatingCta component</td></tr>
+      <tr><td>50+ vs 100+ stats mismatch</td><td>Footer hash-link inconsistencies</td></tr>
+      <tr><td>No case studies → buyers can't validate</td><td>Review schema on testimonials</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note note-info">
+    <strong>12-month targets</strong> (10k visitors, 50 leads/mo, 300 keywords) are the north star — not Month 1 expectations. Month 1 goal: safe launch, 10+ pages, measurable leads, first organic impressions.
+  </div>
+</div>
+
+<!-- ═══════════════ DECISIONS ═══════════════ -->
+<div id="p-decisions" class="panel">
+  <h1>Decisions Only You Can Make</h1>
+  <p class="page-sub">Five decisions unlock the plan. Everything else stays operational — you never need to read an SEO audit.</p>
+
+  <div class="decision">
+    <div class="decision-h"><div class="decision-t">1. Delay launch until Week 1 fixes are done?</div><span class="tag t-red">Urgent</span></div>
+    <div class="decision-b"><strong>Recommended: Yes.</strong> Launching now wastes /cin7 — Google treats it as a homepage duplicate. You also lose all day-one traffic data. Fix time: ~11h dev + 2h design.<br><br><strong>If no:</strong> /cin7 may not rank for 4–8 weeks after fix. No lead attribution baseline.</div>
+  </div>
+  <div class="decision">
+    <div class="decision-h"><div class="decision-t">2. Confirm Cin7-first positioning?</div><span class="tag t-amber">Strategic</span></div>
+    <div class="decision-b">All content leads with Cin7 expertise. Custom dev and AI stay secondary. This is how we beat Symphony SDG and generic agencies. Approve or tell me if revenue priority differs.</div>
+  </div>
+  <div class="decision">
+    <div class="decision-h"><div class="decision-t">3. What is the real project count — 50+ or 100+?</div><span class="tag t-amber">Trust</span></div>
+    <div class="decision-b">Homepage says 50+. /cin7 says 100+. Pick one accurate number — I align all pages. Inconsistent stats hurt trust at conversion.</div>
+  </div>
+  <div class="decision">
+    <div class="decision-h"><div class="decision-t">4. Approve ~₹2,500/month for Ahrefs from Week 2?</div><span class="tag t-blue">Budget</span></div>
+    <div class="decision-b">Tracks Cin7 keyword rankings and competitor backlinks. Without it, content strategy runs on guesswork after Week 2. GA4 + GSC remain free.</div>
+  </div>
+  <div class="decision">
+    <div class="decision-h"><div class="decision-t">5. Provide official email for founder actions?</div><span class="tag t-green">Required</span></div>
+    <div class="decision-b"><strong>One-time:</strong> Company email + password for GA4/GSC accounts, Google Business verification.<br><strong>Weekly (~30 min):</strong> Post LinkedIn from my briefs.<br><strong>As needed:</strong> Case study metrics, client contacts for G2 reviews.</div>
+  </div>
+
+  <h2>What You Should Never Need to Do</h2>
+  <div class="card">
+    <ul class="clean">
+      <li>Write or review code — developer handles all technical changes</li>
+      <li>Manually submit pages to Google — GSC does this after sitemap</li>
+      <li>Manage keyword spreadsheets — I provide summaries only</li>
+      <li>Read SEO audit reports — this document replaces that</li>
+      <li>Choose between canonical implementations — I spec, dev builds</li>
+      <li>Decide schema types or blog titles — I recommend, you approve before publish</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══════════════ POSITIONING ═══════════════ -->
+<div id="p-positioning" class="panel">
+  <h1>Positioning & Target Customers</h1>
+  <p class="page-sub">What to own, what to avoid, and who we're selling to. SymConverge is already an official Cin7 partner — SEO makes that visible.</p>
+
+  <div class="note note-info">
+    Generic terms like "AI Development Company" pit you against thousands of agencies with 10-year SEO head-starts. That fight cannot be won on a 30-day timeline.
+  </div>
+
+  <div class="card" style="border-color:var(--blue-bd);background:var(--blue-lt)">
+    <p style="margin:0;color:#1e3a5f;font-size:15px"><strong>"Official Cin7 Growth, Automation & Integration Partner"</strong> — plus custom AI and SaaS on the ERP layer. Cin7 has 8,000+ customers; most have poor implementations. They need exactly what you sell.</p>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <h3>Stop Competing For</h3>
+      <ul class="clean">
+        <li>Custom Software Development Company</li>
+        <li>AI Development Company</li>
+        <li>Web App Development Agency</li>
+        <li>SaaS Development Company</li>
+      </ul>
+      <p style="font-size:12px;color:var(--text3);margin-top:8px">10,000+ competitors. 12–24 months minimum to rank.</p>
+    </div>
+    <div class="card">
+      <h3>Win At</h3>
+      <ul class="clean">
+        <li>Cin7 Core implementation partner</li>
+        <li>Cin7 consulting & support</li>
+        <li>Cin7 + Shopify / Xero integration</li>
+        <li>Cin7 reporting & automation</li>
+        <li>AI automation for Cin7 users</li>
+      </ul>
+      <p style="font-size:12px;color:var(--text3);margin-top:8px">Lower volume, 5–10× higher conversion. Buyer already spending money.</p>
+    </div>
+  </div>
+
+  <h2>Target Customer Profiles (ICPs)</h2>
+  <table class="tbl">
+    <thead><tr><th>ICP</th><th>Problem</th><th>Services Sold</th><th>Priority</th></tr></thead>
+    <tbody>
+      <tr><td>Wholesale Distributors</td><td>Inventory visibility, manual workflows, reporting complexity</td><td>Cin7 Implementation + Automation + AI Forecasting</td><td><span class="tag t-red">Primary</span></td></tr>
+      <tr><td>Manufacturers</td><td>Production planning, inventory tracking, ERP integration</td><td>Cin7 Optimization + Custom Dashboards + AI</td><td><span class="tag t-red">Primary</span></td></tr>
+      <tr><td>Retail & eCommerce</td><td>Multi-channel inventory, Shopify integration</td><td>Cin7 Integrations + Inventory Automation</td><td><span class="tag t-amber">Secondary</span></td></tr>
+      <tr><td>Existing Cin7 Users</td><td>Poor implementation, missing reports, slow system</td><td>Cin7 Audit + Optimization + Reporting</td><td><span class="tag t-amber">Secondary</span></td></tr>
+    </tbody>
+  </table>
+
+  <h2>Unique Competitive Angle</h2>
+  <div class="card">
+    <p style="margin:0"><strong>Only Cin7 partner that also builds custom AI tools and SaaS on the ERP layer.</strong> A distributor gets Cin7 implementation + AI inventory forecasting + custom reporting in one engagement. Symphony SDG does Cin7 consulting — no custom AI layer.</p>
+  </div>
+
+  <h2>Competitor Gap</h2>
+  <table class="tbl">
+    <thead><tr><th>Competitor</th><th>Their Strength</th><th>Our Gap</th><th>Our Angle</th></tr></thead>
+    <tbody>
+      <tr><td>Symphony SDG</td><td>Deep Cin7 content, 100+ pages</td><td>Content volume, domain age</td><td>AI automation layer they don't offer</td></tr>
+      <tr><td>DEAR/Unleashed consultants</td><td>Broad ERP consulting</td><td>Established client base</td><td>Cin7-only specialization</td></tr>
+      <tr><td>Generic dev agencies</td><td>Low price, volume</td><td>Brand recognition</td><td>ERP expertise they can't replicate</td></tr>
+    </tbody>
+  </table>
+
+  <h2>DataBook Cross-Sell Funnel</h2>
+  <div class="card" style="border-color:var(--purple-bd);background:var(--purple-lt)">
+    <p style="margin:0;color:#4c1d95">SEO traffic → Cin7 reporting content → need advanced reporting → <strong>DataBook</strong> → need custom dashboard → need automation → <strong>SymConverge services</strong>. Reporting cluster blogs in Month 1 feed this pipeline for Month 2+.</p>
+  </div>
+</div>
+
+<!-- ═══════════════ ROADMAP ═══════════════ -->
+<div id="p-roadmap" class="panel">
+  <h1>4-Week Roadmap</h1>
+  <p class="page-sub">Every task tied to a business outcome. Grounded in codebase audit — not generic SEO advice.</p>
+
+  <div class="phase open" onclick="this.classList.toggle('open')">
+    <div class="phase-h"><div><strong>Week 1 — Pre-Launch Gate</strong> <span style="color:var(--text3);font-size:12px;font-weight:400"> · ~11h dev · Do not skip</span></div><span class="chev">›</span></div>
+    <div class="phase-b">
+      <div class="task"><div><strong>Fix canonical bug</strong>Remove global canonical from layout.tsx. Add page-specific canonicals to /cin7, /privacy, /terms.<span class="tag t-gray" style="margin-left:6px">Developer</span></div></div>
+      <div class="task"><div><strong>Create robots.txt + sitemap.ts</strong>Google crawl map. Required before GSC submission.<span class="tag t-gray" style="margin-left:6px">Developer</span></div></div>
+      <div class="task"><div><strong>Install GA4 + conversion tracking</strong>Form submits + Calendly clicks. Uses official company email you provide.<span class="tag t-blue" style="margin-left:6px">Developer + SEO Lead</span></div></div>
+      <div class="task"><div><strong>Set up Google Search Console</strong>Verify domain, connect to GA4, ready to submit sitemap on launch day.<span class="tag t-blue" style="margin-left:6px">SEO Lead</span></div></div>
+      <div class="task"><div><strong>Fix FAQ schema, performance, dead links</strong>CEO.png compression, next/font, href="#" fixes, button→anchor CTAs.<span class="tag t-gray" style="margin-left:6px">Developer</span></div></div>
+      <div class="task"><div><strong>OG images for homepage + /cin7</strong>1200×630px social share cards.<span class="tag t-gray" style="margin-left:6px">Designer</span></div></div>
+      <div class="task"><div><strong>Google Business Profile</strong>Verify business on Maps. Strengthens brand search.<span class="tag t-amber" style="margin-left:6px">Founder</span></div></div>
+      <div class="task"><div><strong>Launch site</strong>Only after all above are verified.<span class="tag t-green" style="margin-left:6px">All</span></div></div>
+    </div>
+  </div>
+
+  <div class="phase" onclick="this.classList.toggle('open')">
+    <div class="phase-h"><div><strong>Week 2 — Index, Schema & First Content</strong></div><span class="chev">›</span></div>
+    <div class="phase-b">
+      <div class="task"><div><strong>Submit sitemap to Google Search Console</strong>Monitor index coverage daily for first 5 days.<span class="tag t-blue" style="margin-left:6px">SEO Lead</span></div></div>
+      <div class="task"><div><strong>Expand /cin7 to 3,000+ words</strong>Implementation process, timeline, cost guide, expanded FAQ. Highest-revenue page.<span class="tag t-blue" style="margin-left:6px">SEO Lead</span></div></div>
+      <div class="task"><div><strong>Add Organization + Service + LocalBusiness schema</strong><span class="tag t-blue" style="margin-left:6px">SEO Lead</span></div></div>
+      <div class="task"><div><strong>Build /blog route + publish Post 1</strong>"How to Choose a Cin7 Implementation Partner"<span class="tag t-blue" style="margin-left:6px">SEO Lead + Developer</span></div></div>
+      <div class="task"><div><strong>Internal links: homepage → /cin7, footer expansion</strong><span class="tag t-gray" style="margin-left:6px">Developer</span></div></div>
+      <div class="task"><div><strong>LinkedIn: 2 posts</strong>Cin7 tip + inventory insight (founder posts from brief)<span class="tag t-amber" style="margin-left:6px">Founder</span></div></div>
+      <div class="task"><div><strong>Facebook Business Page: create + first 2 posts</strong>Repurpose LinkedIn content with native formatting.<span class="tag t-blue" style="margin-left:6px">SEO Lead sets up</span></div></div>
+      <div class="task"><div><strong>Start Ahrefs</strong>Track Cin7 keyword baseline + competitor gaps.<span class="tag t-blue" style="margin-left:6px">SEO Lead</span></div></div>
+      <div class="task"><div><strong>Add breadcrumbs to /cin7 + BreadcrumbList schema</strong><span class="tag t-blue" style="margin-left:6px">SEO Lead + Developer</span></div></div>
+      <div class="task"><div><strong>Track all Calendly link clicks</strong>Wrap 6+ Calendly links with GA4 events.<span class="tag t-gray" style="margin-left:6px">Developer</span></div></div>
+      <div class="task"><div><strong>Align project stats across pages</strong>50+ vs 100+ — founder confirms number.<span class="tag t-amber" style="margin-left:6px">Founder</span></div></div>
+    </div>
+  </div>
+
+  <div class="phase" onclick="this.classList.toggle('open')">
+    <div class="phase-h"><div><strong>Week 3 — Service Pages & Email Funnel</strong></div><span class="chev">›</span></div>
+    <div class="phase-b">
+      <div class="task"><div><strong>Build 4 service pages</strong>/services/ai-automation, app-development, saas-development, workflow-automation — each 500+ words, unique metadata + schema.<span class="tag t-blue" style="margin-left:6px">SEO Lead + Developer</span></div></div>
+      <div class="task"><div><strong>Build /case-studies hub page</strong>Index page linking to individual studies.<span class="tag t-blue" style="margin-left:6px">SEO Lead + Developer</span></div></div>
+      <div class="task"><div><strong>Blog Post 2 + 3</strong>"Cin7 Implementation Timeline & Cost" + "Shopify + Cin7 Integration Guide"<span class="tag t-blue" style="margin-left:6px">SEO Lead</span></div></div>
+      <div class="task"><div><strong>Email capture: Free Cin7 Health Check lead magnet</strong>Set up Brevo, landing form, 4-email welcome sequence.<span class="tag t-blue" style="margin-left:6px">SEO Lead</span></div></div>
+      <div class="task"><div><strong>LinkedIn: 2 posts + 1 long-form article</strong>Article: "5 Signs Your Cin7 Setup Needs a Professional Audit"<span class="tag t-amber" style="margin-left:6px">Founder</span></div></div>
+      <div class="task"><div><strong>Facebook: 2 posts + 1 article share</strong>Link to blog posts. Boost top post if budget allows (optional ₹2–5k).<span class="tag t-blue" style="margin-left:6px">SEO Lead</span></div></div>
+      <div class="task"><div><strong>Cin7 community engagement</strong>Answer 5 questions on Reddit/Facebook Cin7 groups. No selling — link to blog when relevant.<span class="tag t-blue" style="margin-left:6px">SEO Lead</span></div></div>
+    </div>
+  </div>
+
+  <div class="phase" onclick="this.classList.toggle('open')">
+    <div class="phase-h"><div><strong>Week 4 — Proof, Backlinks & Report</strong></div><span class="chev">›</span></div>
+    <div class="phase-b">
+      <div class="task"><div><strong>Publish Styailist case study</strong>Problem → solution → metrics. Primary BOFU asset.<span class="tag t-blue" style="margin-left:6px">SEO Lead</span> <span class="tag t-amber">Founder provides metrics</span></div></div>
+      <div class="task"><div><strong>Build /about page</strong>Founder bio, team, Cin7 certification, company history — E-E-A-T signals.<span class="tag t-blue" style="margin-left:6px">SEO Lead</span></div></div>
+      <div class="task"><div><strong>Blog Post 4</strong>"Cin7 Core vs DEAR vs Unleashed Comparison"<span class="tag t-blue" style="margin-left:6px">SEO Lead</span></div></div>
+      <div class="task"><div><strong>Backlink outreach — 10 pitches, target 5 placements</strong>Inventory blogs, ERP communities, supply chain publications.<span class="tag t-blue" style="margin-left:6px">SEO Lead</span></div></div>
+      <div class="task"><div><strong>G2 + Capterra profiles live</strong>Founder provides 3–5 client contacts for review requests.<span class="tag t-blue" style="margin-left:6px">SEO Lead</span></div></div>
+      <div class="task"><div><strong>Newsletter #1 send</strong>"3 Cin7 Reporting Mistakes Costing You Money" to email list.<span class="tag t-blue" style="margin-left:6px">SEO Lead</span></div></div>
+      <div class="task"><div><strong>LinkedIn: 2 posts</strong>Case study highlight + implementation tip.<span class="tag t-amber" style="margin-left:6px">Founder</span></div></div>
+      <div class="task"><div><strong>Month 1 SEO report to founder</strong>GA4 leads, GSC impressions, pages indexed, content published, backlinks gained.<span class="tag t-blue" style="margin-left:6px">SEO Lead</span></div></div>
+      <div class="task"><div><strong>PageSpeed Insights + Core Web Vitals check</strong>Verify Week 1 performance fixes worked. Target mobile 60+.<span class="tag t-blue" style="margin-left:6px">SEO Lead</span></div></div>
+      <div class="task"><div><strong>YouTube: record first Cin7 tutorial</strong>Script provided by SEO Lead. Optional but high-value for Month 2.<span class="tag t-amber" style="margin-left:6px">Founder</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ PAGES ═══════════════ -->
+<div id="p-pages" class="panel">
+  <h1>Pages to Build</h1>
+  <p class="page-sub">From codebase audit. Split into: fix before launch, build in Month 1, defer to Month 2.</p>
+
+  <h2>Before Launch — Fix Existing Pages</h2>
+  <table class="tbl">
+    <thead><tr><th>URL</th><th>Action</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td><code>/</code></td><td>Fix canonical, OG image, title trailing space</td><td>Currently inherits wrong canonical; hurts all child pages</td></tr>
+      <tr><td><code>/cin7</code></td><td>Own canonical, better title, OG image, expand content Week 2</td><td>Highest-revenue page — must rank independently</td></tr>
+      <tr><td><code>/privacy</code></td><td>Add metadata, noindex, fix Terms text mixed in</td><td>Legal page consuming crawl budget incorrectly</td></tr>
+      <tr><td><code>/terms</code></td><td>Add metadata, noindex</td><td>Same as privacy</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Month 1 — New Pages (High Priority)</h2>
+  <table class="tbl">
+    <thead><tr><th>URL</th><th>Target Keyword</th><th>Week</th><th>Words</th></tr></thead>
+    <tbody>
+      <tr><td><code>/blog</code></td><td>Topical authority hub</td><td>2</td><td>Index page</td></tr>
+      <tr><td><code>/services/ai-automation</code></td><td>ai automation for business</td><td>3</td><td>500+</td></tr>
+      <tr><td><code>/services/app-development</code></td><td>custom app development company</td><td>3</td><td>500+</td></tr>
+      <tr><td><code>/services/saas-development</code></td><td>saas development company</td><td>3</td><td>500+</td></tr>
+      <tr><td><code>/services/workflow-automation</code></td><td>business process automation</td><td>3</td><td>500+</td></tr>
+      <tr><td><code>/case-studies</code></td><td>Social proof / portfolio</td><td>3</td><td>Hub page</td></tr>
+      <tr><td><code>/case-studies/styailist</code></td><td>AI ecommerce case study</td><td>4</td><td>800+</td></tr>
+      <tr><td><code>/about</code></td><td>SymConverge team, founder trust</td><td>4</td><td>400+</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Month 2+ — Deferred (From Audit)</h2>
+  <table class="tbl">
+    <thead><tr><th>URL</th><th>Target Keyword</th><th>Priority</th></tr></thead>
+    <tbody>
+      <tr><td><code>/services/ai-agents</code></td><td>ai agents for business</td><td>Medium</td></tr>
+      <tr><td><code>/cin7/implementation</code></td><td>cin7 implementation cost</td><td>Medium</td></tr>
+      <tr><td><code>/cin7/integration</code></td><td>cin7 shopify integration</td><td>Medium</td></tr>
+      <tr><td><code>/tools/migr8</code></td><td>data migration tool</td><td>Medium</td></tr>
+      <tr><td><code>/tools/ai-phone-assistant</code></td><td>ai phone answering service</td><td>Medium</td></tr>
+      <tr><td><code>/cin7-for-wholesale-distributors</code></td><td>Industry vertical</td><td>High</td></tr>
+      <tr><td><code>/cin7-for-manufacturers</code></td><td>Industry vertical</td><td>High</td></tr>
+      <tr><td><code>/cin7-for-retail-brands</code></td><td>Industry vertical</td><td>High</td></tr>
+      <tr><td><code>/cin7-consultant-usa</code></td><td>Geo-targeted US</td><td>Medium</td></tr>
+      <tr><td><code>/cin7-implementation-partner-usa</code></td><td>Geo-targeted US</td><td>Medium</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Priority Pages — Business Goals (Audit Section G)</h2>
+  <table class="tbl">
+    <thead><tr><th>Page</th><th>URL</th><th>Business Goal</th><th>When</th></tr></thead>
+    <tbody>
+      <tr><td>Cin7 Implementation Guide (expand)</td><td><code>/cin7</code></td><td>Highest revenue page — must be 3,000+ words</td><td><span class="tag t-red">Week 2</span></td></tr>
+      <tr><td>AI Automation Services</td><td><code>/services/ai-automation</code></td><td>Differentiating angle — no competitor owns this</td><td><span class="tag t-amber">Week 3</span></td></tr>
+      <tr><td>SaaS Development</td><td><code>/services/saas-development</code></td><td>Topical completeness for service suite</td><td><span class="tag t-amber">Week 3</span></td></tr>
+      <tr><td>App Development</td><td><code>/services/app-development</code></td><td>High-volume keyword category</td><td><span class="tag t-amber">Week 3</span></td></tr>
+      <tr><td>About / Founder</td><td><code>/about</code></td><td>E-E-A-T trust signals for Google</td><td><span class="tag t-amber">Week 4</span></td></tr>
+      <tr><td>Case Studies Hub</td><td><code>/case-studies</code></td><td>BOFU proof for buyers validating capability</td><td><span class="tag t-amber">Week 3–4</span></td></tr>
+      <tr><td>Blog Index</td><td><code>/blog</code></td><td>Topical authority hub for all content clusters</td><td><span class="tag t-red">Week 2</span></td></tr>
+    </tbody>
+  </table>
+
+  <h2>Pages to Reposition (Not New URLs)</h2>
+  <table class="tbl">
+    <thead><tr><th>Current</th><th>Action</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr><td>Homepage #founder section</td><td>Expand into <code>/about</code></td><td>Thin founder section → full E-E-A-T page</td></tr>
+      <tr><td>Homepage #testimonials</td><td>Expand into <code>/case-studies</code></td><td>BrightOps, FleetIQ, Northwind deserve full case study URLs</td></tr>
+      <tr><td>Homepage #services anchors</td><td>Become real <code>/services/*</code> routes</td><td>Anchor links never rank for service keywords</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note note-info">
+    <strong>Page build rule:</strong> Every new page gets unique title, meta description, canonical, H1, 500+ words minimum, internal links to /cin7 and relevant service pages, and FAQ section with schema where applicable.
+  </div>
+</div>
+
+<!-- ═══════════════ FUNNEL ═══════════════ -->
+<div id="p-funnel" class="panel">
+  <h1>Funnel & Distribution Channels</h1>
+  <p class="page-sub">Full SEO funnel — how strangers find SymConverge, trust us, and book a call. Every channel mapped to funnel stage.</p>
+
+  <h2>The SEO Funnel</h2>
+  <div class="funnel">
+    <div class="funnel-step" style="background:var(--green-lt);border-color:var(--green-bd)">
+      <div class="fl" style="color:var(--green)">TOFU — Awareness</div>
+      <div class="fd">They have a problem but don't know SymConverge yet. Goal: appear in search, social, and communities.</div>
+      <div class="chips">
+        <span class="chip" style="border-color:var(--green-bd);color:var(--green)">Blog: What is Cin7 Core?</span>
+        <span class="chip" style="border-color:var(--green-bd);color:var(--green)">Blog: Shopify + Cin7 guide</span>
+        <span class="chip" style="border-color:var(--green-bd);color:var(--green)">LinkedIn posts</span>
+        <span class="chip" style="border-color:var(--green-bd);color:var(--green)">Facebook articles</span>
+        <span class="chip" style="border-color:var(--green-bd);color:var(--green)">Cin7 Reddit/FB groups</span>
+        <span class="chip" style="border-color:var(--green-bd);color:var(--green)">Guest posts (backlinks)</span>
+        <span class="chip" style="border-color:var(--green-bd);color:var(--green)">Google organic (informational)</span>
+      </div>
+    </div>
+    <div style="text-align:center;color:var(--text3);font-size:18px;padding:4px 0">↓</div>
+    <div class="funnel-step" style="background:var(--amber-lt);border-color:var(--amber-bd)">
+      <div class="fl" style="color:var(--amber)">MOFU — Consideration</div>
+      <div class="fd">They know they need a Cin7 partner. Goal: prove expertise, capture email, get on their shortlist.</div>
+      <div class="chips">
+        <span class="chip" style="border-color:var(--amber-bd);color:var(--amber)">/cin7 implementation guide</span>
+        <span class="chip" style="border-color:var(--amber-bd);color:var(--amber)">Blog: How to choose a partner</span>
+        <span class="chip" style="border-color:var(--amber-bd);color:var(--amber)">Blog: Cin7 vs DEAR comparison</span>
+        <span class="chip" style="border-color:var(--amber-bd);color:var(--amber)">LinkedIn long-form article</span>
+        <span class="chip" style="border-color:var(--amber-bd);color:var(--amber)">Free Cin7 Health Check (lead magnet)</span>
+        <span class="chip" style="border-color:var(--amber-bd);color:var(--amber)">Email nurture sequence</span>
+        <span class="chip" style="border-color:var(--amber-bd);color:var(--amber)">Newsletter</span>
+        <span class="chip" style="border-color:var(--amber-bd);color:var(--amber)">G2 reviews</span>
+      </div>
+    </div>
+    <div style="text-align:center;color:var(--text3);font-size:18px;padding:4px 0">↓</div>
+    <div class="funnel-step" style="background:var(--blue-lt);border-color:var(--blue-bd)">
+      <div class="fl" style="color:var(--blue)">BOFU — Decision</div>
+      <div class="fd">They're ready to buy. Goal: remove friction, provide proof, book the call.</div>
+      <div class="chips">
+        <span class="chip" style="border-color:var(--blue-bd);color:var(--blue)">Calendly: Free consultation</span>
+        <span class="chip" style="border-color:var(--blue-bd);color:var(--blue)">Contact form</span>
+        <span class="chip" style="border-color:var(--blue-bd);color:var(--blue)">Styailist case study</span>
+        <span class="chip" style="border-color:var(--blue-bd);color:var(--blue)">/about founder page</span>
+        <span class="chip" style="border-color:var(--blue-bd);color:var(--blue)">Service pages with CTAs</span>
+        <span class="chip" style="border-color:var(--blue-bd);color:var(--blue)">Testimonials</span>
+        <span class="chip" style="border-color:var(--blue-bd);color:var(--blue)">Email: Book consultation CTA</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Channel Playbook — Month 1</h2>
+
+  <div class="channel-card">
+    <div class="channel-top"><div class="channel-name">Google Search (Organic SEO)</div><span class="tag t-blue">Core</span></div>
+    <div class="channel-desc">Primary long-term channel. Week 1 fixes make the site indexable. Week 2–4 content builds keyword coverage. Cin7 implementation terms convert at 5–10× generic dev terms.</div>
+    <div class="channel-meta"><span class="tag t-gray">Owner: SEO Lead</span><span class="tag t-gray">Tools: GSC, GA4, Ahrefs</span><span class="tag t-gray">Results: Week 3+ impressions</span></div>
+  </div>
+
+  <div class="channel-card">
+    <div class="channel-top"><div class="channel-name">Google Search Console</div><span class="tag t-red">Week 1</span></div>
+    <div class="channel-desc">Submit sitemap after launch. Monitor which pages Google indexes, which queries trigger impressions, and catch crawl errors. Connected to GA4 for full funnel view. <strong>Requires official company email from founder.</strong></div>
+    <div class="channel-meta"><span class="tag t-gray">Owner: SEO Lead</span><span class="tag t-green">Free</span><span class="tag t-amber">Founder provides email access</span></div>
+  </div>
+
+  <div class="channel-card">
+    <div class="channel-top"><div class="channel-name">Blog</div><span class="tag t-blue">4 posts / month</span></div>
+    <div class="channel-desc">Targets MOFU and TOFU keywords. Each post links to /cin7 or a service page. Posts become backlink assets and email newsletter content. Human-sandwich workflow: founder anecdote → AI draft → SEO Lead edit.</div>
+    <div class="channel-meta"><span class="tag t-gray">Owner: SEO Lead</span><span class="tag t-gray">Founder: 15-min input per post</span></div>
+  </div>
+
+  <div class="channel-card">
+    <div class="channel-top"><div class="channel-name">LinkedIn (Founder + Company Page)</div><span class="tag t-amber">8 posts / month</span></div>
+    <div class="channel-desc">B2B Cin7 buyers research the founder before signing. I write briefs; founder posts 2×/week. Week 3: one long-form article ("5 Signs Your Cin7 Setup Needs an Audit"). Company page reposts + adds service highlights. LinkedIn content also appears in Google for branded searches.</div>
+    <div class="channel-meta"><span class="tag t-amber">Founder posts</span><span class="tag t-gray">SEO Lead writes briefs</span><span class="tag t-green">Free</span></div>
+  </div>
+
+  <div class="channel-card">
+    <div class="channel-top"><div class="channel-name">Facebook Business Page</div><span class="tag t-amber">4 posts / month</span></div>
+    <div class="channel-desc">Repurpose blog and LinkedIn content as native Facebook posts and articles. Cin7 user groups on Facebook are active — share helpful content (not ads) in groups. Optional: boost best-performing post (₹2–5k). Builds brand presence for retargeting later.</div>
+    <div class="channel-meta"><span class="tag t-gray">SEO Lead sets up page</span><span class="tag t-gray">Founder approves posts</span></div>
+  </div>
+
+  <div class="channel-card">
+    <div class="channel-top"><div class="channel-name">Email Marketing + Newsletter</div><span class="tag t-blue">Week 3 launch</span></div>
+    <div class="channel-desc"><strong>Lead magnet:</strong> Free Cin7 Health Check (PDF + booking link). <strong>Welcome sequence:</strong> 4 emails over 10 days — mistakes, case snippet, reporting tip, book call CTA. <strong>Newsletter:</strong> Monthly send Week 4 — "3 Cin7 Reporting Mistakes." Tool: Brevo (free up to 2k contacts). Every blog post gets an email version.</div>
+    <div class="channel-meta"><span class="tag t-gray">Owner: SEO Lead</span><span class="tag t-green">Brevo — Free</span></div>
+  </div>
+
+  <div class="channel-card">
+    <div class="channel-top"><div class="channel-name">Backlink Strategy</div><span class="tag t-blue">Target: 5–10 in Month 1</span></div>
+    <div class="channel-desc">
+      <strong>Tactics:</strong> (1) Guest posts on inventory/ERP blogs — pitch "How AI Changes Cin7 Implementations" (2) Cin7 community answers with blog links (3) G2/Capterra listings — review sites rank above agency sites (4) HARO / journalist queries on inventory tech (5) Partner cross-links from DataBook when live (6) Directory submissions: Clutch, GoodFirms (free tiers).<br><br>
+      <strong>Do not buy links.</strong> Focus on 5 quality placements over 50 low-quality ones.
+    </div>
+    <div class="channel-meta"><span class="tag t-gray">Owner: SEO Lead</span><span class="tag t-gray">Founder: appears in guest posts</span></div>
+  </div>
+
+  <div class="channel-card">
+    <div class="channel-top"><div class="channel-name">Cin7 Communities (Reddit, Facebook Groups)</div><span class="tag t-green">Ongoing</span></div>
+    <div class="channel-desc">Answer real Cin7 user questions — reporting problems, integration issues, setup mistakes. No direct selling. Link to relevant blog post when it genuinely helps. Builds reputation and referral traffic. 2 hours/week.</div>
+    <div class="channel-meta"><span class="tag t-gray">Owner: SEO Lead</span><span class="tag t-green">Free</span></div>
+  </div>
+
+  <div class="channel-card">
+    <div class="channel-top"><div class="channel-name">G2 + Capterra Reviews</div><span class="tag t-amber">Week 4</span></div>
+    <div class="channel-desc">Review platforms rank on page 1 for "cin7 implementation partner" searches. Free listing + 3–5 reviews from past clients = immediate visibility. Founder provides client contacts; I send review request templates.</div>
+    <div class="channel-meta"><span class="tag t-gray">SEO Lead sets up</span><span class="tag t-amber">Founder: client contacts</span></div>
+  </div>
+
+  <div class="channel-card">
+    <div class="channel-top"><div class="channel-name">YouTube Tutorials</div><span class="tag t-gray">Week 4 starter</span></div>
+    <div class="channel-desc">Video ranks for informational queries. Start with one tutorial: "Custom reports in Cin7 Core" or "Shopify + Cin7 setup walkthrough." Founder records screen; I write script. Cross-sell opportunity for DataBook. Google indexes YouTube in search results.</div>
+    <div class="channel-meta"><span class="tag t-amber">Founder records</span><span class="tag t-gray">SEO Lead scripts</span><span class="tag t-green">Free</span></div>
+  </div>
+
+  <div class="channel-card">
+    <div class="channel-top"><div class="channel-name">Podcast & Guest Appearances</div><span class="tag t-gray">Outreach Week 3–4</span></div>
+    <div class="channel-desc">Pitch supply chain, ERP, and inventory podcasts. Topic: "How AI is changing Cin7 implementations." Each appearance = backlink + brand mention. Target 1–2 pitches in Month 1; appearances may land in Month 2.</div>
+    <div class="channel-meta"><span class="tag t-gray">SEO Lead outreach</span><span class="tag t-amber">Founder appears</span></div>
+  </div>
+
+  <div class="channel-card">
+    <div class="channel-top"><div class="channel-name">Directory Listings (Clutch, GoodFirms, DesignRush)</div><span class="tag t-blue">Week 4</span></div>
+    <div class="channel-desc">Free agency directory profiles. Rank for category searches and provide backlink equity. Part of backlink strategy — not primary lead source but compounds authority.</div>
+    <div class="channel-meta"><span class="tag t-gray">SEO Lead</span><span class="tag t-green">Free</span></div>
+  </div>
+
+  <h2>Lead Magnet Ecosystem</h2>
+  <table class="tbl">
+    <thead><tr><th>Offer</th><th>Format</th><th>Stage</th><th>What It Captures</th><th>When</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Free Cin7 Health Check</strong></td><td>15-min call + audit report</td><td>MOFU → BOFU</td><td>High-intent Cin7 users with problems</td><td>Week 3</td></tr>
+      <tr><td><strong>Inventory Optimization Assessment</strong></td><td>Questionnaire + score</td><td>MOFU</td><td>Distributors planning improvements</td><td>Week 4</td></tr>
+      <tr><td><strong>AI Readiness Report</strong></td><td>PDF after email</td><td>TOFU → MOFU</td><td>AI-aware business owners</td><td>Month 2</td></tr>
+      <tr><td><strong>Reporting Audit</strong></td><td>PDF checklist</td><td>MOFU</td><td>Cin7 users frustrated with reports → DataBook funnel</td><td>Month 2</td></tr>
+      <tr><td><strong>30-Min Strategy Consultation</strong></td><td>Calendly booking</td><td>BOFU</td><td>Qualified leads ready for proposal</td><td>Live now</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Email Nurture Sequences</h2>
+  <div class="grid-2">
+    <div class="card">
+      <h3>Sequence A — Cin7 Users (Week 3 launch)</h3>
+      <ul class="clean">
+        <li>Email 1: The 3 biggest Cin7 implementation mistakes</li>
+        <li>Email 2: How we optimized a distributor's Cin7 in 2 weeks</li>
+        <li>Email 3: What proper Cin7 reporting looks like</li>
+        <li>Email 4: Free Cin7 audit — book your slot</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Sequence B — AI / Automation Leads (Week 4)</h3>
+      <ul class="clean">
+        <li>Email 1: What AI automation actually costs (no fluff)</li>
+        <li>Email 2: How we built Styailist in 6 weeks</li>
+        <li>Email 3: 5 processes you can automate this month</li>
+        <li>Email 4: Book a strategy call — 30 min, no pitch</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Full Funnel Flow</h2>
+  <div class="card" style="font-size:13px;color:var(--text2);line-height:1.7">
+    <strong style="color:var(--text)">Search / Social / Community</strong> → Blog or /cin7 page → Lead magnet (email capture) → Welcome sequence → Newsletter → Consultation (Calendly) → Discovery call → Proposal → Client
+  </div>
+</div>
+
+<!-- ═══════════════ CONTENT ═══════════════ -->
+<div id="p-content" class="panel">
+  <h1>Content Strategy — Month 1</h1>
+  <p class="page-sub">Every piece of content mapped to funnel stage, channel, and target keyword. Nothing generic.</p>
+
+  <h2>Blog Calendar (4 Posts)</h2>
+  <table class="tbl">
+    <thead><tr><th>Week</th><th>Title</th><th>Stage</th><th>Keyword Target</th><th>CTA</th></tr></thead>
+    <tbody>
+      <tr><td>2</td><td>How to Choose a Cin7 Implementation Partner (8-Point Checklist)</td><td><span class="tag t-amber">MOFU</span></td><td>cin7 implementation partner</td><td>Free consultation</td></tr>
+      <tr><td>3</td><td>Cin7 Implementation Timeline & Cost Guide 2026</td><td><span class="tag t-amber">MOFU</span></td><td>cin7 implementation cost</td><td>Free Cin7 audit</td></tr>
+      <tr><td>3</td><td>Shopify + Cin7 Core Integration: Step-by-Step Guide</td><td><span class="tag t-green">TOFU</span></td><td>shopify cin7 integration</td><td>Integration services</td></tr>
+      <tr><td>4</td><td>Cin7 Core vs DEAR vs Unleashed: Full Comparison</td><td><span class="tag t-amber">MOFU</span></td><td>cin7 vs dear inventory</td><td>Book consultation</td></tr>
+    </tbody>
+  </table>
+
+  <h2>LinkedIn Content Calendar</h2>
+  <table class="tbl">
+    <thead><tr><th>Week</th><th>Format</th><th>Topic</th><th>Funnel</th></tr></thead>
+    <tbody>
+      <tr><td>2</td><td>Post</td><td>"3 signs your Cin7 implementation was done wrong"</td><td>MOFU</td></tr>
+      <tr><td>2</td><td>Post</td><td>"Why inventory visibility matters more than you think"</td><td>TOFU</td></tr>
+      <tr><td>3</td><td>Long article</td><td>"5 Signs Your Cin7 Setup Needs a Professional Audit"</td><td>MOFU</td></tr>
+      <tr><td>3</td><td>Post</td><td>"We automated a distributor's PO process in 4 days — here's how"</td><td>TOFU</td></tr>
+      <tr><td>4</td><td>Post</td><td>Styailist case study highlight with metrics</td><td>BOFU</td></tr>
+      <tr><td>4</td><td>Post</td><td>"What proper Cin7 reporting actually looks like"</td><td>MOFU</td></tr>
+      <tr><td>4</td><td>Post</td><td>Founder perspective: lessons from 50+ implementations</td><td>BOFU</td></tr>
+      <tr><td>4</td><td>Post</td><td>Free Cin7 Health Check offer</td><td>BOFU</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Facebook Content</h2>
+  <div class="grid-2">
+    <div class="card">
+      <h3>Page Posts (4/month)</h3>
+      <ul class="clean">
+        <li>Week 2: Repurpose LinkedIn Cin7 tip post</li>
+        <li>Week 2: Share blog Post 1 with native summary</li>
+        <li>Week 3: Share Shopify + Cin7 integration guide</li>
+        <li>Week 4: Case study announcement + CTA</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Group Engagement</h3>
+      <ul class="clean">
+        <li>Join 3–5 Cin7 user Facebook groups</li>
+        <li>Answer 2 questions/week with genuine help</li>
+        <li>Link to blog only when directly relevant</li>
+        <li>Never spam or direct-sell in groups</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Email Marketing</h2>
+  <table class="tbl">
+    <thead><tr><th>Asset</th><th>When</th><th>Details</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Lead Magnet</strong></td><td>Week 3</td><td>"Free Cin7 Health Check" — 1-page PDF + Calendly link. Form on /cin7 and blog sidebar.</td></tr>
+      <tr><td><strong>Welcome Sequence</strong></td><td>Week 3</td><td>4 emails / 10 days: (1) Biggest Cin7 mistakes (2) Case snippet (3) Reporting tip (4) Book call CTA</td></tr>
+      <tr><td><strong>Newsletter #1</strong></td><td>Week 4</td><td>"3 Cin7 Reporting Mistakes Costing You Money" — sent to all subscribers + blog readers</td></tr>
+      <tr><td><strong>Blog-to-Email</strong></td><td>Ongoing</td><td>Each blog post gets a shortened email version for subscribers</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Backlink Outreach Plan</h2>
+  <table class="tbl">
+    <thead><tr><th>Tactic</th><th>Target Sites</th><th>Week</th><th>Expected Links</th></tr></thead>
+    <tbody>
+      <tr><td>Guest post pitch</td><td>Inventory Management blogs, Supply Chain publications</td><td>3–4</td><td>2–3</td></tr>
+      <tr><td>G2 + Capterra listing</td><td>g2.com, capterra.com</td><td>4</td><td>2 (nofollow but ranks)</td></tr>
+      <tr><td>Directory submission</td><td>Clutch, GoodFirms, DesignRush</td><td>4</td><td>3</td></tr>
+      <tr><td>Cin7 community links</td><td>Reddit r/cin7, FB groups</td><td>2–4</td><td>1–2 (nofollow)</td></tr>
+      <tr><td>HARO / journalist queries</td><td>Inventory tech, ERP topics</td><td>3–4</td><td>0–2 (high value if landed)</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Keyword Clusters (Priority Order)</h2>
+  <div class="grid-2">
+    <div class="card">
+      <h3 style="color:var(--red)">Priority 1 — Cin7 Implementation</h3>
+      <p style="font-size:12.5px;color:var(--text3);margin-bottom:8px">500–2k searches/mo · Highest revenue intent</p>
+      <div class="chips">
+        <span class="chip">cin7 core implementation partner</span>
+        <span class="chip">cin7 implementation cost</span>
+        <span class="chip">cin7 core setup guide</span>
+        <span class="chip">hire cin7 expert</span>
+        <span class="chip">cin7 core certified partner</span>
+        <span class="chip">cin7 core implementation services</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--amber)">Priority 2 — Integrations</h3>
+      <p style="font-size:12.5px;color:var(--text3);margin-bottom:8px">100–500/mo · High conversion long tail</p>
+      <div class="chips">
+        <span class="chip">shopify cin7 integration</span>
+        <span class="chip">cin7 xero integration</span>
+        <span class="chip">cin7 quickbooks integration</span>
+        <span class="chip">cin7 amazon integration</span>
+        <span class="chip">cin7 api integration services</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--purple)">Priority 3 — Cin7 Reporting</h3>
+      <p style="font-size:12.5px;color:var(--text3);margin-bottom:8px">300–1k/mo · Feeds DataBook cross-sell</p>
+      <div class="chips">
+        <span class="chip">cin7 custom reports</span>
+        <span class="chip">cin7 reporting limitations</span>
+        <span class="chip">cin7 advanced reports</span>
+        <span class="chip">cin7 core optimization</span>
+        <span class="chip">cin7 kpi dashboard</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--blue)">Priority 4 — AI Automation</h3>
+      <p style="font-size:12.5px;color:var(--text3);margin-bottom:8px">1k–10k/mo · Differentiating angle</p>
+      <div class="chips">
+        <span class="chip">ai automation for distributors</span>
+        <span class="chip">inventory automation ai</span>
+        <span class="chip">workflow automation erp</span>
+        <span class="chip">ai agents for inventory</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--text3)">Priority 5 — Service Pages</h3>
+      <p style="font-size:12.5px;color:var(--text3);margin-bottom:8px">2k–10k/mo · Secondary presence</p>
+      <div class="chips">
+        <span class="chip">custom app development</span>
+        <span class="chip">saas development company</span>
+        <span class="chip">business process automation</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--text3)">Priority 6 — Industry / Geo (Month 2+)</h3>
+      <p style="font-size:12.5px;color:var(--text3);margin-bottom:8px">US market primary</p>
+      <div class="chips">
+        <span class="chip">cin7 for wholesale distributors</span>
+        <span class="chip">cin7 for manufacturers</span>
+        <span class="chip">cin7 consultant usa</span>
+        <span class="chip">cin7 implementation partner usa</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Founder Authority — Weekly Rhythm</h2>
+  <table class="tbl">
+    <thead><tr><th>Day</th><th>Content Type</th><th>Example</th><th>Goal</th></tr></thead>
+    <tbody>
+      <tr><td>Monday</td><td>Inventory Insight</td><td>"3 signs your Cin7 implementation was done wrong"</td><td>Cin7 authority</td></tr>
+      <tr><td>Wednesday</td><td>AI / Automation Tip</td><td>"We automated a distributor's PO process in 4 days"</td><td>AI credibility</td></tr>
+      <tr><td>Friday</td><td>Case Study / Result</td><td>"Client reduced reporting time 90% with DataBook + SymConverge"</td><td>Social proof</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Company Page Strategy (LinkedIn)</h2>
+  <div class="card">
+    <ul class="clean">
+      <li><strong>2 posts/week</strong> — case study snippets, service highlights, client wins, product announcements</li>
+      <li>Repost founder content with company context added</li>
+      <li>Share every new blog post within 24 hours of publish</li>
+      <li>Company page content also surfaces in Google branded searches</li>
+    </ul>
+  </div>
+
+  <h2>Content Production Workflow</h2>
+  <div class="card">
+    <p style="margin:0"><strong>Human-sandwich:</strong> Founder 15-min SME input → AI drafts structure + first pass → SEO Lead edits, optimizes for keywords + schema → Founder approves → Developer publishes. Scales quality without a full writing team.</p>
+  </div>
+
+  <h2>Blog Backlog — After Month 1</h2>
+  <table class="tbl">
+    <thead><tr><th>Title</th><th>Stage</th><th>Target Buyer</th></tr></thead>
+    <tbody>
+      <tr><td>Custom AI vs Off-the-Shelf Software: Which Do You Need?</td><td>TOFU</td><td>SMB researching AI options</td></tr>
+      <tr><td>Common Cin7 Implementation Mistakes (And How to Avoid Them)</td><td>MOFU</td><td>Existing Cin7 user with problems</td></tr>
+      <tr><td>What Does AI Automation Cost? (With ROI Framework)</td><td>TOFU</td><td>Budget-aware decision maker</td></tr>
+      <tr><td>Cin7 Core Advanced Features: Getting Past the Basics</td><td>MOFU</td><td>Power user extracting more value</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══════════════ KEYWORDS ═══════════════ -->
+<div id="p-keywords" class="panel">
+  <h1>Full Keyword Strategy</h1>
+  <p class="page-sub">Intent over volume. A founder searching "cin7 implementation partner" is ready to spend $5k–$50k. Target buyers, not browsers.</p>
+
+  <div class="note note-info">
+    <strong>Strategy rule:</strong> Build pillar pages first (/cin7, /services/*), then blog posts to support them. Blog without service pages is a store without a storefront.
+  </div>
+
+  <div class="kw-block">
+    <div class="kw-head"><div class="kw-title">Cin7 Core — Implementation & Partnership</div><span class="tag t-red">Priority 1</span></div>
+    <p style="font-size:12px;color:var(--text3);margin-bottom:8px">500–2k/mo · Highest commercial intent · Maps to /cin7</p>
+    <div class="chips">
+      <span class="chip">cin7 core implementation partner</span><span class="chip">cin7 core certified partner</span><span class="chip">cin7 core implementation services</span><span class="chip">hire cin7 core expert</span><span class="chip">cin7 core implementation cost</span><span class="chip">cin7 core setup guide</span><span class="chip">cin7 core consultant</span><span class="chip">cin7 core implementation checklist</span>
+    </div>
+  </div>
+  <div class="kw-block">
+    <div class="kw-head"><div class="kw-title">Cin7 Integrations</div><span class="tag t-amber">Priority 2</span></div>
+    <p style="font-size:12px;color:var(--text3);margin-bottom:8px">100–500/mo each · High conversion · Long tail wins fast</p>
+    <div class="chips">
+      <span class="chip">shopify cin7 core integration</span><span class="chip">connect shopify to cin7</span><span class="chip">cin7 xero integration</span><span class="chip">cin7 quickbooks integration</span><span class="chip">cin7 amazon integration</span><span class="chip">cin7 hubspot integration</span><span class="chip">cin7 shopify inventory sync</span>
+    </div>
+  </div>
+  <div class="kw-block">
+    <div class="kw-head"><div class="kw-title">Cin7 Reporting & Optimization</div><span class="tag t-amber">Priority 3</span></div>
+    <p style="font-size:12px;color:var(--text3);margin-bottom:8px">300–1k/mo · Problem-aware buyers · DataBook funnel</p>
+    <div class="chips">
+      <span class="chip">cin7 core custom reports</span><span class="chip">cin7 reporting limitations</span><span class="chip">cin7 advanced reports</span><span class="chip">cin7 core optimization</span><span class="chip">maximize cin7 core value</span><span class="chip">cin7 inventory automation</span>
+    </div>
+  </div>
+  <div class="kw-block">
+    <div class="kw-head"><div class="kw-title">AI Automation for Inventory Businesses</div><span class="tag t-blue">Priority 4</span></div>
+    <p style="font-size:12px;color:var(--text3);margin-bottom:8px">1k–10k/mo · Competitors don't own this angle</p>
+    <div class="chips">
+      <span class="chip">ai automation for distributors</span><span class="chip">inventory automation ai</span><span class="chip">ai agents for inventory management</span><span class="chip">ai forecasting for wholesale</span><span class="chip">workflow automation for manufacturers</span>
+    </div>
+  </div>
+  <div class="kw-block">
+    <div class="kw-head"><div class="kw-title">AI Development & Hire Developers</div><span class="tag t-gray">Priority 5</span></div>
+    <p style="font-size:12px;color:var(--text3);margin-bottom:8px">5k–50k/mo · Secondary — only via service pages, not primary focus</p>
+    <div class="chips">
+      <span class="chip">ai development company</span><span class="chip">custom ai development</span><span class="chip">hire dedicated developers</span><span class="chip">hire ai developers</span><span class="chip">mern stack development company</span>
+    </div>
+  </div>
+  <div class="kw-block">
+    <div class="kw-head"><div class="kw-title">Industry & Geo Verticals</div><span class="tag t-gray">Month 2+</span></div>
+    <p style="font-size:12px;color:var(--text3);margin-bottom:8px">US market primary · India emerging</p>
+    <div class="chips">
+      <span class="chip">cin7 for wholesale distributors</span><span class="chip">cin7 for manufacturers</span><span class="chip">cin7 for retail brands</span><span class="chip">cin7 for ecommerce</span><span class="chip">cin7 consultant usa</span><span class="chip">cin7 implementation partner usa</span><span class="chip">inventory erp implementation usa</span>
+    </div>
+  </div>
+
+  <h2>Keyword → Page Mapping</h2>
+  <table class="tbl">
+    <thead><tr><th>Keyword Cluster</th><th>Primary Page</th><th>Supporting Content</th></tr></thead>
+    <tbody>
+      <tr><td>Cin7 Implementation</td><td><code>/cin7</code></td><td>Blog: partner checklist, cost guide, mistakes</td></tr>
+      <tr><td>Integrations</td><td><code>/cin7/integration</code> (M2)</td><td>Blog: Shopify guide, Xero guide</td></tr>
+      <tr><td>Reporting</td><td>Blog cluster</td><td>DataBook landing (separate product)</td></tr>
+      <tr><td>AI Automation</td><td><code>/services/ai-automation</code></td><td>Blog: AI cost, Styailist case study</td></tr>
+      <tr><td>App / SaaS Dev</td><td><code>/services/app-development</code>, <code>/saas-development</code></td><td>Case studies</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══════════════ ROLES ═══════════════ -->
+<div id="p-roles" class="panel">
+  <h1>Roles & Access</h1>
+  <p class="page-sub">Who owns what. What the founder must provide to unblock Week 1.</p>
+
+  <div class="ask-box">
+    <h3>Founder Must Provide — Week 1</h3>
+    <table class="tbl" style="margin:10px 0 0;border:none;box-shadow:none">
+      <tbody>
+        <tr><td><strong>Official company email + password</strong></td><td>To create GA4 property and Google Search Console account under SymConverge ownership. Example: <code>hello@symconverge.com</code>. I configure both; you keep admin access permanently.</td></tr>
+        <tr><td><strong>Domain DNS access</strong></td><td>GSC domain verification may need a TXT record (or HTML file upload via developer).</td></tr>
+        <tr><td><strong>Google Business Profile</strong></td><td>Verify with business address + phone. ~30 min one-time.</td></tr>
+        <tr><td><strong>LinkedIn + Facebook login</strong></td><td>For page setup in Week 2–3. Or add me as page admin.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="grid-3">
+    <div class="card" style="border-top:3px solid var(--blue)">
+      <h3 style="color:var(--blue)">SEO Lead (Me)</h3>
+      <ul class="clean">
+        <li>GA4 + GSC setup</li>
+        <li>All content & briefs</li>
+        <li>Schema specifications</li>
+        <li>Blog, email, newsletter</li>
+        <li>Backlink outreach</li>
+        <li>G2 / Capterra setup</li>
+        <li>Community engagement</li>
+        <li>Monthly reporting</li>
+        <li>Facebook page management</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--text3)">
+      <h3>Developer</h3>
+      <ul class="clean">
+        <li>All Week 1 technical fixes</li>
+        <li>robots.txt + sitemap</li>
+        <li>GA4 code install</li>
+        <li>Page route builds</li>
+        <li>Image optimization</li>
+        <li>Schema deployment</li>
+      </ul>
+      <p style="font-size:12px;color:var(--text3);margin-top:10px">~11h Week 1, then ~4h/week</p>
+    </div>
+    <div class="card" style="border-top:3px solid var(--green)">
+      <h3 style="color:var(--green)">Founder (You)</h3>
+      <ul class="clean">
+        <li>Email access for GA4/GSC</li>
+        <li>Google Business verify</li>
+        <li>LinkedIn posts (from briefs)</li>
+        <li>Case study metrics</li>
+        <li>Client contacts for G2</li>
+        <li>Approve content before publish</li>
+        <li>Confirm project count stat</li>
+      </ul>
+      <p style="font-size:12px;color:var(--text3);margin-top:10px"> ongoing</p>
+    </div>
+  </div>
+
+  <h2>Responsibility Matrix</h2>
+  <table class="tbl">
+    <thead><tr><th>Task</th><th>Owner</th><th>Supports</th><th>Approves</th></tr></thead>
+    <tbody>
+      <tr><td>Launch blockers (canonical, sitemap, GA4)</td><td>Developer</td><td>SEO Lead</td><td>SEO Lead</td></tr>
+      <tr><td>GA4 + GSC account creation</td><td>SEO Lead</td><td>Founder (email access)</td><td>Founder</td></tr>
+      <tr><td>GSC sitemap submit + monitoring</td><td>SEO Lead</td><td>—</td><td>—</td></tr>
+      <tr><td>/cin7 content expansion</td><td>SEO Lead</td><td>Founder (facts)</td><td>Founder</td></tr>
+      <tr><td>Service pages + blog</td><td>SEO Lead</td><td>Developer</td><td>Founder</td></tr>
+      <tr><td>LinkedIn posts</td><td>Founder</td><td>SEO Lead (briefs)</td><td>Founder</td></tr>
+      <tr><td>Facebook page + posts</td><td>SEO Lead</td><td>Founder</td><td>Founder</td></tr>
+      <tr><td>Email / newsletter</td><td>SEO Lead</td><td>—</td><td>Founder</td></tr>
+      <tr><td>Backlink outreach</td><td>SEO Lead</td><td>Founder (guest posts)</td><td>SEO Lead</td></tr>
+      <tr><td>Case study</td><td>SEO Lead</td><td>Founder (metrics)</td><td>Founder</td></tr>
+      <tr><td>Month 1 report</td><td>SEO Lead</td><td>—</td><td>—</td></tr>
+      <tr><td>Schema markup (Organization, Service, FAQ)</td><td>SEO Lead</td><td>Developer</td><td>SEO Lead</td></tr>
+      <tr><td>Guest post outreach</td><td>SEO Lead</td><td>Founder (appears)</td><td>SEO Lead</td></tr>
+      <tr><td>OG image design</td><td>Designer</td><td>SEO Lead brief</td><td>Founder</td></tr>
+      <tr><td>YouTube tutorial</td><td>Founder records</td><td>SEO Lead script</td><td>Founder</td></tr>
+      <tr><td>Newsletter sends</td><td>SEO Lead</td><td>—</td><td>Founder</td></tr>
+    </tbody>
+  </table>
+
+  <h2>My Role by Workstream</h2>
+  <table class="tbl">
+    <thead><tr><th>Workstream</th><th>What I Do</th><th>Tools</th><th>Your Involvement</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Technical SEO</strong></td><td>Audit specs, schema, GSC monitoring, crawl fixes</td><td>GSC, GA4, Ahrefs</td><td>Approve dev time; provide email access</td></tr>
+      <tr><td><strong>Content</strong></td><td>Pillar pages, blog, case studies, on-page copy</td><td>Ahrefs, AI drafting</td><td>Approve + provide facts</td></tr>
+      <tr><td><strong>Founder Brand</strong></td><td>Weekly LinkedIn briefs, authority positioning</td><td>LinkedIn</td><td>Post 2–3×/week</td></tr>
+      <tr><td><strong>Social (Facebook)</strong></td><td>Page setup, posts, group engagement strategy</td><td>Facebook</td><td>Approve posts</td></tr>
+      <tr><td><strong>Email / Newsletter</strong></td><td>Lead magnets, sequences, monthly newsletter</td><td>Brevo, GA4</td><td>Approve offers</td></tr>
+      <tr><td><strong>Backlinks</strong></td><td>Guest posts, directories, HARO, community links</td><td>Ahrefs, email</td><td>Appear in guest content</td></tr>
+      <tr><td><strong>Reporting</strong></td><td>Month 1 dashboard: leads, GSC, content, links</td><td>GA4, GSC, Looker</td><td>Review end of Month 1</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Designer & Writer Roles</h2>
+  <div class="grid-2">
+    <div class="card"><h3>Designer</h3><ul class="clean"><li>OG images (1200×630) for homepage + /cin7</li><li>Lead magnet PDF layout</li><li>Social share graphics (optional)</li></ul><p style="font-size:12px;color:var(--text3);margin-top:8px">~2h Week 1 for OG images</p></div>
+    <div class="card"><h3>Writer / AI</h3><ul class="clean"><li>AI assists first drafts of blog posts</li><li>SEO Lead edits all output for accuracy</li><li>Founder provides SME facts per piece</li></ul><p style="font-size:12px;color:var(--text3);margin-top:8px">No external writer needed Month 1</p></div>
+  </div>
+</div>
+
+<!-- ═══════════════ TOOLS ═══════════════ -->
+<div id="p-tools" class="panel">
+  <h1>Tools & Budget</h1>
+  <p class="page-sub">Only what this 30-day plan needs. No Screaming Frog — site is small enough to audit manually via GSC + Ahrefs.</p>
+
+  <h2>Week 1 — Free (Required)</h2>
+  <table class="tbl">
+    <thead><tr><th>Tool</th><th>Purpose</th><th>Who Sets Up</th><th>Founder Provides</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Google Analytics 4</strong></td>
+        <td>Track visitors, form submissions, Calendly clicks, traffic sources</td>
+        <td>SEO Lead + Developer</td>
+        <td>Official company email + password</td>
+      </tr>
+      <tr>
+        <td><strong>Google Search Console</strong></td>
+        <td>Monitor indexing, search queries, crawl errors, sitemap status</td>
+        <td>SEO Lead</td>
+        <td>Same company email (linked to GA4)</td>
+      </tr>
+      <tr>
+        <td><strong>Google Business Profile</strong></td>
+        <td>Brand search visibility, Maps, Knowledge Panel trust</td>
+        <td>Founder verifies</td>
+        <td>Business address + phone</td>
+      </tr>
+      <tr>
+        <td><strong>Calendly</strong> (existing)</td>
+        <td>Primary conversion — consultation bookings</td>
+        <td>Already live</td>
+        <td>Just needs GA4 event tracking added</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Week 2+ — Paid (Recommended)</h2>
+  <table class="tbl">
+    <thead><tr><th>Tool</th><th>Cost</th><th>Purpose</th><th>When</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Ahrefs Starter</strong></td>
+        <td>~₹2,500/mo</td>
+        <td>Track Cin7 keyword rankings, find competitor backlink gaps, monitor content performance</td>
+        <td>Week 2</td>
+      </tr>
+      <tr>
+        <td><strong>Brevo</strong> (email)</td>
+        <td><span class="tag t-green">Free</span></td>
+        <td>Lead magnet capture, welcome email sequence, newsletter sends</td>
+        <td>Week 3</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note note-ok">
+    <strong>Not needed in Month 1:</strong> Screaming Frog (site has &lt;15 pages — GSC covers crawl issues), Surfer SEO (optional Month 2), Profound/AI citation monitoring (too early).
+  </div>
+
+  <h2>Future Tools — Month 2+ (When to Add)</h2>
+  <table class="tbl">
+    <thead><tr><th>Tool</th><th>Cost</th><th>When</th><th>Why Wait</th></tr></thead>
+    <tbody>
+      <tr><td>Surfer SEO / Frase</td><td>~₹4k/mo</td><td>Month 2</td><td>Content scoring against competitors — valuable once 8+ pages live</td></tr>
+      <tr><td>Profound (AI citation monitoring)</td><td>Paid</td><td>Month 3+</td><td>Tracks ChatGPT/Perplexity citations — needs content volume first</td></tr>
+      <tr><td>Clearscope / MarketMuse</td><td>Enterprise</td><td>Month 6+</td><td>Topic modeling at scale — overkill at 15 pages</td></tr>
+      <tr><td>Respona (link outreach)</td><td>~$99/mo</td><td>Month 4+</td><td>Manual outreach sufficient until 5+ guest posts/month</td></tr>
+    </tbody>
+  </table>
+
+  <h2>12-Month KPI Targets (North Star)</h2>
+  <table class="tbl">
+    <thead><tr><th>Metric</th><th>12-Month Target</th><th>Month 1 Realistic</th></tr></thead>
+    <tbody>
+      <tr><td>Organic traffic</td><td>10,000+ visitors/mo</td><td>First impressions in GSC</td></tr>
+      <tr><td>Ranking keywords</td><td>300+</td><td>10–20 indexed pages</td></tr>
+      <tr><td>Qualified leads</td><td>50+/mo</td><td>5–15/mo (all channels)</td></tr>
+      <tr><td>Consultation calls</td><td>20+/mo</td><td>Track baseline in GA4</td></tr>
+      <tr><td>Backlinks</td><td>250+</td><td>5–10</td></tr>
+      <tr><td>Case studies published</td><td>20+</td><td>1 (Styailist)</td></tr>
+      <tr><td>LinkedIn followers</td><td>10,000+</td><td>Consistent posting rhythm</td></tr>
+      <tr><td>Newsletter subscribers</td><td>2,000+</td><td>First 50–100</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Total Cost</h2>
+  <div class="card" style="text-align:center;padding:24px">
+    <div style="font-size:36px;font-weight:700;color:var(--blue);letter-spacing:-.03em">~₹2,500<span style="font-size:16px;color:var(--text3)">/month</span></div>
+    <p style="margin:8px 0 0;color:var(--text2)">Ahrefs Starter only. Everything else is free.</p>
+  </div>
+</div>
+
+<!-- ═══════════════ TECH ═══════════════ -->
+<div id="p-tech" class="panel">
+  <h1>Technical Reference</h1>
+  <p class="page-sub">Launch blockers, full fix plan, schema, audit notes, migration. For developer and SEO execution — founder can skip this section.</p>
+
+  <div class="note note-warn">
+    <strong>Pre-launch gate:</strong> Do not submit sitemap to Google Search Console until all Critical items below are fixed. Launching with the canonical bug suppresses /cin7 for weeks.
+  </div>
+
+  <h2>Launch Blockers (12 Items)</h2>
+  <table class="tbl">
+    <thead><tr><th>#</th><th>Issue</th><th>File</th><th>Consequence</th><th>Time</th></tr></thead>
+    <tbody>
+      <tr><td>L1</td><td>Root canonical hardcoded — all pages = homepage duplicate</td><td><code>layout.tsx:14</code></td><td>Google suppresses /cin7 as duplicate</td><td>30 min</td></tr>
+      <tr><td>L2</td><td>No robots.txt</td><td><code>public/</code></td><td>No crawl control; staging exposure</td><td>10 min</td></tr>
+      <tr><td>L3</td><td>No sitemap.xml</td><td><code>src/app/</code></td><td>Slow discovery; zero indexation signal</td><td>30 min</td></tr>
+      <tr><td>L4</td><td>No GA4 / GTM anywhere</td><td>Entire codebase</td><td>Cannot measure anything post-launch</td><td>2 hr</td></tr>
+      <tr><td>L5</td><td>ngrok dev header in production</td><td><code>next.config.mjs</code></td><td>Exposes staging infrastructure</td><td>10 min</td></tr>
+      <tr><td>L6</td><td>Duplicate FAQPage schema</td><td><code>layout.tsx</code> + <code>Cin7FAQ.tsx</code></td><td>Google ignores both schemas</td><td>45 min</td></tr>
+      <tr><td>L7</td><td>No OG images on any page</td><td>All metadata</td><td>Blank social share cards</td><td>2 hr design</td></tr>
+      <tr><td>L8</td><td>/privacy, /terms — no metadata</td><td>page.tsx files</td><td>Google generates own titles</td><td>20 min</td></tr>
+      <tr><td>L9</td><td>CEO.png 795KB, plain img tag</td><td><code>Founder.tsx</code></td><td>LCP &gt;4s on mobile</td><td>1 hr</td></tr>
+      <tr><td>L10</td><td>/cin7 no canonical override</td><td><code>cin7/layout.tsx</code></td><td>/cin7 won't rank independently</td><td>15 min</td></tr>
+      <tr><td>L11</td><td>CTA is button not link</td><td><code>ConsultationHero.tsx</code></td><td>Uncrawlable Calendly link</td><td>10 min</td></tr>
+      <tr><td>L12</td><td>href="#" dead links on /cin7</td><td><code>Apps.tsx</code>, <code>Cin7Partner.tsx</code></td><td>Dead links; no internal equity</td><td>20 min</td></tr>
+    </tbody>
+  </table>
+  <div class="note note-info"><strong>Total fix time:</strong> ~9h developer + 2h design (OG images). Highest-ROI week of the entire project.</div>
+
+  <h2>Full Technical Fix Plan (By Phase)</h2>
+  <div class="phase open" onclick="this.classList.toggle('open')">
+    <div class="phase-h"><div><strong>Phase 1 — Metadata & Canonical</strong> <span style="color:var(--text3);font-size:12px">· Developer</span></div><span class="chev">›</span></div>
+    <div class="phase-b">
+      <div class="task"><div><strong>Remove global canonical from layout.tsx</strong>Add metadataBase. Add page-specific canonicals per route.</div></div>
+      <div class="task"><div><strong>Fix /cin7 title</strong>"Cin7 Implementation Partner | SymConverge" — money keyword in title.</div></div>
+      <div class="task"><div><strong>Add metadata to /privacy and /terms</strong>Include robots: noindex on legal pages.</div></div>
+      <div class="task"><div><strong>Fix title trailing space</strong>"SymConverge " → "SymConverge"</div></div>
+      <div class="task"><div><strong>Create OG images</strong>1200×630 for homepage and /cin7. Designer.</div></div>
+    </div>
+  </div>
+  <div class="phase" onclick="this.classList.toggle('open')">
+    <div class="phase-h"><div><strong>Phase 2 — Crawlability & GSC</strong> <span style="color:var(--text3);font-size:12px">· </span></div><span class="chev">›</span></div>
+    <div class="phase-b">
+      <div class="task"><div><strong>Create public/robots.txt</strong>Allow all, disallow /api, point to sitemap.</div></div>
+      <div class="task"><div><strong>Create src/app/sitemap.ts</strong>Next.js sitemap for /, /cin7, legal pages.</div></div>
+      <div class="task"><div><strong>Set up Google Search Console</strong>Verify domain, connect GA4, submit sitemap on launch.</div></div>
+      <div class="task"><div><strong>Remove ngrok config</strong>Delete allowedDevOrigins and headers() from next.config.mjs.</div></div>
+    </div>
+  </div>
+  <div class="phase" onclick="this.classList.toggle('open')">
+    <div class="phase-h"><div><strong>Phase 3 — Analytics</strong> <span style="color:var(--text3);font-size:12px">· ~2h</span></div><span class="chev">›</span></div>
+    <div class="phase-b">
+      <div class="task"><div><strong>Install GA4</strong>via @next/third-parties/google in root layout.</div></div>
+      <div class="task"><div><strong>Form submission events</strong>gtag form_submit on Contact.tsx + ConsultationCTA.tsx success.</div></div>
+      <div class="task"><div><strong>Calendly click tracking</strong>Wrap all 6+ Calendly links with click events.</div></div>
+      <div class="task"><div><strong>Fix toast typo</strong>"submited" → "Your message has been sent successfully!"</div></div>
+    </div>
+  </div>
+  <div class="phase" onclick="this.classList.toggle('open')">
+    <div class="phase-h"><div><strong>Phase 4 — Performance</strong> <span style="color:var(--text3);font-size:12px">· ~2h</span></div><span class="chev">›</span></div>
+    <div class="phase-b">
+      <div class="task"><div><strong>CEO.png → next/image + WebP</strong>795KB → target &lt;50KB. Fixes LCP.</div></div>
+      <div class="task"><div><strong>Google Fonts → next/font</strong>Remove render-blocking font links from layout.</div></div>
+      <div class="task"><div><strong>Migrate remaining img tags</strong>sc.svg in Navbar, Footer, WhyUs — add width/height.</div></div>
+    </div>
+  </div>
+  <div class="phase" onclick="this.classList.toggle('open')">
+    <div class="phase-h"><div><strong>Phase 5 — Schema</strong> <span style="color:var(--text3);font-size:12px">· ~2h</span></div><span class="chev">›</span></div>
+    <div class="phase-b">
+      <div class="task"><div><strong>Move FAQPage schema</strong>Out of root layout. One per page only.</div></div>
+      <div class="task"><div><strong>Organization schema</strong>Name, URL, logo, phone, LinkedIn sameAs.</div></div>
+      <div class="task"><div><strong>Service schema</strong>4 homepage services with descriptions.</div></div>
+      <div class="task"><div><strong>LocalBusiness schema</strong>Ahmedabad, Gujarat address + phone.</div></div>
+      <div class="task"><div><strong>BreadcrumbList</strong>On /cin7 and service pages.</div></div>
+    </div>
+  </div>
+  <div class="phase" onclick="this.classList.toggle('open')">
+    <div class="phase-h"><div><strong>Phase 6 — Internal Linking & UX</strong> <span style="color:var(--text3);font-size:12px">· ~1h</span></div><span class="chev">›</span></div>
+    <div class="phase-b">
+      <div class="task"><div><strong>Fix href="#" on /cin7</strong>Apps.tsx, Cin7Partner.tsx → real anchors or URLs.</div></div>
+      <div class="task"><div><strong>ConsultationHero button → anchor</strong>Crawlable Calendly link.</div></div>
+      <div class="task"><div><strong>Homepage → /cin7 internal link</strong>Services or Products section.</div></div>
+      <div class="task"><div><strong>Expand footer</strong>Add /cin7, /privacy, /terms with correct hrefs.</div></div>
+      <div class="task"><div><strong>Align stats</strong>50+ vs 100+ projects — one number everywhere.</div></div>
+      <div class="task"><div><strong>Fix Privacy page content</strong>Remove Terms language mixed into Privacy Policy.</div></div>
+    </div>
+  </div>
+
+  <h2>URL Inventory (Audit Section D)</h2>
+  <table class="tbl">
+    <thead><tr><th>URL</th><th>Status</th><th>Action</th></tr></thead>
+    <tbody>
+      <tr><td><code>/</code></td><td>Live</td><td>Fix canonical, OG, title</td></tr>
+      <tr><td><code>/cin7</code></td><td>Live</td><td>Fix canonical, expand content</td></tr>
+      <tr><td><code>/privacy</code></td><td>Live</td><td>Add metadata, noindex</td></tr>
+      <tr><td><code>/terms</code></td><td>Live</td><td>Add metadata, noindex</td></tr>
+      <tr><td><code>/services/*</code></td><td>Missing</td><td>Build Week 3</td></tr>
+      <tr><td><code>/blog</code></td><td>Missing</td><td>Build Week 2</td></tr>
+      <tr><td><code>/case-studies</code></td><td>Missing</td><td>Build Week 3–4</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Audit Contradictions Resolved</h2>
+  <table class="tbl">
+    <thead><tr><th>Source Said</th><th>Code Audit Found</th><th>Verdict</th></tr></thead>
+    <tbody>
+      <tr><td>"All meta descriptions empty"</td><td>Homepage + /cin7 have descriptions</td><td>Partially wrong — fix privacy/terms + improve titles</td></tr>
+      <tr><td>"8 blogs/month"</td><td>2 pages, no blog infra</td><td>4/month Month 1 realistic; 8/month is 12-mo target</td></tr>
+      <tr><td>"50+ geo/industry pages"</td><td>4 routes total</td><td>Phase 2 after Month 1 proves traction</td></tr>
+      <tr><td>"10k visitors in 12 months"</td><td>Zero content depth today</td><td>Valid north star, not Month 1 expectation</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Repeated Findings (All Sources Agree)</h2>
+  <div class="card"><ul class="clean">
+    <li>Cin7-first positioning beats generic dev agency positioning</li>
+    <li>Launch blockers must be fixed before go-live</li>
+    <li>/cin7 is the highest-revenue page — needs depth</li>
+    <li>Case studies and founder authority critical for B2B trust</li>
+    <li>LinkedIn + communities beat organic search for first 60 days</li>
+    <li>GA4 + GSC non-negotiable before launch</li>
+    <li>DataBook cross-sell via reporting content cluster</li>
+  </ul></div>
+
+  <h2>Migration & Redirect Notes</h2>
+  <div class="card">
+    <p style="margin:0 0 10px">If brand-new site: no 301 redirects needed. Confirm hosting enforces:</p>
+    <ul class="clean">
+      <li>HTTP → HTTPS</li>
+      <li>non-www → www.symconverge.com</li>
+      <li>Block ngrok/staging URLs from indexing</li>
+    </ul>
+    <p style="margin:10px 0 0;font-size:13px;color:var(--text3)">If replacing an old site: crawl old URLs before launch and build redirect map.</p>
+  </div>
+
+  <h2>Schema Rollout</h2>
+  <table class="tbl">
+    <thead><tr><th>Type</th><th>Where</th><th>Week</th></tr></thead>
+    <tbody>
+      <tr><td>Organization</td><td>Root layout</td><td>1</td></tr>
+      <tr><td>FAQPage (fixed, one per page)</td><td>/ and /cin7 only</td><td>1</td></tr>
+      <tr><td>Service</td><td>Homepage + service pages</td><td>2–3</td></tr>
+      <tr><td>LocalBusiness</td><td>Root layout</td><td>2</td></tr>
+      <tr><td>Article</td><td>Blog posts</td><td>2+</td></tr>
+      <tr><td>BreadcrumbList</td><td>/cin7, /services/*</td><td>2</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Month 1 Report Template (What You Receive)</h2>
+  <div class="card">
+    <ul class="clean">
+      <li><strong>Leads:</strong> Form submissions + Calendly bookings (GA4)</li>
+      <li><strong>Search visibility:</strong> Pages indexed, top queries, impressions (GSC)</li>
+      <li><strong>Content published:</strong> Blog posts, service pages, case study</li>
+      <li><strong>Social:</strong> LinkedIn + Facebook post count and engagement</li>
+      <li><strong>Email:</strong> Subscribers gained, open rates</li>
+      <li><strong>Backlinks:</strong> New links acquired (target vs actual)</li>
+      <li><strong>Issues:</strong> Any crawl errors or ranking drops</li>
+      <li><strong>Month 2 preview:</strong> What comes next</li>
+    </ul>
+  </div>
+</div>
+
+</div>
+</div>
+
+<script>
+function go(id){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.sb-link').forEach(l=>l.classList.remove('active'));
+  document.getElementById('p-'+id).classList.add('active');
+  event.currentTarget.classList.add('active');
+}
+</script>
+</body>
+</html>

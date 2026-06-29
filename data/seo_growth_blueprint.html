@@ -1,0 +1,2896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Databook — SEO Growth Plan & Execution Blueprint | 30-Day Operating Manual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --plum: #5b21b6;
+      --plum-light: #7c3aed;
+      --plum-pale: #f5f3ff;
+      --plum-border: #ddd6fe;
+      --plum-glow: rgba(124,58,237,.12);
+      --gold: #b45309;
+      --gold-light: #d97706;
+      --gold-pale: #fffbeb;
+      --red: #dc2626;
+      --red-pale: #fef2f2;
+      --orange: #ea580c;
+      --orange-pale: #fff7ed;
+      --yellow: #ca8a04;
+      --yellow-pale: #fefce8;
+      --green: #15803d;
+      --green-pale: #f0fdf4;
+      --blue: #1d4ed8;
+      --blue-pale: #eff6ff;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-400: #94a3b8;
+      --gray-500: #64748b;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --gray-800: #1e293b;
+      --gray-900: #0f172a;
+      --shadow: 0 1px 2px rgba(15,23,42,.04);
+      --shadow-md: 0 4px 12px rgba(15,23,42,.06);
+      --shadow-lg: 0 10px 24px rgba(15,23,42,.08);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --radius-lg: 16px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--gray-700);
+      line-height: 1.65;
+      font-size: 14px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── STICKY NAV ────────────────────────────────────── */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-200);
+      box-shadow: var(--shadow);
+    }
+    .top-nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 52px;
+      overflow-x: auto;
+      scrollbar-width: thin;
+      scrollbar-color: var(--gray-300) transparent;
+    }
+    .top-nav-inner::-webkit-scrollbar { height: 4px; }
+    .top-nav-inner::-webkit-scrollbar-thumb { background: var(--gray-300); border-radius: 4px; }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--gray-900);
+      white-space: nowrap;
+      margin-right: 12px;
+      padding-right: 16px;
+      border-right: 1px solid var(--gray-200);
+      text-decoration: none;
+    }
+    .nav-dot {
+      width: 10px; height: 10px;
+      background: linear-gradient(135deg, var(--plum-light), #a78bfa);
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 7px 11px;
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--gray-600);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background .15s, color .15s;
+      flex-shrink: 0;
+      border: 1px solid transparent;
+    }
+    .nav-link:hover {
+      background: var(--gray-100);
+      color: var(--gray-900);
+      border-color: var(--gray-200);
+    }
+    .nav-link.active {
+      background: var(--plum-pale);
+      color: var(--plum);
+      border-color: var(--plum-border);
+      font-weight: 600;
+    }
+
+    /* ── LAYOUT ─────────────────────────────────────────── */
+    .page-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 20px 72px;
+    }
+
+    /* ── HERO ───────────────────────────────────────────── */
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 40px 40px 36px;
+      color: var(--gray-800);
+      margin-bottom: 28px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #7c3aed, #a78bfa, #c4b5fd, #fbbf24);
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--plum-pale) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--plum-pale);
+      border: 1px solid var(--plum-border);
+      border-radius: 20px;
+      padding: 5px 12px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      color: var(--plum);
+    }
+    .hero h1 {
+      font-family: 'Fraunces', serif;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      color: var(--gray-900);
+      max-width: 720px;
+    }
+    .hero-sub {
+      font-size: 15px;
+      color: var(--gray-600);
+      max-width: 640px;
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      padding-top: 24px;
+      border-top: 1px solid var(--gray-200);
+    }
+    .hero-meta-item {
+      font-size: 12px;
+      color: var(--gray-500);
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+    }
+    .hero-meta-item strong {
+      display: block;
+      font-size: 14px;
+      color: var(--gray-900);
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    /* ── KPI CARDS ──────────────────────────────────────── */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .kpi-card {
+      background: linear-gradient(145deg, #ffffff 0%, #fafbff 100%);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      box-shadow: var(--shadow);
+      transition: box-shadow .15s, border-color .15s, transform .15s;
+    }
+    .kpi-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--gray-300);
+      transform: translateY(-1px);
+    }
+    .kpi-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: var(--gray-500);
+      margin-bottom: 8px;
+    }
+    .kpi-value {
+      font-family: 'Fraunces', serif;
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--gray-900);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .kpi-note { font-size: 12px; color: var(--gray-500); line-height: 1.45; }
+    .kpi-card.danger { border-left: 3px solid var(--red); }
+    .kpi-card.danger .kpi-value { color: var(--red); }
+    .kpi-card.warning { border-left: 3px solid var(--orange); }
+    .kpi-card.warning .kpi-value { color: var(--orange); }
+    .kpi-card.success { border-left: 3px solid var(--green); }
+    .kpi-card.success .kpi-value { color: var(--green); }
+    .kpi-card.primary { border-left: 3px solid var(--plum-light); }
+    .kpi-card.primary .kpi-value { color: var(--plum); }
+
+    /* ── SECTION HEADERS ────────────────────────────────── */
+    .section {
+      margin-bottom: 20px;
+      background: var(--surface);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border-left: 3px solid var(--plum-border);
+    }
+    .section-header {
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--gray-200);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      cursor: pointer;
+      user-select: none;
+      background: var(--gray-50);
+      transition: background .15s;
+    }
+    .section-header:hover { background: var(--gray-100); }
+    .section-icon {
+      width: 40px; height: 40px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+      background: var(--surface) !important;
+      border: 1px solid var(--gray-200);
+    }
+    .section-title { flex: 1; min-width: 0; }
+    .section-title h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--gray-900);
+      line-height: 1.3;
+    }
+    .section-title p {
+      font-size: 13px;
+      color: var(--gray-500);
+      margin-top: 3px;
+      line-height: 1.4;
+    }
+    .section-toggle {
+      font-size: 14px;
+      color: var(--gray-400);
+      transition: transform .2s, color .15s;
+      flex-shrink: 0;
+      width: 28px; height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--surface);
+      border: 1px solid var(--gray-200);
+      border-radius: 6px;
+    }
+    .section-header:hover .section-toggle { color: var(--plum); }
+    .section-body {
+      padding: 28px 24px 32px;
+      background: var(--surface);
+    }
+    .section-body.collapsed { display: none; }
+
+    /* ── PHASE BADGE ────────────────────────────────────── */
+    .phase-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      background: var(--plum-pale);
+      color: var(--plum);
+      border: 1px solid var(--plum-border);
+    }
+
+    /* ── SEVERITY BADGES ────────────────────────────────── */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      padding: 3px 9px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      white-space: nowrap;
+      border: 1px solid transparent;
+    }
+    .badge-critical { background: var(--red-pale); color: var(--red); border-color: #fecaca; }
+    .badge-high { background: var(--orange-pale); color: var(--orange); border-color: #fed7aa; }
+    .badge-medium { background: var(--yellow-pale); color: var(--yellow); border-color: #fde68a; }
+    .badge-low { background: var(--green-pale); color: var(--green); border-color: #bbf7d0; }
+    .badge-info { background: var(--blue-pale); color: var(--blue); border-color: #bfdbfe; }
+    .badge-plum { background: var(--plum-pale); color: var(--plum); border-color: var(--plum-border); }
+
+    /* ── TABLES ─────────────────────────────────────────── */
+    .tbl-wrap {
+      overflow-x: auto;
+      border-radius: var(--radius);
+      border: 1px solid var(--gray-200);
+      background: var(--surface);
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    thead { background: linear-gradient(180deg, #faf5ff 0%, #f3e8ff 100%); }
+    thead th {
+      padding: 11px 16px;
+      text-align: left;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--plum);
+      white-space: nowrap;
+      border-bottom: 2px solid var(--plum-border);
+    }
+    tbody tr { border-top: 1px solid var(--gray-100); transition: background .1s; }
+    tbody tr:hover { background: var(--plum-pale); }
+    tbody td {
+      padding: 12px 16px;
+      vertical-align: top;
+      color: var(--gray-700);
+      line-height: 1.5;
+    }
+    tbody tr:nth-child(even) { background: #fafbfc; }
+    tbody tr:nth-child(even):hover { background: var(--plum-pale); }
+
+    /* ── FINDING CARDS ──────────────────────────────────── */
+    .finding-card {
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      margin-bottom: 12px;
+      overflow: hidden;
+      background: var(--surface);
+      transition: border-color .15s;
+    }
+    .finding-card:hover { border-color: var(--gray-300); }
+    .finding-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      background: var(--gray-50);
+      border-bottom: 1px solid var(--gray-200);
+      flex-wrap: wrap;
+    }
+    .finding-id {
+      font-family: ui-monospace, monospace;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--plum);
+      background: var(--plum-pale);
+      border: 1px solid var(--plum-border);
+      border-radius: 6px;
+      padding: 3px 8px;
+    }
+    .finding-title { font-weight: 600; font-size: 14px; flex: 1; color: var(--gray-800); min-width: 200px; }
+    .finding-body { padding: 18px; }
+    .finding-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      margin-top: 4px;
+    }
+    .finding-meta {
+      font-size: 13px;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      line-height: 1.5;
+    }
+    .finding-meta strong {
+      display: block;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: var(--gray-500);
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    /* ── KEYWORD TABLE ──────────────────────────────────── */
+    .kw-cluster { margin-bottom: 28px; }
+    .kw-cluster-title {
+      font-family: 'Fraunces', serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--plum-pale);
+    }
+
+    /* ── FUNNEL DIAGRAM ─────────────────────────────────── */
+    .funnel {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      max-width: 100%;
+    }
+    .funnel-stage {
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      border: 1px solid transparent;
+    }
+    .funnel-stage-icon {
+      width: 38px; height: 38px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+      background: rgba(255,255,255,.7);
+      border: 1px solid rgba(0,0,0,.06);
+    }
+    .funnel-stage-content { flex: 1; }
+    .funnel-stage-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      color: var(--gray-500);
+    }
+    .funnel-stage-title { font-weight: 600; font-size: 14px; margin-bottom: 4px; color: var(--gray-800); }
+    .funnel-stage-desc { font-size: 13px; color: var(--gray-600); line-height: 1.5; }
+    .funnel-awareness { background: #f0f7ff; border-color: #dbeafe; }
+    .funnel-interest { background: #f8f5ff; border-color: #ede9fe; }
+    .funnel-consideration { background: #fdf4ff; border-color: #f3e8ff; }
+    .funnel-decision { background: #fffbeb; border-color: #fde68a; }
+    .funnel-conversion { background: #f0fdf4; border-color: #bbf7d0; }
+    .funnel-retention { background: #f0f9ff; border-color: #bae6fd; }
+
+    /* ── TIMELINE ───────────────────────────────────────── */
+    .timeline { position: relative; padding-left: 32px; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 11px; top: 8px; bottom: 8px;
+      width: 2px;
+      background: var(--gray-200);
+    }
+    .timeline-week { margin-bottom: 32px; position: relative; }
+    .timeline-week::before {
+      content: '';
+      position: absolute;
+      left: -32px; top: 8px;
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      background: var(--plum-light);
+      border: 3px solid var(--surface);
+      box-shadow: 0 0 0 2px var(--plum-border);
+    }
+    .timeline-week-label {
+      font-family: 'Fraunces', serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 8px;
+    }
+    .task-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .task-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      font-size: 13px;
+      line-height: 1.5;
+      transition: border-color .15s;
+    }
+    .task-item:hover { border-color: var(--gray-300); background: var(--surface); }
+    .task-item .priority {
+      flex-shrink: 0;
+      width: 26px; height: 22px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      font-weight: 800;
+      margin-top: 1px;
+    }
+    .p0 { background: var(--red-pale); color: var(--red); border: 1px solid #fecaca; }
+    .p1 { background: var(--orange-pale); color: var(--orange); border: 1px solid #fed7aa; }
+    .p2 { background: var(--yellow-pale); color: var(--yellow); border: 1px solid #fde68a; }
+    .p3 { background: var(--green-pale); color: var(--green); border: 1px solid #bbf7d0; }
+
+    /* ── RESPONSIBILITY MATRIX ──────────────────────────── */
+    .raci td { text-align: center; }
+    .raci td:first-child { text-align: left; font-weight: 500; }
+    .raci-r { font-weight: 700; color: var(--plum); }
+    .raci-a { font-weight: 700; color: var(--orange); }
+    .raci-c { color: var(--blue); font-weight: 600; }
+    .raci-i { color: var(--gray-400); }
+
+    /* ── CHANNEL CARDS ──────────────────────────────────── */
+    .channel-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+    .channel-card {
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 20px;
+      background: var(--surface);
+      transition: box-shadow .15s, border-color .15s;
+    }
+    .channel-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--gray-300);
+    }
+    .channel-card-icon { font-size: 26px; margin-bottom: 10px; }
+    .channel-card-title { font-weight: 700; font-size: 14px; margin-bottom: 4px; color: var(--gray-900); }
+    .channel-card-freq {
+      font-size: 11px;
+      color: var(--plum);
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: inline-block;
+      background: var(--plum-pale);
+      padding: 2px 8px;
+      border-radius: 20px;
+    }
+    .channel-card-desc { font-size: 13px; color: var(--gray-600); line-height: 1.55; }
+
+    /* ── DELIVERABLES ───────────────────────────────────── */
+    .deliverable-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+    }
+    .deliverable-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: var(--surface);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 16px;
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .deliverable-item:hover {
+      border-color: var(--plum-border);
+      box-shadow: var(--shadow);
+    }
+    .deliverable-icon { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
+    .deliverable-name { font-weight: 600; font-size: 13px; margin-bottom: 4px; color: var(--gray-900); }
+    .deliverable-desc { font-size: 12px; color: var(--gray-600); line-height: 1.5; }
+
+    /* ── TOOL REQUIREMENTS ──────────────────────────────── */
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .tool-card {
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 16px;
+      background: var(--surface);
+      transition: border-color .15s;
+    }
+    .tool-card:hover { border-color: var(--gray-300); }
+    .tool-name { font-weight: 700; font-size: 13px; margin-bottom: 6px; color: var(--gray-900); }
+    .tool-priority {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+    .tool-desc { font-size: 12px; color: var(--gray-600); line-height: 1.55; }
+
+    /* ── SCORECARD ──────────────────────────────────────── */
+    .score-bar { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+    .score-label { width: 180px; font-size: 13px; font-weight: 500; color: var(--gray-700); flex-shrink: 0; }
+    .score-track {
+      flex: 1;
+      height: 10px;
+      background: var(--gray-100);
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+    }
+    .score-fill { height: 100%; border-radius: 5px; }
+    .score-num { width: 44px; font-size: 13px; font-weight: 700; text-align: right; flex-shrink: 0; }
+
+    /* ── INFO BOXES ─────────────────────────────────────── */
+    .info-box {
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      margin-bottom: 16px;
+      font-size: 13px;
+      line-height: 1.6;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .info-box-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+    .info-box.note { background: var(--blue-pale); border: 1px solid #bfdbfe; color: var(--gray-700); }
+    .info-box.warning { background: var(--yellow-pale); border: 1px solid #fde68a; color: var(--gray-700); }
+    .info-box.critical { background: var(--red-pale); border: 1px solid #fecaca; color: var(--gray-700); }
+    .info-box.success { background: var(--green-pale); border: 1px solid #bbf7d0; color: var(--gray-700); }
+
+    /* ── OPPORTUNITY CARDS ──────────────────────────────── */
+    .opp-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px;
+    }
+    .opp-card {
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      background: var(--surface);
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .opp-card:hover {
+      border-color: var(--gray-300);
+      box-shadow: var(--shadow);
+    }
+    .opp-card-title { font-weight: 700; font-size: 14px; margin-bottom: 8px; color: var(--gray-900); }
+    .opp-card-desc { font-size: 13px; color: var(--gray-600); line-height: 1.55; }
+
+    /* ── TWO-COL LAYOUT ─────────────────────────────────── */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    @media (max-width: 768px) {
+      .two-col { grid-template-columns: 1fr; }
+      .hero { padding: 28px 22px; }
+      .hero h1 { font-size: 26px; }
+      .section-body { padding: 20px 16px 24px; }
+      .finding-grid { grid-template-columns: 1fr; }
+      .score-label { width: 120px; font-size: 12px; }
+    }
+
+    /* ── MISC ───────────────────────────────────────────── */
+    h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    h4 { font-size: 13px; font-weight: 700; color: var(--gray-800); margin-bottom: 10px; }
+    p { color: var(--gray-700); line-height: 1.65; }
+    ul { padding-left: 20px; }
+    ul li { margin-bottom: 6px; color: var(--gray-700); font-size: 13px; line-height: 1.55; }
+    code {
+      font-family: ui-monospace, monospace;
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+      color: var(--plum);
+    }
+    .mb-4 { margin-bottom: 16px; }
+    .mb-6 { margin-bottom: 24px; }
+    .mt-4 { margin-top: 16px; }
+    .text-muted { color: var(--gray-500); font-size: 12px; line-height: 1.5; }
+    hr { border: none; border-top: 1px solid var(--gray-200); margin: 24px 0; }
+    .tag {
+      display: inline-block;
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      border-radius: 6px;
+      padding: 2px 8px;
+      font-size: 11px;
+      color: var(--gray-600);
+      margin: 1px;
+    }
+
+    /* Progress indicator */
+    .progress-ring {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      width: 44px; height: 44px;
+      background: var(--surface);
+      border: 1px solid var(--gray-200);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--plum);
+      font-size: 11px;
+      font-weight: 700;
+      box-shadow: var(--shadow-lg);
+      cursor: pointer;
+      transition: background .15s, color .15s, transform .15s;
+    }
+    .progress-ring:hover {
+      background: var(--plum-pale);
+      border-color: var(--plum-border);
+      transform: translateY(-2px);
+    }
+
+    .section-divider {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--gray-500);
+      margin: 32px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .section-divider::before, .section-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--gray-200);
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 500;
+      background: var(--gray-100);
+      color: var(--gray-600);
+      border: 1px solid var(--gray-200);
+    }
+    .pill.plum { background: var(--plum-pale); color: var(--plum); border-color: var(--plum-border); }
+    .pill.gold { background: var(--gold-pale); color: var(--gold); border-color: #fde68a; }
+    .pill.green { background: var(--green-pale); color: var(--green); border-color: #bbf7d0; }
+    .pill.red { background: var(--red-pale); color: var(--red); border-color: #fecaca; }
+
+    /* ── APP SHELL & SIDEBAR TABS ───────────────────────── */
+    .app-layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 260px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      background: linear-gradient(180deg, #faf8ff 0%, #ffffff 40%, #f8fafc 100%);
+      border-right: 1px solid var(--gray-200);
+      display: flex;
+      flex-direction: column;
+      padding: 20px 14px;
+      box-shadow: 4px 0 24px rgba(91,33,182,.04);
+      z-index: 50;
+      overflow-y: auto;
+    }
+
+    .sidebar-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px 20px;
+      border-bottom: 1px solid var(--gray-200);
+      margin-bottom: 16px;
+    }
+
+    .sidebar-brand-icon {
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--plum-light), #a78bfa);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      box-shadow: 0 4px 12px rgba(124,58,237,.25);
+    }
+
+    .sidebar-brand-text {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--gray-900);
+      line-height: 1.2;
+    }
+
+    .sidebar-brand-sub {
+      font-size: 10px;
+      color: var(--gray-500);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-top: 2px;
+    }
+
+    .sidebar-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--gray-400);
+      padding: 0 10px;
+      margin-bottom: 8px;
+    }
+
+    .sidebar-tabs {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      flex: 1;
+    }
+
+    .tab-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      padding: 11px 12px;
+      border: 1px solid transparent;
+      border-radius: var(--radius-sm);
+      background: transparent;
+      color: var(--gray-600);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 500;
+      text-align: left;
+      cursor: pointer;
+      transition: all .18s ease;
+    }
+
+    .tab-btn:hover {
+      background: var(--gray-100);
+      color: var(--gray-900);
+      border-color: var(--gray-200);
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(135deg, var(--plum-pale) 0%, #ede9fe 100%);
+      color: var(--plum);
+      border-color: var(--plum-border);
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(124,58,237,.1);
+    }
+
+    .tab-btn-icon {
+      width: 28px; height: 28px;
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      background: var(--surface);
+      border: 1px solid var(--gray-200);
+      flex-shrink: 0;
+    }
+
+    .tab-btn.active .tab-btn-icon {
+      background: var(--plum-light);
+      border-color: var(--plum-light);
+      box-shadow: 0 2px 6px rgba(124,58,237,.3);
+    }
+
+    .sidebar-footer {
+      margin-top: auto;
+      padding: 14px 10px 4px;
+      border-top: 1px solid var(--gray-200);
+      font-size: 11px;
+      color: var(--gray-500);
+      line-height: 1.5;
+    }
+
+    .main-content {
+      flex: 1;
+      min-width: 0;
+      padding: 24px 28px 48px;
+      max-height: 100vh;
+      overflow-y: auto;
+      background: var(--bg);
+    }
+
+    .tab-panel { display: none; animation: tabFadeIn .25s ease; }
+    .tab-panel.active { display: block; }
+
+    @keyframes tabFadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .tab-panel-header {
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--plum-pale);
+    }
+
+    .tab-panel-header h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 4px;
+    }
+
+    .tab-panel-header p {
+      font-size: 14px;
+      color: var(--gray-500);
+    }
+
+    /* Sections always expanded inside tabs */
+    .section-toggle { display: none; }
+    .section-header { cursor: default; }
+    .section-header:hover { background: var(--gray-50); }
+    .section-body.collapsed { display: block !important; }
+
+    .mobile-tab-bar {
+      display: none;
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      background: rgba(255,255,255,.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 10px 12px;
+      overflow-x: auto;
+      gap: 6px;
+      box-shadow: var(--shadow-md);
+      width: 100%;
+    }
+
+    .mobile-tab-bar .tab-btn {
+      width: auto;
+      white-space: nowrap;
+      padding: 8px 14px;
+      font-size: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .app-layout { flex-direction: column; }
+      .sidebar { display: none; }
+      .mobile-tab-bar {
+        display: flex;
+        order: -1;
+      }
+      .main-content { max-height: none; padding: 16px; flex: 1; }
+    }
+
+    /* hide old top nav */
+    .top-nav { display: none !important; }
+  </style>
+</head>
+<body>
+
+<div class="app-layout">
+
+  <!-- Sidebar navigation -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="sidebar-brand-icon">📊</div>
+      <div>
+        <div class="sidebar-brand-text">Databook SEO</div>
+        <div class="sidebar-brand-sub">30-Day Blueprint</div>
+      </div>
+    </div>
+    <div class="sidebar-label">Navigate</div>
+    <nav class="sidebar-tabs" id="sidebarTabs">
+      <button type="button" class="tab-btn active" data-tab="overview"><span class="tab-btn-icon">📊</span> Overview</button>
+      <button type="button" class="tab-btn" data-tab="context"><span class="tab-btn-icon">🏢</span> Business Context</button>
+      <button type="button" class="tab-btn" data-tab="audit"><span class="tab-btn-icon">🔍</span> Audit & Findings</button>
+      <button type="button" class="tab-btn" data-tab="strategy"><span class="tab-btn-icon">🎯</span> Strategy</button>
+      <button type="button" class="tab-btn" data-tab="execution"><span class="tab-btn-icon">📅</span> Execution Plan</button>
+      <button type="button" class="tab-btn" data-tab="owner"><span class="tab-btn-icon">👔</span> Owner Report</button>
+    </nav>
+    <div class="sidebar-footer">
+      SEO Specialist · June 25, 2026<br>Version 1.0
+    </div>
+  </aside>
+
+  <!-- Mobile tab bar -->
+  <div class="mobile-tab-bar" id="mobileTabs">
+    <button type="button" class="tab-btn active" data-tab="overview">Overview</button>
+    <button type="button" class="tab-btn" data-tab="context">Business</button>
+    <button type="button" class="tab-btn" data-tab="audit">Audit</button>
+    <button type="button" class="tab-btn" data-tab="strategy">Strategy</button>
+    <button type="button" class="tab-btn" data-tab="execution">Execution</button>
+    <button type="button" class="tab-btn" data-tab="owner">Owner</button>
+  </div>
+
+  <main class="main-content" id="top">
+
+  <!-- ══ TAB: OVERVIEW ══════════════════════════════════════════════════ -->
+  <div class="tab-panel active" id="tab-overview">
+
+<div class="hero">
+  <div class="hero-badge">🚀 SEO Operating Blueprint — 30-Day Execution Plan</div>
+  <h1>Databook — SEO Growth Plan<br>& Execution Blueprint</h1>
+  <p class="hero-sub">A complete, evidence-based organic growth strategy for Databook's Cin7Core reporting SaaS. Every recommendation is traceable to codebase audit findings, keyword opportunities, and competitive research.</p>
+  <div class="hero-meta">
+    <div class="hero-meta-item"><strong>Databook.io</strong>Product: Cin7Core Reporting SaaS</div>
+    <div class="hero-meta-item"><strong>June 25, 2026</strong>Audit Date</div>
+    <div class="hero-meta-item"><strong>30 Days</strong>Execution Horizon</div>
+    <div class="hero-meta-item"><strong>2.5 / 10</strong>Current SEO Readiness Score</div>
+    <div class="hero-meta-item"><strong>$0 → Organic Pipeline</strong>Current SEO Revenue</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!-- KPI DASHBOARD                                                          -->
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<div id="exec-summary" class="kpi-grid">
+  <div class="kpi-card danger">
+    <div class="kpi-label">Indexability Score</div>
+    <div class="kpi-value">1/10</div>
+    <div class="kpi-note">No robots.txt, no sitemap, auth pages indexable</div>
+  </div>
+  <div class="kpi-card danger">
+    <div class="kpi-label">Metadata Score</div>
+    <div class="kpi-value">4/10</div>
+    <div class="kpi-note">Root Twitter card still says "Lumen" + @Lovable; homepage/pricing meta weak</div>
+  </div>
+  <div class="kpi-card danger">
+    <div class="kpi-label">Schema / Rich Results</div>
+    <div class="kpi-value">0/10</div>
+    <div class="kpi-note">Zero structured data anywhere in codebase</div>
+  </div>
+  <div class="kpi-card danger">
+    <div class="kpi-label">Content Architecture</div>
+    <div class="kpi-value">2/10</div>
+    <div class="kpi-note">Only 2 indexable pages; zero keyword landing pages</div>
+  </div>
+  <div class="kpi-card warning">
+    <div class="kpi-label">Internal Linking</div>
+    <div class="kpi-value">4/10</div>
+    <div class="kpi-note">Homepage has inline footer; /pricing has none; /platform is orphan</div>
+  </div>
+  <div class="kpi-card warning">
+    <div class="kpi-label">Performance SEO</div>
+    <div class="kpi-value">5/10</div>
+    <div class="kpi-note">No favicon; Google Fonts external; fonts OK</div>
+  </div>
+  <div class="kpi-card warning">
+    <div class="kpi-label">Critical Issues</div>
+    <div class="kpi-value">6</div>
+    <div class="kpi-note">C-01 through C-06 — all fixable in one sprint</div>
+  </div>
+  <div class="kpi-card primary">
+    <div class="kpi-label">Missing Landing Pages</div>
+    <div class="kpi-value">8+</div>
+    <div class="kpi-note">High-intent keyword pages that don't exist yet</div>
+  </div>
+</div>
+
+  </div><!-- /tab-overview -->
+
+  <!-- ══ TAB: BUSINESS CONTEXT ══════════════════════════════════════════ -->
+  <div class="tab-panel" id="tab-context">
+    <div class="tab-panel-header">
+      <h2>Business & Growth Context</h2>
+      <p>Product understanding, target audience, and organic growth analysis</p>
+    </div>
+
+<div class="section" id="business">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-icon" style="background:#f3eeff">🏢</div>
+    <div class="section-title">
+      <h2>Business & Product Context</h2>
+      <p>What Databook is, who it serves, and why SEO matters right now</p>
+    </div>
+    <div class="section-toggle">▼</div>
+  </div>
+  <div class="section-body">
+
+    <div class="two-col mb-6">
+      <div>
+        <h3>What is Databook?</h3>
+        <p class="mb-4">Databook is a B2B SaaS reporting tool built specifically for <strong>Cin7Core inventory management system</strong> users. It solves a real, painful problem: Cin7Core's native exports are messy, have junk rows at the top, and combining data across multiple exports requires hours of manual Excel work every month.</p>
+        <p class="mb-4">Databook lets users upload their Cin7Core CSV/Excel exports, pick the exact fields they need, and download a clean, combined report in under 60 seconds — no Excel gymnastics required.</p>
+        <div class="info-box success">
+          <div class="info-box-icon">💡</div>
+          <div><strong>Core Pain Point (Evidence from codebase):</strong> "We were spending 3–4 hours every month pulling together our stock report from Cin7Core. Databook does it in under a minute." — Testimonial from an Australian e-commerce brand (routes/index.tsx, line 418–420)</div>
+        </div>
+      </div>
+      <div>
+        <h3>Target Audience</h3>
+        <table style="margin-bottom:0">
+          <thead><tr><th>Segment</th><th>Role</th><th>Pain</th></tr></thead>
+          <tbody>
+            <tr><td>Australian SME</td><td>Operations Manager</td><td>Monthly stock reporting</td></tr>
+            <tr><td>E-commerce Brand</td><td>Inventory Manager</td><td>Multi-location data merge</td></tr>
+            <tr><td>Wholesale/Retail</td><td>Finance Controller</td><td>Margin & revenue reports</td></tr>
+            <tr><td>3PL / Distribution</td><td>Warehouse Manager</td><td>Stock on hand accuracy</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="two-col mb-6">
+      <div>
+        <h3>Revenue Model</h3>
+        <ul>
+          <li><strong>Free tier:</strong> 2 file uploads, first 50 rows, dashboard only</li>
+          <li><strong>Pro tier ($29/month):</strong> Unlimited uploads, all rows, CSV export, unlimited templates</li>
+          <li><strong>Payment:</strong> Razorpay subscription billing (India-origin payment gateway)</li>
+          <li><strong>Referral codes:</strong> Discount system exists for partner/referral growth</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Platform Roadmap (Evidence from codebase)</h3>
+        <ul>
+          <li>✅ <strong>Cin7Core</strong> — Live (API + CSV upload)</li>
+          <li>✅ <strong>CSV/Excel uploads</strong> — Live</li>
+          <li>🕐 <strong>Xero</strong> — Coming soon (locked in UI)</li>
+          <li>🕐 <strong>ShipStation</strong> — Coming soon (locked in UI)</li>
+          <li>🕐 <strong>Cin7Core API automation</strong> — Coming soon (Pro feature)</li>
+          <li>🕐 <strong>Scheduled reports</strong> — Coming soon (Pro feature)</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>SEO Opportunity Assessment</h3>
+    <div class="info-box warning">
+      <div class="info-box-icon">⚠️</div>
+      <div><strong>Critical Launch Risk:</strong> The site is not indexation-ready. The two highest-value pages (Homepage + Pricing) are not being discovered efficiently by Google because there is no sitemap.xml and no robots.txt. Auth pages (/signin, /signup, /onboarding, /app/*) are fully indexable — Google may discover and attempt to index them, wasting crawl budget and damaging brand trust.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 1B: BUSINESS & ORGANIC GROWTH ANALYSIS                        -->
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="growth">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-icon" style="background:#fffbeb">📈</div>
+    <div class="section-title">
+      <h2>Business & Organic Growth Analysis</h2>
+      <p>Where growth comes from, where it is blocked, and what is being missed</p>
+    </div>
+    <div class="section-toggle">▼</div>
+  </div>
+  <div class="section-body">
+
+    <div class="info-box note">
+      <div class="info-box-icon">📌</div>
+      <div><strong>Strategic Frame (Source:</strong> <em>2026 Strategic Roadmap — Pipeline-Led SEO.docx</em>): In 2026, organic traffic volume is a vanity metric. Databook must shift from a traffic engine to a <strong>pipeline engine</strong> — measuring SQLs and MRR from organic, not sessions. AI Overviews reduce top-listing CTR by ~34.5%; informational query clicks drop ~61%. Meanwhile, 37–40% of B2B buyers start research in LLMs (ChatGPT, Perplexity, Claude).</div>
+    </div>
+
+    <h3>Business Objectives (Inferred from Codebase + Strategy Docs)</h3>
+    <div class="two-col mb-6">
+      <ul>
+        <li><strong>Acquire Cin7Core users</strong> frustrated with manual Excel reporting (primary ICP)</li>
+        <li><strong>Convert free → Pro ($29/mo)</strong> via unlimited rows, CSV export, templates (plans.ts, pricing.tsx)</li>
+        <li><strong>Establish category authority</strong> for "Cin7Core reporting" before competitors enter niche</li>
+        <li><strong>Build integration ecosystem</strong> — Xero, ShipStation roadmap visible in platform.tsx</li>
+      </ul>
+      <ul>
+        <li><strong>Reduce CAC</strong> through organic vs paid acquisition</li>
+        <li><strong>Enable referral growth</strong> — referral code system exists (pricing.tsx)</li>
+        <li><strong>Connect search to revenue</strong> via GSC → CRM attribution (MCP/QLA framework)</li>
+        <li><strong>Win AI discovery layer</strong> — become cited "consensus answer" for Cin7Core reporting</li>
+      </ul>
+    </div>
+
+    <h3>Where Growth Will Come From</h3>
+    <div class="opp-grid mb-6">
+      <div class="opp-card">
+        <div class="opp-card-title">🎯 Uncontested Cin7Core Keywords</div>
+        <div class="opp-card-desc">No dedicated SEO competitor owns "cin7core reporting tool" or "cin7core export to excel." High-intent, low-competition niche. Evidence: seo_audit.md Step 9 missing landing pages; competitor analysis in this report.</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-card-title">📊 Product-Led Comparison Pages</div>
+        <div class="opp-card-desc">"Competitor alternative" keywords convert at 8.43% vs 3.44% for category terms (2026 Blueprint PDF). Target: Databook vs Excel, vs manual Cin7Core exports. Source: seo_strategy_report.html keyword table.</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-card-title">🔧 JTBD Interactive Tools</div>
+        <div class="opp-card-desc">Un-summarizable assets force click-through when AI answers informational queries. ROI estimator, cleanup calculator — keywords from strategy report show 5.65% conversion on JTBD tools.</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-card-title">🤝 Cin7Core Ecosystem Placement</div>
+        <div class="opp-card-desc">Integration marketplace listing = high-authority backlink + direct referral pipeline to exact ICP. Platform selector shows Cin7Core as live integration (platform.tsx).</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-card-title">💼 Founder LinkedIn Amplification</div>
+        <div class="opp-card-desc">Highest-leverage early-stage B2B channel for niche SaaS. Every post drives brand searches ("databook cin7core") and referral traffic with zero SEO lag.</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-card-title">🤖 AEO / LLM Citations</div>
+        <div class="opp-card-desc">40% of researchers use chat interfaces. Structured data + entity coverage + third-party citations position Databook in AI "shortlists" for Cin7Core reporting queries.</div>
+      </div>
+    </div>
+
+    <h3>Where Growth Is Currently Blocked</h3>
+    <div class="tbl-wrap mb-6">
+      <table>
+        <thead><tr><th>Blocker</th><th>Evidence</th><th>Business Impact</th><th>Resolution</th></tr></thead>
+        <tbody>
+          <tr><td>Site not indexation-ready</td><td>No robots.txt, no sitemap, auth pages indexable (seo_audit.md C-01–C-03)</td><td>Google may not discover or trust public pages</td><td>Week 1 technical sprint</td></tr>
+          <tr><td>Brand damage on social shares</td><td>twitter:title="Lumen", twitter:site="@Lovable" (__root.tsx:39–40)</td><td>Every share shows wrong brand — kills trust at awareness stage</td><td>5-minute fix Day 1</td></tr>
+          <tr><td>Only 2 indexable landing pages</td><td>14 routes total; only / and /pricing are public SEO assets</td><td>Cannot capture problem-aware or comparison searches</td><td>Create 4+ landing pages Week 3+</td></tr>
+          <tr><td>Zero analytics infrastructure</td><td>No GA4, GTM, or GSC scripts in codebase</td><td>Cannot measure organic ROI or attribute signups</td><td>GA4 + GSC Week 1–2</td></tr>
+          <tr><td>No CRM ↔ search connection</td><td>No attribution layer in api.ts or tracking</td><td>Cannot optimize for closed-won revenue (pipeline-led SEO)</td><td>MCP/QLA Phase 2–3</td></tr>
+          <tr><td>Missing legal pages</td><td>No /privacy or /terms routes in routeTree.gen.ts</td><td>E-E-A-T deficit; compliance risk for AU/UK SMEs</td><td>Week 3 legal pages</td></tr>
+          <tr><td>No blog or content hub</td><td>Zero /blog route; no CMS</td><td>Cannot capture long-tail or build topical authority</td><td>Blog setup Month 2</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Opportunities Being Missed Right Now</h3>
+    <ul class="mb-4">
+      <li><strong>8 quick-report use cases</strong> in app.index.tsx (QUICK_REPORTS array, lines 42–51) — each is a programmatic SEO page opportunity not yet built</li>
+      <li><strong>Homepage contact form</strong> (index.tsx) captures leads but has no organic attribution tracking</li>
+      <li><strong>Testimonial</strong> ("3–4 hours every month" → "under a minute") is powerful conversion copy not used in meta descriptions or comparison pages</li>
+      <li><strong>Smart header detection</strong> feature (index.tsx features section) directly answers "cin7core export messy" pain — no dedicated landing page yet</li>
+      <li><strong>Coming-soon integrations</strong> (Xero, ShipStation in platform.tsx) — pre-build SEO pages before launch for first-mover indexing</li>
+    </ul>
+
+    <div class="info-box success">
+      <div class="info-box-icon">✅</div>
+      <div><strong>Strategic Advantage:</strong> Databook's product is genuinely differentiated (AI + Cin7Core niche + $29/mo price point). The SEO gap is entirely execution — not product-market fit. Fixing technical blockers in Week 1 unblocks all downstream content and authority work.</div>
+    </div>
+
+  </div>
+</div>
+
+  </div><!-- /tab-context -->
+
+  <!-- ══ TAB: AUDIT & FINDINGS ══════════════════════════════════════════ -->
+  <div class="tab-panel" id="tab-audit">
+    <div class="tab-panel-header">
+      <h2>Audit & Technical SEO</h2>
+      <p>Consolidated findings database and developer action center</p>
+    </div>
+
+<div class="section" id="findings">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-icon" style="background:#fef2f2">🔍</div>
+    <div class="section-title">
+      <h2>Master SEO Findings Database</h2>
+      <p>Consolidated findings from full codebase audit, seo_audit.md, and strategic research</p>
+    </div>
+    <div class="section-toggle">▼</div>
+  </div>
+  <div class="section-body">
+
+    <div class="info-box note">
+      <div class="info-box-icon">📌</div>
+      <div><strong>Source of Truth:</strong> All findings below are traceable to specific files and line numbers in the codebase. Severity ratings follow the audit methodology in <code>seos/seo_audit.md</code>.</div>
+    </div>
+
+    <div class="section-divider">🔴 Critical Findings (C-01 → C-06)</div>
+
+    <div class="finding-card">
+      <div class="finding-header">
+        <span class="finding-id">C-01</span>
+        <span class="finding-title">No robots.txt file anywhere in the repository</span>
+        <span class="badge badge-critical">🔴 Critical</span>
+      </div>
+      <div class="finding-body">
+        <div class="finding-grid">
+          <div class="finding-meta"><strong>Source</strong>seo_audit.md Step 2; public/ directory (does not exist)</div>
+          <div class="finding-meta"><strong>SEO Impact</strong>Googlebot crawls auth pages, app dashboard, and /app/brain debug tool — wasting crawl budget and potentially indexing sensitive routes</div>
+          <div class="finding-meta"><strong>Business Impact</strong>Sign-in, sign-up, and internal tool URLs may appear in Google search results — extremely poor user experience</div>
+          <div class="finding-meta"><strong>Fix</strong>Create <code>public/robots.txt</code> with Disallow rules for /signin, /signup, /onboarding, /connect, /app/ — Sitemap: https://databook.io/sitemap.xml</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="finding-card">
+      <div class="finding-header">
+        <span class="finding-id">C-02</span>
+        <span class="finding-title">No sitemap.xml — Google cannot efficiently discover indexable pages</span>
+        <span class="badge badge-critical">🔴 Critical</span>
+      </div>
+      <div class="finding-body">
+        <div class="finding-grid">
+          <div class="finding-meta"><strong>Source</strong>seo_audit.md Step 4; grep across entire codebase returns zero results for "sitemap"</div>
+          <div class="finding-meta"><strong>SEO Impact</strong>/ and /pricing may take weeks to be discovered and indexed; no crawl priority signaling to Google</div>
+          <div class="finding-meta"><strong>Business Impact</strong>Every day without a sitemap is a day Google may not know Databook's key pages exist</div>
+          <div class="finding-meta"><strong>Fix</strong>Create TanStack Start API route at <code>src/routes/api/sitemap.xml.ts</code> returning XML with /, /pricing, /platform (optional)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="finding-card">
+      <div class="finding-header">
+        <span class="finding-id">C-03</span>
+        <span class="finding-title">No noindex tags on 9 auth/app routes — all are indexable by Google</span>
+        <span class="badge badge-critical">🔴 Critical</span>
+      </div>
+      <div class="finding-body">
+        <div class="finding-grid">
+          <div class="finding-meta"><strong>Affected Files</strong>signin.tsx, signup.tsx, onboarding.tsx, connect.tsx, app.tsx, app.uploads.tsx, app.templates.tsx, app.settings.tsx, app.brain.tsx</div>
+          <div class="finding-meta"><strong>SEO Impact</strong>Index bloat with low-quality pages; crawl budget wasted on auth flows</div>
+          <div class="finding-meta"><strong>Business Impact</strong>Users searching "Databook sign in" may get confused SERP results showing internal app pages</div>
+          <div class="finding-meta"><strong>Fix</strong>Add <code>{ name: "robots", content: "noindex,nofollow" }</code> to each route's head() function</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="finding-card">
+      <div class="finding-header">
+        <span class="finding-id">C-04</span>
+        <span class="finding-title">twitter:title contains old brand name "Lumen" — not Databook</span>
+        <span class="badge badge-critical">🔴 Critical</span>
+      </div>
+      <div class="finding-body">
+        <div class="finding-grid">
+          <div class="finding-meta"><strong>Source</strong>src/routes/__root.tsx line 40</div>
+          <div class="finding-meta"><strong>SEO Impact</strong>Social signal disconnect; wrong brand entity association in Knowledge Graph</div>
+          <div class="finding-meta"><strong>Business Impact</strong>Every Twitter/X share of any Databook page shows "Lumen" as the title — major brand trust damage</div>
+          <div class="finding-meta"><strong>Fix</strong>5-minute fix: Change to <code>"Databook — AI reports for Cin7Core"</code> — <strong>highest ROI task in the entire backlog</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="finding-card">
+      <div class="finding-header">
+        <span class="finding-id">C-05</span>
+        <span class="finding-title">twitter:site is "@Lovable" — the AI development tool, not Databook</span>
+        <span class="badge badge-critical">🔴 Critical</span>
+      </div>
+      <div class="finding-body">
+        <div class="finding-grid">
+          <div class="finding-meta"><strong>Source</strong>src/routes/__root.tsx line 39</div>
+          <div class="finding-meta"><strong>SEO Impact</strong>Entity confusion; Twitter attribution points to wrong company</div>
+          <div class="finding-meta"><strong>Business Impact</strong>Databook is publicly attributed to Lovable.dev (the tool used to build it) on all social shares</div>
+          <div class="finding-meta"><strong>Fix</strong>Change to Databook's actual Twitter handle, or remove entirely if no handle exists yet</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="finding-card">
+      <div class="finding-header">
+        <span class="finding-id">C-06</span>
+        <span class="finding-title">OG and Twitter images point to Lovable.dev's temporary CDN URL</span>
+        <span class="badge badge-critical">🔴 Critical</span>
+      </div>
+      <div class="finding-body">
+        <div class="finding-grid">
+          <div class="finding-meta"><strong>Source</strong>src/routes/__root.tsx lines 42–43 — URL points to pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev</div>
+          <div class="finding-meta"><strong>SEO Impact</strong>Broken social images when URL expires; no real product branding on social shares</div>
+          <div class="finding-meta"><strong>Business Impact</strong>Link sharing to investors, partners, or users may show broken/wrong image</div>
+          <div class="finding-meta"><strong>Fix</strong>Create a branded 1200×630px OG image, host on Databook's own CDN, update URL in __root.tsx</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider">🟠 High Priority Findings (H-01 → H-06)</div>
+
+    <div class="tbl-wrap mb-6">
+      <table>
+        <thead>
+          <tr><th>ID</th><th>Issue</th><th>Source File</th><th>SEO Impact</th><th>Priority</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>H-01</code></td>
+            <td>Homepage (/) has basic head() but title is brand-first, not keyword-optimized; no OG overrides, no schema</td>
+            <td><code>routes/index.tsx</code> lines 17–23 — title: "Databook — Smarter reporting for Cin7Core"</td>
+            <td>Misses "cin7core reporting tool" exact-match in title tag</td>
+            <td><span class="badge badge-high">🟠 High</span></td>
+          </tr>
+          <tr>
+            <td><code>H-02</code></td>
+            <td>Pricing page metadata is generic — "One simple plan. No confusion." — weak for commercial searches</td>
+            <td><code>routes/pricing.tsx</code> lines 14–18</td>
+            <td>Lower CTR for "databook pricing" and "cin7core reporting cost" queries</td>
+            <td><span class="badge badge-high">🟠 High</span></td>
+          </tr>
+          <tr>
+            <td><code>H-03</code></td>
+            <td>Zero structured data (Schema.org) anywhere in the entire codebase</td>
+            <td>All route files — grepping for ld+json returns nothing</td>
+            <td>No rich results; plain blue links vs competitors with enhanced SERP features</td>
+            <td><span class="badge badge-high">🟠 High</span></td>
+          </tr>
+          <!-- <tr>
+            <td><code>H-04</code></td>
+            <td>No canonical tags on any route — duplicate URL risk (Cloudflare + Vercel)</td>
+            <td><code>__root.tsx</code> and all route files</td>
+            <td>PageRank dilution; www vs non-www may split authority</td>
+            <td><span class="badge badge-high">🟠 High</span></td>
+          </tr> -->
+          <tr>
+            <td><code>H-05</code></td>
+            <td>Footer exists on homepage only (inline, not shared component); /pricing has no footer; links to /app/uploads in footer are poor SEO practice</td>
+            <td><code>routes/index.tsx</code> lines 530–581; pricing.tsx has no footer</td>
+            <td>Inconsistent internal linking; auth-gated URLs in crawlable footer</td>
+            <td><span class="badge badge-high">🟠 High</span></td>
+          </tr>
+          <tr>
+            <td><code>H-06</code></td>
+            <td>/app/brain exposed as real URL with old brand name + hardcoded auth token</td>
+            <td><code>routes/app.brain.tsx</code> lines 6–8, 56</td>
+            <td>If indexed: "Databook — Lumen" appears in Google with no description</td>
+            <td><span class="badge badge-high">🟠 High</span> + Security</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-divider">🟡 Medium Priority Findings (M-01 → M-06)</div>
+
+    <div class="tbl-wrap mb-6">
+      <table>
+        <thead><tr><th>ID</th><th>Issue</th><th>Fix</th><th>Effort</th></tr></thead>
+        <tbody>
+          <tr><td><code>M-01</code></td><td>og:type is "website" on all pages — pricing and app pages need specific types</td><td>Per-route og:type override in head()</td><td>15 min</td></tr>
+          <tr><td><code>M-02</code></td><td>twitter:card is "summary" — small card; should be summary_large_image</td><td>One-line change in __root.tsx line 38</td><td>5 min</td></tr>
+          <tr><td><code>M-03</code></td><td>/platform is an orphan page — not in nav, not in footer</td><td>Add to footer or add noindex</td><td>10 min</td></tr>
+          <tr><td><code>M-04</code></td><td>No favicon defined — browser tabs show blank icon</td><td>Add favicon.ico + link rel="icon" in __root.tsx</td><td>1h with designer</td></tr>
+          <tr><td><code>M-05</code></td><td>Google Fonts loaded externally — adds DNS lookup latency</td><td>Self-host via @fontsource npm packages</td><td>3h dev</td></tr>
+          <tr><td><code>M-06</code></td><td>Vercel catch-all rewrite sends 404s as 200 (soft 404s)</td><td>Verify Cloudflare Workers SSR returns correct HTTP 404 status</td><td>1h dev</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-divider">✅ High Confidence Findings vs Assumptions</div>
+    <div class="two-col">
+      <div>
+        <h4>High Confidence Findings (from codebase)</h4>
+        <ul>
+          <li>No robots.txt in repository (verified by file listing)</li>
+          <li>No sitemap.xml (grepped entire codebase)</li>
+          <li>Zero ld+json anywhere (grepped for schema/Organization/SoftwareApplication)</li>
+          <li>Old brand name "Lumen" in twitter:title (__root.tsx line 40)</li>
+          <li>Wrong twitter:site "@Lovable" (__root.tsx line 39)</li>
+          <li>Temporary CDN URL in OG image (__root.tsx lines 42–43)</li>
+          <li>Homepage HAS head() with title + description (index.tsx lines 17–23) — but not keyword-optimized</li>
+          <li>Pricing HAS head() with title + description (pricing.tsx lines 14–18) — but generic copy</li>
+          <li>Homepage HAS inline footer with links (index.tsx lines 530–581) — not a shared component</li>
+          <li>No FAQ section on homepage — FAQPage schema requires creating FAQ content first</li>
+          <li>Firebase project ID: databook-1839c (wrangler.jsonc)</li>
+          <li>Worker name still "super-duper-chainsaw" (wrangler.jsonc line 3)</li>
+          <li>API URL is a temporary Cloudflare Tunnel URL (wrangler.jsonc line 9)</li>
+          <li>Contact email: hello@databook.io (index.tsx line 46)</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Assumptions (Require Verification)</h4>
+        <ul>
+          <li>Domain is databook.io (inferred from codebase strings)</li>
+          <li>Target market is primarily Australia (testimonial: "Australian e-commerce brand")</li>
+          <li>No GA4 or GSC connected (no analytics scripts found in codebase)</li>
+          <li>No existing domain authority or backlink profile (new product)</li>
+          <li>Xero/ShipStation integrations will launch within 6 months</li>
+          <li>SEO is currently generating zero organic traffic (pre-launch state)</li>
+        </ul>
+        <h4 class="mt-4">Information Gaps</h4>
+        <ul>
+          <li>Current Google Search Console data (if any)</li>
+          <li>Existing backlink profile count</li>
+          <li>Number of Cin7Core users globally</li>
+          <li>Competitor monthly organic traffic data</li>
+          <li>Founder's LinkedIn presence and audience size</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 3: TECHNICAL SEO MASTER PLAN                                  -->
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="technical">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-icon" style="background:#fff7ed">⚙️</div>
+    <div class="section-title">
+      <h2>Technical SEO Master Plan</h2>
+      <p>Developer action center with priority-ordered fixes, owners, and effort estimates</p>
+    </div>
+    <div class="section-toggle">▼</div>
+  </div>
+  <div class="section-body">
+
+    <div class="info-box critical">
+      <div class="info-box-icon">🚨</div>
+      <div><strong>Overall Technical SEO Readiness: 2.5/10</strong> — The site is not ready for indexing. These technical fixes must be completed before any content or link building investment begins. Technical debt here will undermine every other SEO initiative.</div>
+    </div>
+
+    <h3>Technical SEO Scorecard</h3>
+    <div class="mb-6">
+      <div class="score-bar"><span class="score-label">Indexability</span><div class="score-track"><div class="score-fill" style="width:10%;background:var(--red)"></div></div><span class="score-num" style="color:var(--red)">1/10</span></div>
+      <div class="score-bar"><span class="score-label">Metadata Quality</span><div class="score-track"><div class="score-fill" style="width:30%;background:var(--orange)"></div></div><span class="score-num" style="color:var(--orange)">3/10</span></div>
+      <div class="score-bar"><span class="score-label">Sitemap</span><div class="score-track"><div class="score-fill" style="width:0%;background:var(--red)"></div></div><span class="score-num" style="color:var(--red)">0/10</span></div>
+      <div class="score-bar"><span class="score-label">Internal Linking</span><div class="score-track"><div class="score-fill" style="width:30%;background:var(--orange)"></div></div><span class="score-num" style="color:var(--orange)">3/10</span></div>
+      <div class="score-bar"><span class="score-label">Schema / Rich Results</span><div class="score-track"><div class="score-fill" style="width:0%;background:var(--red)"></div></div><span class="score-num" style="color:var(--red)">0/10</span></div>
+      <div class="score-bar"><span class="score-label">URL Structure</span><div class="score-track"><div class="score-fill" style="width:60%;background:var(--yellow)"></div></div><span class="score-num" style="color:var(--yellow)">6/10</span></div>
+      <div class="score-bar"><span class="score-label">Performance SEO</span><div class="score-track"><div class="score-fill" style="width:50%;background:var(--yellow)"></div></div><span class="score-num" style="color:var(--yellow)">5/10</span></div>
+      <div class="score-bar"><span class="score-label">Content Architecture</span><div class="score-track"><div class="score-fill" style="width:20%;background:var(--red)"></div></div><span class="score-num" style="color:var(--red)">2/10</span></div>
+    </div>
+
+    <h3>🚀 Immediate Fixes — Sprint 1 (This Week)</h3>
+    <div class="tbl-wrap mb-6">
+      <table>
+        <thead><tr><th>#</th><th>Task</th><th>File / Location</th><th>Owner</th><th>Effort</th><th>Priority</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Fix <code>twitter:title</code> from "Lumen" → "Databook — AI reports for Cin7Core"</td><td><code>__root.tsx</code> line 40</td><td>Dev</td><td>5 min</td><td><span class="badge badge-critical">P0</span></td></tr>
+          <tr><td>2</td><td>Fix <code>twitter:site</code> from <code>@Lovable</code> → Databook's handle (or remove)</td><td><code>__root.tsx</code> line 39</td><td>Dev</td><td>5 min</td><td><span class="badge badge-critical">P0</span></td></tr>
+          <tr><td>3</td><td>Create <code>public/robots.txt</code> with Disallow for all auth/app routes</td><td>New file: <code>public/robots.txt</code></td><td>Dev</td><td>15 min</td><td><span class="badge badge-critical">P0</span></td></tr>
+          <tr><td>4</td><td>Add <code>noindex,nofollow</code> to /signin, /signup, /onboarding, /connect head()</td><td>4 route files</td><td>Dev</td><td>30 min</td><td><span class="badge badge-critical">P0</span></td></tr>
+          <tr><td>5</td><td>Add <code>noindex,nofollow</code> to all /app/* route head() functions</td><td>5 route files in app/*</td><td>Dev</td><td>20 min</td><td><span class="badge badge-critical">P0</span></td></tr>
+          <tr><td>6</td><td>Add <code>noindex</code> to /app/brain (security + SEO)</td><td><code>app.brain.tsx</code> line 7</td><td>Dev</td><td>5 min</td><td><span class="badge badge-critical">P0</span></td></tr>
+          <tr><td>7</td><td>Replace OG/Twitter image URL with production asset (1200×630px)</td><td><code>__root.tsx</code> lines 42–43</td><td>Designer + Dev</td><td>1h</td><td><span class="badge badge-critical">P0</span></td></tr>
+          <tr><td>8</td><td>Change <code>twitter:card</code> to <code>summary_large_image</code></td><td><code>__root.tsx</code> line 38</td><td>Dev</td><td>5 min</td><td><span class="badge badge-high">P1</span></td></tr>
+          <tr><td>9</td><td>Add optimized <code>head()</code> to homepage with keyword-rich title + description</td><td><code>routes/index.tsx</code></td><td>SEO + Dev</td><td>20 min</td><td><span class="badge badge-high">P1</span></td></tr>
+          <tr><td>10</td><td>Add optimized <code>head()</code> to pricing page with commercial title + description</td><td><code>routes/pricing.tsx</code></td><td>SEO + Dev</td><td>15 min</td><td><span class="badge badge-high">P1</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>📋 Pre-Launch Fixes — Sprint 2 (Weeks 2–3)</h3>
+    <div class="tbl-wrap mb-6">
+      <table>
+        <thead><tr><th>#</th><th>Task</th><th>Rationale</th><th>Owner</th><th>Effort</th></tr></thead>
+        <tbody>
+          <tr><td>11</td><td>Implement <code>sitemap.xml</code> API route in TanStack Start</td><td>Google cannot efficiently discover pages without it</td><td>Dev</td><td>2h</td></tr>
+          <tr><td>12</td><td>Add canonical <code>&lt;link&gt;</code> to all public routes (/, /pricing)</td><td>Prevents duplicate content if Cloudflare + Vercel both serve same URLs</td><td>Dev</td><td>30 min</td></tr>
+          <tr><td>13</td><td>Add Organization + WebSite + SoftwareApplication JSON-LD schema to homepage</td><td>Establishes entity; enables rich results eligibility</td><td>SEO + Dev</td><td>2h</td></tr>
+          <tr><td>14</td><td>Add FAQ section to homepage + FAQPage schema</td><td>No FAQ content exists yet — must create section first, then schema</td><td>SEO + Dev</td><td>3h</td></tr>
+          <tr><td>15</td><td>Add Offer/Product schema to pricing page</td><td>Enables pricing display in SERP snippets</td><td>SEO + Dev</td><td>1h</td></tr>
+          <tr><td>16</td><td>Add favicon (favicon.ico + Apple touch icon + SVG icon)</td><td>Brand trust; SERP mobile icon; bookmarks</td><td>Designer + Dev</td><td>1h</td></tr>
+          <tr><td>17</td><td>Add og:site_name and og:url to root metadata</td><td>Completes Open Graph implementation</td><td>Dev</td><td>10 min</td></tr>
+          <tr><td>18</td><td>Verify Cloudflare Workers SSR returns HTTP 404 status for unknown routes</td><td>Vercel SPA rewrite sends 404s as 200 (soft 404s)</td><td>Dev</td><td>1h</td></tr>
+          <tr><td>19</td><td>Set up Google Search Console + submit sitemap</td><td>Required for tracking indexation and organic performance</td><td>SEO Specialist</td><td>30 min</td></tr>
+          <tr><td>20</td><td>Rename wrangler.jsonc worker from "super-duper-chainsaw" → "databook"</td><td>Cloudflare dashboard shows incorrect name; may surface in logs</td><td>DevOps</td><td>5 min</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>🗓️ Post-Launch Roadmap (Month 2+)</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Task</th><th>Business Justification</th><th>Effort</th></tr></thead>
+        <tbody>
+          <tr><td>21</td><td>Self-host Google Fonts (@fontsource/inter, @fontsource/fraunces)</td><td>Eliminates external DNS dependency; minor LCP improvement</td><td>3h dev</td></tr>
+          <tr><td>22</td><td>Create /features or /how-it-works landing page</td><td>SEO-targetable page for feature discovery keywords</td><td>1 week</td></tr>
+          <tr><td>23</td><td>Create /integrations/cin7core keyword-targeted landing page</td><td>"cin7core integration" cluster — high commercial intent</td><td>3 days</td></tr>
+          <tr><td>24</td><td>Create /cin7core-reporting or /cin7core-export-to-excel landing page</td><td>Primary revenue keyword cluster</td><td>2 days</td></tr>
+          <tr><td>25</td><td>Add Privacy Policy and Terms pages (currently missing entirely)</td><td>Compliance + E-E-A-T signals; required for GDPR/APPI</td><td>2 days</td></tr>
+          <tr><td>26</td><td>Implement blog or resource hub (/blog)</td><td>Content moat; backlink acquisition; long-tail keyword capture</td><td>2 weeks setup</td></tr>
+          <tr><td>27</td><td>Connect Google Analytics 4 for organic traffic measurement</td><td>Without GA4, SEO performance is unmeasurable</td><td>2h</td></tr>
+          <tr><td>28</td><td>Add BreadcrumbList schema to inner pages</td><td>Enables breadcrumb display in SERP snippets</td><td>2h</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+  </div><!-- /tab-audit -->
+
+  <!-- ══ TAB: STRATEGY ══════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="tab-strategy">
+    <div class="tab-panel-header">
+      <h2>SEO Strategy</h2>
+      <p>Keywords, content, funnels, channels, AEO, and competitor opportunities</p>
+    </div>
+
+<div class="section" id="keywords">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-icon" style="background:#f0fdf4">🎯</div>
+    <div class="section-title">
+      <h2>Keyword Strategy Framework</h2>
+      <p>Complete keyword universe with intent mapping, funnel stage, and recommended page</p>
+    </div>
+    <div class="section-toggle">▼</div>
+  </div>
+  <div class="section-body">
+
+    <div class="info-box note">
+      <div class="info-box-icon">🧠</div>
+      <div><strong>Keyword Context:</strong> Databook operates in a highly niche vertical — Cin7Core is an inventory management platform used by ~15,000+ SMEs globally. The keyword universe is small but extremely high-intent. Every searcher is a potential customer. Volume is low but conversion potential is very high.</div>
+    </div>
+
+    <div class="kw-cluster mb-6">
+      <div class="kw-cluster-title">💰 Tier 1B — Pipeline-Led High-Intent Keywords (Source: seo_strategy_report.html)</div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Keyword Target</th><th>Est. Volume</th><th>Funnel</th><th>Conv. Rate</th><th>Target Page</th><th>Priority</th></tr></thead>
+          <tbody>
+            <tr><td>Cin7Core reporting tool vs Excel</td><td>480/mo</td><td>BOFU</td><td>8.43%</td><td><code>/vs/excel-reporting</code> [create]</td><td><span class="badge badge-critical">P0</span></td></tr>
+            <tr><td>Cin7Core inventory report export error</td><td>320/mo</td><td>BOFU</td><td>7.20%</td><td><code>/vs/manual-cleanup-fixes</code> [create]</td><td><span class="badge badge-critical">P0</span></td></tr>
+            <tr><td>How to merge Cin7Core data sheets</td><td>980/mo</td><td>MOFU</td><td>4.12%</td><td><code>/integrations/cin7core-combine</code> [create]</td><td><span class="badge badge-high">P1</span></td></tr>
+            <tr><td>Cin7Core + Xero integration reporting</td><td>650/mo</td><td>MOFU</td><td>3.88%</td><td><code>/integrations/xero-reporting</code> [create]</td><td><span class="badge badge-high">P1</span></td></tr>
+            <tr><td>Cin7Core Excel Cleanup Calculator</td><td>1,200/mo</td><td>JTBD Tool</td><td>5.65%</td><td><code>/tools/cleanup-roi-estimator</code> [create]</td><td><span class="badge badge-high">P1</span></td></tr>
+            <tr><td>Inventory valuation report generator online</td><td>780/mo</td><td>JTBD Tool</td><td>5.10%</td><td><code>/tools/valuation-formatter</code> [create]</td><td><span class="badge badge-medium">P2</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-muted mt-4">Evidence: Conversion rates and volume estimates from <code>seos/seo_strategy_report.html</code> keyword table. "Competitor alternative" keywords convert at 8.43% vs 3.44% for general category terms (2026 B2B SaaS SEO Blueprint PDF).</p>
+    </div>
+
+    <div class="kw-cluster mb-6">
+      <div class="kw-cluster-title">🏆 Tier 1 — Revenue Keywords (Highest Commercial Intent)</div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Keyword</th><th>Intent</th><th>Funnel Stage</th><th>Recommended Page</th><th>Priority</th><th>Business Value</th></tr></thead>
+          <tbody>
+            <tr><td>cin7core reporting tool</td><td>Commercial</td><td>Decision</td><td><code>/</code> homepage</td><td><span class="badge badge-critical">P0</span></td><td>⭐⭐⭐⭐⭐ Highest</td></tr>
+            <tr><td>cin7core report generator</td><td>Commercial</td><td>Decision</td><td><code>/</code> homepage</td><td><span class="badge badge-critical">P0</span></td><td>⭐⭐⭐⭐⭐ Highest</td></tr>
+            <tr><td>cin7core export to excel</td><td>Problem-aware</td><td>Consideration</td><td><code>/cin7core-export</code> [create]</td><td><span class="badge badge-high">P1</span></td><td>⭐⭐⭐⭐⭐ Highest</td></tr>
+            <tr><td>cin7core inventory report</td><td>Commercial</td><td>Decision</td><td><code>/cin7core-reporting</code> [create]</td><td><span class="badge badge-high">P1</span></td><td>⭐⭐⭐⭐⭐ Highest</td></tr>
+            <tr><td>databook pricing</td><td>Commercial</td><td>Decision</td><td><code>/pricing</code></td><td><span class="badge badge-high">P1</span></td><td>⭐⭐⭐⭐ High</td></tr>
+            <tr><td>cin7core data export tool</td><td>Commercial</td><td>Consideration</td><td><code>/cin7core-export</code> [create]</td><td><span class="badge badge-high">P1</span></td><td>⭐⭐⭐⭐⭐ Highest</td></tr>
+            <tr><td>cin7core reporting software</td><td>Commercial</td><td>Decision</td><td><code>/</code> homepage</td><td><span class="badge badge-critical">P0</span></td><td>⭐⭐⭐⭐⭐ Highest</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="kw-cluster mb-6">
+      <div class="kw-cluster-title">🔧 Tier 2 — Problem-Aware Keywords (Pain Point Searches)</div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Keyword</th><th>Pain Point</th><th>Funnel Stage</th><th>Recommended Page</th><th>Priority</th></tr></thead>
+          <tbody>
+            <tr><td>cin7core export messy</td><td>Bad exports</td><td>Awareness</td><td>Blog article</td><td><span class="badge badge-high">P1</span></td></tr>
+            <tr><td>cin7core combine reports</td><td>Multi-file merge</td><td>Consideration</td><td><code>/cin7core-reporting</code> [create]</td><td><span class="badge badge-high">P1</span></td></tr>
+            <tr><td>cin7core custom report fields</td><td>Limited native reports</td><td>Consideration</td><td><code>/features</code> [create]</td><td><span class="badge badge-medium">P2</span></td></tr>
+            <tr><td>inventory report template excel</td><td>Manual template work</td><td>Awareness</td><td>Blog article / Resource page</td><td><span class="badge badge-medium">P2</span></td></tr>
+            <tr><td>how to export cin7core data</td><td>How-to</td><td>Awareness</td><td>Blog article</td><td><span class="badge badge-high">P1</span></td></tr>
+            <tr><td>cin7core stock on hand report</td><td>Stock visibility</td><td>Consideration</td><td>Blog article or use-case page</td><td><span class="badge badge-high">P1</span></td></tr>
+            <tr><td>cin7core sales report by sku</td><td>SKU-level insights</td><td>Consideration</td><td>Use-case page or blog</td><td><span class="badge badge-medium">P2</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="kw-cluster mb-6">
+      <div class="kw-cluster-title">🔗 Tier 3 — Integration & Comparison Keywords</div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Keyword</th><th>Type</th><th>Funnel Stage</th><th>Recommended Page</th><th>Priority</th></tr></thead>
+          <tbody>
+            <tr><td>cin7core integration tools</td><td>Integration</td><td>Consideration</td><td><code>/integrations/cin7core</code> [create]</td><td><span class="badge badge-high">P1</span></td></tr>
+            <tr><td>cin7core alternatives</td><td>Comparison</td><td>Consideration</td><td>Blog article</td><td><span class="badge badge-medium">P2</span></td></tr>
+            <tr><td>cin7core api reporting</td><td>Technical</td><td>Decision</td><td><code>/integrations/cin7core</code> [create]</td><td><span class="badge badge-high">P1</span></td></tr>
+            <tr><td>best reporting tools for cin7core</td><td>Comparison</td><td>Decision</td><td>Landing page</td><td><span class="badge badge-high">P1</span></td></tr>
+            <tr><td>cin7 vs dear systems reports</td><td>Comparison</td><td>Awareness</td><td>Blog article</td><td><span class="badge badge-medium">P2</span></td></tr>
+            <tr><td>inventory management reporting software</td><td>Category</td><td>Awareness</td><td>Blog article</td><td><span class="badge badge-medium">P2</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="kw-cluster mb-6">
+      <div class="kw-cluster-title">📝 Tier 4 — Long-Tail & Local Opportunities</div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Keyword</th><th>Volume Est.</th><th>Funnel Stage</th><th>Content Type</th></tr></thead>
+          <tbody>
+            <tr><td>how to get inventory report from cin7core</td><td>Very low</td><td>Awareness → Consideration</td><td>Tutorial blog post</td></tr>
+            <tr><td>cin7core csv export not working</td><td>Very low</td><td>Awareness</td><td>Troubleshooting blog post</td></tr>
+            <tr><td>automate cin7core reports</td><td>Low</td><td>Decision</td><td>Feature landing page</td></tr>
+            <tr><td>cin7core stock report by location</td><td>Very low</td><td>Consideration</td><td>Use-case page</td></tr>
+            <tr><td>cin7core open sales orders report</td><td>Very low</td><td>Consideration</td><td>Use-case page</td></tr>
+            <tr><td>cin7core top customers report</td><td>Very low</td><td>Consideration</td><td>Use-case page</td></tr>
+            <tr><td>cin7core margin by product report</td><td>Very low</td><td>Consideration</td><td>Use-case page</td></tr>
+            <tr><td>databook cin7core review</td><td>Brand</td><td>Decision</td><td>Review/case study</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h3>Recommended Homepage Title & Description (From Audit)</h3>
+    <div class="info-box success">
+      <div class="info-box-icon">✅</div>
+      <div>
+        <strong>Title Tag (H-01 fix):</strong> <code>Cin7Core Reporting Tool — Databook | AI-powered inventory reports</code><br>
+        <strong>Meta Description:</strong> <code>Turn messy Cin7Core exports into clean, shareable reports in seconds. Ask a question, pick your fields, download a polished report. Free to start.</code>
+      </div>
+    </div>
+
+    <div class="info-box success">
+      <div class="info-box-icon">✅</div>
+      <div>
+        <strong>Pricing Title Tag (H-02 fix):</strong> <code>Databook Pricing — Free & Pro Plans | Cin7Core Reporting Tool</code><br>
+        <strong>Pricing Meta Description:</strong> <code>Start free — no credit card required. Upgrade to Pro for $29/month for unlimited rows, CSV export, and saved templates. Smarter Cin7Core reporting starts here.</code>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 5: CONTENT STRATEGY                                            -->
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="content">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-icon" style="background:#eff6ff">📝</div>
+    <div class="section-title">
+      <h2>Content Strategy & Ecosystem</h2>
+      <p>Pages to create, improve, merge, and expand — with keywords, CTAs, and expected outcomes</p>
+    </div>
+    <div class="section-toggle">▼</div>
+  </div>
+  <div class="section-body">
+
+    <div class="section-divider">Existing Pages — Improve & Optimize</div>
+
+    <div class="tbl-wrap mb-6">
+      <table>
+        <thead><tr><th>Page</th><th>Current State</th><th>Action</th><th>Target Keywords</th><th>Expected Outcome</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><code>/</code> Homepage</td>
+            <td>Rich content but no unique head(); falls to root fallback</td>
+            <td><strong>Optimize</strong> — Upgrade title to keyword-first format; add Organization, SoftwareApplication schema; create FAQ section + FAQPage schema</td>
+            <td>cin7core reporting tool, cin7core report generator, cin7core reporting software</td>
+            <td>Primary organic landing page; target top-3 SERP for brand + core product keywords</td>
+          </tr>
+          <tr>
+            <td><code>/pricing</code></td>
+            <td>Good pricing page; weak metadata; no schema</td>
+            <td><strong>Optimize</strong> — Add commercial keyword title; add Offer/Product schema; add FAQ schema for pricing questions</td>
+            <td>databook pricing, cin7core reporting tool cost, databook pro plan</td>
+            <td>Capture commercial-intent searchers at decision stage; increase trial-to-paid conversion</td>
+          </tr>
+          <tr>
+            <td><code>/platform</code></td>
+            <td>Thin page (4 buttons); orphan (not in nav)</td>
+            <td><strong>Either noindex OR redirect</strong> — It's a utility step, not an SEO asset</td>
+            <td>N/A — not a search-landing destination</td>
+            <td>Remove from index to improve site quality score</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-divider">New Pages to Create (Month 1–2)</div>
+
+    <div class="tbl-wrap mb-6">
+      <table>
+        <thead><tr><th>URL</th><th>Type</th><th>Primary Keywords</th><th>CTA</th><th>Funnel Stage</th><th>Priority</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><code>/vs/excel-reporting</code></td>
+            <td>Comparison Page</td>
+            <td>cin7core reporting tool vs excel, manual excel cleanup</td>
+            <td>Start Free → /signup</td>
+            <td>Decision (BOFU)</td>
+            <td><span class="badge badge-critical">P0</span></td>
+          </tr>
+          <tr>
+            <td><code>/tools/cleanup-roi-estimator</code></td>
+            <td>JTBD Tool</td>
+            <td>cin7core excel cleanup calculator, reporting time savings</td>
+            <td>Use Tool → Email capture → /signup</td>
+            <td>Consideration</td>
+            <td><span class="badge badge-high">P1</span></td>
+          </tr>
+          <tr>
+            <td><code>/cin7core-reporting</code></td>
+            <td>Service Page</td>
+            <td>cin7core reporting tool, cin7core inventory report</td>
+            <td>Start Free → /signup</td>
+            <td>Decision</td>
+            <td><span class="badge badge-critical">P0</span></td>
+          </tr>
+          <tr>
+            <td><code>/cin7core-export</code></td>
+            <td>Solution Page</td>
+            <td>cin7core export to excel, cin7core data export</td>
+            <td>Start Free → /signup</td>
+            <td>Consideration</td>
+            <td><span class="badge badge-high">P1</span></td>
+          </tr>
+          <tr>
+            <td><code>/integrations/cin7core</code></td>
+            <td>Integration Page</td>
+            <td>cin7core integration, cin7core api reporting, cin7core automation</td>
+            <td>Connect Cin7Core → /signup</td>
+            <td>Decision</td>
+            <td><span class="badge badge-high">P1</span></td>
+          </tr>
+          <tr>
+            <td><code>/features</code></td>
+            <td>Feature Page</td>
+            <td>databook features, cin7core multi-file reports, inventory report templates</td>
+            <td>See Pricing → /pricing</td>
+            <td>Consideration</td>
+            <td><span class="badge badge-high">P1</span></td>
+          </tr>
+          <tr>
+            <td><code>/about</code></td>
+            <td>About Page</td>
+            <td>databook about, who built databook</td>
+            <td>Contact Us → /contact</td>
+            <td>Trust-building</td>
+            <td><span class="badge badge-medium">P2</span></td>
+          </tr>
+          <tr>
+            <td><code>/contact</code></td>
+            <td>Contact Page</td>
+            <td>databook contact, cin7core reporting help</td>
+            <td>Contact Form</td>
+            <td>Trust-building</td>
+            <td><span class="badge badge-medium">P2</span></td>
+          </tr>
+          <tr>
+            <td><code>/privacy</code></td>
+            <td>Legal Page</td>
+            <td>N/A — compliance requirement</td>
+            <td>N/A</td>
+            <td>Trust/Compliance</td>
+            <td><span class="badge badge-high">P1 (legal)</span></td>
+          </tr>
+          <tr>
+            <td><code>/terms</code></td>
+            <td>Legal Page</td>
+            <td>N/A — compliance requirement</td>
+            <td>N/A</td>
+            <td>Trust/Compliance</td>
+            <td><span class="badge badge-high">P1 (legal)</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-divider">Blog Content Roadmap (Month 2–3)</div>
+
+    <div class="tbl-wrap mb-6">
+      <table>
+        <thead><tr><th>Article Title</th><th>Primary Keyword</th><th>Funnel Stage</th><th>Word Count</th><th>CTA</th></tr></thead>
+        <tbody>
+          <tr><td>How to Export Inventory Reports from Cin7Core (The Easy Way)</td><td>how to export cin7core data</td><td>Awareness → Consideration</td><td>1,500+</td><td>Try Databook Free</td></tr>
+          <tr><td>Cin7Core Stock on Hand Report: Step-by-Step Guide</td><td>cin7core stock on hand report</td><td>Consideration</td><td>1,200+</td><td>Generate Report Now</td></tr>
+          <tr><td>The 8 Best Reports Every Cin7Core User Should Run Monthly</td><td>cin7core reports monthly</td><td>Awareness</td><td>2,000+</td><td>Automate These Reports</td></tr>
+          <tr><td>Cin7Core vs DEAR Systems: Which Has Better Reporting?</td><td>cin7core vs dear inventory reporting</td><td>Awareness</td><td>2,500+</td><td>See How Databook Helps</td></tr>
+          <tr><td>How to Combine Multiple Cin7Core Exports Into One Report</td><td>cin7core combine reports</td><td>Consideration → Decision</td><td>1,000+</td><td>Try Multi-File Reports</td></tr>
+          <tr><td>Top 10 SKUs by Margin: The Cin7Core Report You Need to Run</td><td>cin7core top sku by margin</td><td>Consideration</td><td>1,000+</td><td>Run This Report Free</td></tr>
+          <tr><td>Why Cin7Core Exports Have Junk Rows (And How to Fix It)</td><td>cin7core export messy header rows</td><td>Awareness</td><td>800+</td><td>Databook Fixes This Automatically</td></tr>
+          <tr><td>Inventory Reporting Best Practices for Australian E-Commerce Brands</td><td>inventory reporting best practices</td><td>Awareness</td><td>2,000+</td><td>Discover Smarter Reporting</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-divider">Quick Report Use-Case Pages (Month 2)</div>
+    <p class="mb-4">The app's <code>QUICK_REPORTS</code> array (app.index.tsx lines 42–51) reveals exactly what reports users run. Each is a candidate for a dedicated use-case SEO page:</p>
+    <div class="two-col">
+      <ul>
+        <li>Open Sales Orders Report — <code>/reports/open-sales-orders</code></li>
+        <li>Top Customers by Revenue — <code>/reports/top-customers</code></li>
+        <li>Margin by Product Family — <code>/reports/product-margin</code></li>
+        <li>Aged Inventory Report — <code>/reports/aged-inventory</code></li>
+      </ul>
+      <ul>
+        <li>Outstanding Shipments — <code>/reports/shipment-tracking</code></li>
+        <li>Stock on Hand by SKU — <code>/reports/stock-on-hand</code></li>
+        <li>Revenue vs Last Quarter — <code>/reports/revenue-comparison</code></li>
+        <li>Top 10 SKUs by Margin — <code>/reports/sku-margin</code></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 6: FUNNEL STRATEGY                                             -->
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="funnel">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-icon" style="background:#fdf4ff">🔽</div>
+    <div class="section-title">
+      <h2>Funnel Strategy</h2>
+      <p>Two primary acquisition funnels mapped from keyword intent to conversion</p>
+    </div>
+    <div class="section-toggle">▼</div>
+  </div>
+  <div class="section-body">
+
+    <div class="two-col mb-6">
+      <div>
+        <h3>Funnel A — Cin7Core Problem Searcher</h3>
+        <p class="text-muted mb-4">Audience: Inventory managers who know Cin7Core but are frustrated with export limitations</p>
+        <div class="funnel">
+          <div class="funnel-stage funnel-awareness">
+            <div class="funnel-stage-icon">👁️</div>
+            <div class="funnel-stage-content">
+              <div class="funnel-stage-label">Awareness</div>
+              <div class="funnel-stage-title">Searches for the problem</div>
+              <div class="funnel-stage-desc">Keywords: "cin7core export messy", "how to export cin7core data", "cin7core reports limited" → Blog articles, use-case pages</div>
+            </div>
+          </div>
+          <div class="funnel-stage funnel-interest">
+            <div class="funnel-stage-icon">💡</div>
+            <div class="funnel-stage-content">
+              <div class="funnel-stage-label">Interest</div>
+              <div class="funnel-stage-title">Discovers Databook as a solution</div>
+              <div class="funnel-stage-desc">Keywords: "cin7core reporting tool", "cin7core combine exports" → Homepage, /cin7core-reporting page</div>
+            </div>
+          </div>
+          <div class="funnel-stage funnel-consideration">
+            <div class="funnel-stage-icon">🔍</div>
+            <div class="funnel-stage-content">
+              <div class="funnel-stage-label">Consideration</div>
+              <div class="funnel-stage-title">Evaluates features and trust</div>
+              <div class="funnel-stage-desc">/features page, testimonials, /integrations/cin7core, "does it work with Cin7Core API?"</div>
+            </div>
+          </div>
+          <div class="funnel-stage funnel-decision">
+            <div class="funnel-stage-icon">💰</div>
+            <div class="funnel-stage-content">
+              <div class="funnel-stage-label">Decision</div>
+              <div class="funnel-stage-title">Evaluates pricing</div>
+              <div class="funnel-stage-desc">Keywords: "databook pricing", "databook pro vs free" → /pricing page with Offer schema</div>
+            </div>
+          </div>
+          <div class="funnel-stage funnel-conversion">
+            <div class="funnel-stage-icon">✅</div>
+            <div class="funnel-stage-content">
+              <div class="funnel-stage-label">Conversion</div>
+              <div class="funnel-stage-title">Signs up free → upgrades to Pro</div>
+              <div class="funnel-stage-desc">/signup → /onboarding → /app → /pricing → Pro upgrade via Razorpay</div>
+            </div>
+          </div>
+          <div class="funnel-stage funnel-retention">
+            <div class="funnel-stage-icon">🔄</div>
+            <div class="funnel-stage-content">
+              <div class="funnel-stage-label">Retention</div>
+              <div class="funnel-stage-title">Becomes a monthly user + referrer</div>
+              <div class="funnel-stage-desc">Templates, saved reports, API automation (coming soon), referral codes for friends</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3>Funnel B — Brand Search (Direct Intent)</h3>
+        <p class="text-muted mb-4">Audience: Someone who heard about Databook through LinkedIn, referral, or word of mouth</p>
+        <div class="funnel">
+          <div class="funnel-stage funnel-awareness">
+            <div class="funnel-stage-icon">👁️</div>
+            <div class="funnel-stage-content">
+              <div class="funnel-stage-label">Awareness</div>
+              <div class="funnel-stage-title">Searches brand directly</div>
+              <div class="funnel-stage-desc">Keywords: "databook", "databook.io", "databook cin7core" → Homepage</div>
+            </div>
+          </div>
+          <div class="funnel-stage funnel-interest">
+            <div class="funnel-stage-icon">💡</div>
+            <div class="funnel-stage-content">
+              <div class="funnel-stage-label">Interest</div>
+              <div class="funnel-stage-title">Explores the product</div>
+              <div class="funnel-stage-desc">Homepage hero, "How it works" section, features grid, testimonial</div>
+            </div>
+          </div>
+          <div class="funnel-stage funnel-decision">
+            <div class="funnel-stage-icon">💰</div>
+            <div class="funnel-stage-content">
+              <div class="funnel-stage-label">Decision</div>
+              <div class="funnel-stage-title">Checks pricing</div>
+              <div class="funnel-stage-desc">/pricing — Free vs Pro comparison; referral code applied if referred</div>
+            </div>
+          </div>
+          <div class="funnel-stage funnel-conversion">
+            <div class="funnel-stage-icon">✅</div>
+            <div class="funnel-stage-content">
+              <div class="funnel-stage-label">Conversion</div>
+              <div class="funnel-stage-title">Signs up immediately</div>
+              <div class="funnel-stage-desc">"Start for free" → /signup with referral code pre-filled</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <h4>KPIs to Track Per Funnel</h4>
+          <table style="margin-bottom:0">
+            <thead><tr><th>Metric</th><th>Tool</th><th>Target (Month 1)</th></tr></thead>
+            <tbody>
+              <tr><td>Organic impressions</td><td>GSC</td><td>500+</td></tr>
+              <tr><td>Organic clicks</td><td>GSC</td><td>50+</td></tr>
+              <tr><td>Pages indexed</td><td>GSC</td><td>2 (/, /pricing)</td></tr>
+              <tr><td>Avg. position for core keywords</td><td>GSC</td><td>Track baseline</td></tr>
+              <tr><td>Organic signups</td><td>GA4</td><td>5+ from organic</td></tr>
+              <tr><td>Blog page sessions</td><td>GA4</td><td>0 (Month 1) → 100 (Month 2)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 6B: AEO & PIPELINE-LED SEO                                     -->
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="aeo">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-icon" style="background:#f5f3ff">🤖</div>
+    <div class="section-title">
+      <h2>AEO, Pipeline Attribution & AI Search</h2>
+      <p>Answer Engine Optimization and revenue-aligned measurement (Sources: 2026 Roadmap DOCX, seo_strategy_report.html)</p>
+    </div>
+    <div class="section-toggle">▼</div>
+  </div>
+  <div class="section-body">
+
+    <div class="info-box note">
+      <div class="info-box-icon">🧠</div>
+      <div><strong>Why AEO Matters for Databook:</strong> 37–40% of B2B buyers start research in ChatGPT, Perplexity, and Claude. Databook's product (AI-powered Cin7Core reporting) is naturally aligned with AI discovery — but only if structured data, entity coverage, and third-party citations are built. Brands are 6.5× more likely to be cited via third-party sources than their own domains.</div>
+    </div>
+
+    <h3>Pipeline Attribution Architecture</h3>
+    <div class="funnel mb-6" style="max-width:100%">
+      <div class="funnel-stage funnel-awareness">
+        <div class="funnel-stage-icon">🔍</div>
+        <div class="funnel-stage-content">
+          <div class="funnel-stage-label">Step 1 — Discovery</div>
+          <div class="funnel-stage-title">Google Search or LLM query</div>
+          <div class="funnel-stage-desc">User searches "cin7core reporting tool" or asks ChatGPT "best way to export Cin7Core data" — GCLID/UTM captured on landing</div>
+        </div>
+      </div>
+      <div class="funnel-stage funnel-interest">
+        <div class="funnel-stage-icon">🌐</div>
+        <div class="funnel-stage-content">
+          <div class="funnel-stage-label">Step 2 — Conversion</div>
+          <div class="funnel-stage-title">Databook signup or contact form</div>
+          <div class="funnel-stage-desc">/signup or contact form (index.tsx) — cookie/session linked to acquisition source via GA4</div>
+        </div>
+      </div>
+      <div class="funnel-stage funnel-consideration">
+        <div class="funnel-stage-icon">📊</div>
+        <div class="funnel-stage-content">
+          <div class="funnel-stage-label">Step 3 — CRM</div>
+          <div class="funnel-stage-title">HubSpot / Salesforce lead record</div>
+          <div class="funnel-stage-desc">GCLID-to-CRM matching links keyword cluster to opportunity (QLA framework)</div>
+        </div>
+      </div>
+      <div class="funnel-stage funnel-conversion">
+        <div class="funnel-stage-icon">💰</div>
+        <div class="funnel-stage-content">
+          <div class="funnel-stage-label">Step 4 — Closed-Won</div>
+          <div class="funnel-stage-title">Pro subscription ($29/mo via Razorpay)</div>
+          <div class="funnel-stage-desc">Offline conversion fed back to Google Smart Bidding — trains on revenue, not form fills (30–50% CAC reduction potential)</div>
+        </div>
+      </div>
+      <div class="funnel-stage funnel-retention">
+        <div class="funnel-stage-icon">🔄</div>
+        <div class="funnel-stage-content">
+          <div class="funnel-stage-label">Step 5 — MCP Query Loop</div>
+          <div class="funnel-stage-title">"Which Cin7Core keywords drove closed-won in Q3?"</div>
+          <div class="funnel-stage-desc">Model Context Protocol connects GSC + CRM — leadership queries pipeline in plain English (2026 Roadmap DOCX)</div>
+        </div>
+      </div>
+    </div>
+
+    <h3>AEO Implementation Priorities for Databook</h3>
+    <div class="two-col mb-6">
+      <div>
+        <h4>1. Structured Data (Codebase Action)</h4>
+        <ul>
+          <li>Inject JSON-LD via TanStack Router <code>head()</code> — SSR ensures crawlers see it</li>
+          <li><code>SoftwareApplication</code> on homepage — product type, pricing, features</li>
+          <li><code>Organization</code> on __root.tsx — entity recognition</li>
+          <li><code>FAQPage</code> — requires creating FAQ section first (not yet on site)</li>
+          <li><code>Offer</code> on /pricing — $0 free / $29 Pro plans</li>
+        </ul>
+      </div>
+      <div>
+        <h4>2. Entity Coverage Content</h4>
+        <ul>
+          <li>Cover full Cin7Core reporting subject: SKU mapping, stock on hand, margin analysis, multi-file merge</li>
+          <li>Use domain terminology from QUICK_REPORTS (app.index.tsx lines 42–51)</li>
+          <li>Include statistics with sources — +37–40% AI citation boost (Princeton GEO research)</li>
+          <li>Explicit positioning: "Databook is the reporting layer for Cin7Core users who are tired of Excel"</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>3. Citation Outreach Targets</h4>
+    <p class="mb-4">Monitor Perplexity/ChatGPT citations for Cin7Core queries. Target domains AI engines already cite: Cin7Core help docs, inventory management blogs, e-commerce ops publications, G2/Capterra review pages.</p>
+
+    <div class="info-box warning">
+      <div class="info-box-icon">⚠️</div>
+      <div><strong>AI Bot Access Check Required:</strong> Once robots.txt is created, ensure GPTBot, PerplexityBot, ClaudeBot, and Google-Extended are NOT blocked — blocking prevents AI citation. Only block auth routes (/app/*, /signin, etc.).</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 7: CHANNEL STRATEGY                                            -->
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="channels">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-icon" style="background:#f0f9ff">📡</div>
+    <div class="section-title">
+      <h2>Channel Strategy</h2>
+      <p>How SEO works alongside every other organic channel Databook should invest in</p>
+    </div>
+    <div class="section-toggle">▼</div>
+  </div>
+  <div class="section-body">
+    <div class="channel-grid">
+      <div class="channel-card">
+        <div class="channel-card-icon">🌐</div>
+        <div class="channel-card-title">Website (SEO Primary)</div>
+        <div class="channel-card-freq">Weekly content updates</div>
+        <div class="channel-card-desc">The central conversion engine. Homepage + /pricing optimize for decision-stage traffic. New landing pages capture problem-aware searches. Blog captures awareness traffic. All pages funnel toward /signup.</div>
+      </div>
+      <div class="channel-card">
+        <div class="channel-card-icon">📝</div>
+        <div class="channel-card-title">Blog (/blog)</div>
+        <div class="channel-card-freq">2 articles/month minimum</div>
+        <div class="channel-card-desc">Primary organic traffic driver at scale. Target Cin7Core-specific how-to content and inventory reporting guides. Each article should target one primary keyword and link back to the core conversion pages.</div>
+      </div>
+      <div class="channel-card">
+        <div class="channel-card-icon">💼</div>
+        <div class="channel-card-title">Founder LinkedIn</div>
+        <div class="channel-card-freq">3–5 posts/week</div>
+        <div class="channel-card-desc">The highest-leverage early-stage channel for a niche SaaS. Post about Cin7Core user pain points, product updates, customer wins, and founder journey. Every post is a backlink opportunity and referral source.</div>
+      </div>
+      <div class="channel-card">
+        <div class="channel-card-icon">🏢</div>
+        <div class="channel-card-title">Company LinkedIn</div>
+        <div class="channel-card-freq">2–3 posts/week</div>
+        <div class="channel-card-desc">Share blog articles, feature launches, use-case screenshots, and Cin7Core community insights. Cross-promote with Founder profile content. Build followers for future announcements.</div>
+      </div>
+      <div class="channel-card">
+        <div class="channel-card-icon">📧</div>
+        <div class="channel-card-title">Email (Product Emails)</div>
+        <div class="channel-card-freq">Onboarding + weekly digest</div>
+        <div class="channel-card-desc">Triggered emails for new signups. Monthly report ideas digest (referencing blog content). Upgrade nudge emails for free users. Email is the retention layer that keeps users coming back and upgrades organic word-of-mouth.</div>
+      </div>
+      <div class="channel-card">
+        <div class="channel-card-icon">🗣️</div>
+        <div class="channel-card-title">Cin7Core Community & Forums</div>
+        <div class="channel-card-freq">Weekly participation</div>
+        <div class="channel-card-desc">The Cin7Core user community (Facebook Group, Reddit, their official forum) is a direct pipeline to the exact target audience. Helpful contributions with tasteful product mentions drive referral traffic with zero SEO cost.</div>
+      </div>
+      <div class="channel-card">
+        <div class="channel-card-icon">⭐</div>
+        <div class="channel-card-title">Review Platforms</div>
+        <div class="channel-card-freq">Ongoing (request reviews)</div>
+        <div class="channel-card-desc">Capterra, G2, GetApp, Product Hunt. Cin7Core's own integration marketplace if available. Reviews build brand authority and appear in Google's Knowledge Panel. Target: 10+ reviews in Month 1.</div>
+      </div>
+      <div class="channel-card">
+        <div class="channel-card-icon">🤝</div>
+        <div class="channel-card-title">Partnerships & Digital PR</div>
+        <div class="channel-card-freq">Monthly outreach</div>
+        <div class="channel-card-desc">Target Cin7Core consultants, implementation partners, and e-commerce agencies. Guest posts on inventory management, e-commerce ops, and SME accounting blogs. Each guest post = high-authority backlink + referral traffic.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 8: COMPETITOR OPPORTUNITY ANALYSIS                             -->
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="competitors">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-icon" style="background:#fefce8">🏆</div>
+    <div class="section-title">
+      <h2>Competitor Opportunity Analysis</h2>
+      <p>Content gaps, keyword gaps, and positioning opportunities based on niche research</p>
+    </div>
+    <div class="section-toggle">▼</div>
+  </div>
+  <div class="section-body">
+
+    <div class="info-box note">
+      <div class="info-box-icon">📌</div>
+      <div><strong>Competitive Landscape Note:</strong> Databook operates in a highly specialized niche (Cin7Core + reporting). The primary "competitors" are: (1) Cin7Core's own native reporting, (2) generic BI tools (Tableau, Power BI — enterprise-priced overkill), (3) Excel/Google Sheets manual work, and (4) generic inventory reporting software. There are very few direct niche competitors — this is a strategic advantage.</div>
+    </div>
+
+    <div class="section-divider">Quick Wins (Month 1)</div>
+    <div class="opp-grid mb-6">
+      <div class="opp-card">
+        <div class="opp-card-title">🚀 Own "cin7core reporting tool" — It's Uncontested</div>
+        <div class="opp-card-desc">There are no strong, niche-specific SEO competitors for "cin7core reporting tool." Cin7Core's own documentation may rank, but a well-optimized landing page should beat it quickly. This is a quick win that could rank in 30–60 days on a new domain.</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-card-title">📋 Capture "Cin7Core export" Problem Keywords</div>
+        <div class="opp-card-desc">Nobody is creating content specifically about Cin7Core export problems and solutions at the depth needed. Creating a /cin7core-export landing page and companion blog articles would fill a complete content vacuum.</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-card-title">⭐ Get Into the Cin7Core Ecosystem</div>
+        <div class="opp-card-desc">Cin7Core has an integration marketplace. If Databook appears there, it gains immediate authority with Cin7Core users AND gets high-quality backlinks from Cin7Core's domain — which presumably has strong authority.</div>
+      </div>
+    </div>
+
+    <div class="section-divider">Medium-Term Opportunities (Month 2–3)</div>
+    <div class="opp-grid mb-6">
+      <div class="opp-card">
+        <div class="opp-card-title">📚 Content Hub for Inventory Reporting Best Practices</div>
+        <div class="opp-card-desc">Generic inventory management blogs cover reporting at a high level. Databook can own the specific niche of "reporting for inventory-focused SMEs using cloud IMS." Create the definitive guide — nobody else has done this for the Cin7Core audience.</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-card-title">🔗 Comparison Pages for IMS Reporting Capabilities</div>
+        <div class="opp-card-desc">Target comparison keywords: "Cin7Core vs DEAR Inventory reporting," "Cin7Core reporting limitations." These pages attract high-intent users who are evaluating their current tools and would benefit most from Databook.</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-card-title">💼 Xero + ShipStation Integration SEO (Roadmap Prep)</div>
+        <div class="opp-card-desc">The app's platform selector shows Xero and ShipStation as "coming soon." Pre-building /integrations/xero and /integrations/shipstation landing pages now will mean they're indexed and trusted by launch time — a significant first-mover advantage.</div>
+      </div>
+    </div>
+
+    <div class="section-divider">Long-Term Opportunities (Month 3+)</div>
+    <div class="opp-grid">
+      <div class="opp-card">
+        <div class="opp-card-title">🌏 Geographic Expansion — ANZ and UK</div>
+        <div class="opp-card-desc">Cin7Core is particularly popular in Australia, New Zealand, and UK among product-based SMEs. Country-specific landing pages or a localization strategy could capture these geographic audiences before any competitor does.</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-card-title">🔬 Authority Content for Inventory Management Professionals</div>
+        <div class="opp-card-desc">Long-form guides on inventory KPIs, stock turn, margin analysis, and demand forecasting — all linked to Cin7Core use cases — will attract search traffic AND backlinks from industry blogs, making Databook the authority in this niche.</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-card-title">🤖 AI-Powered Reporting Content</div>
+        <div class="opp-card-desc">"AI inventory reports" and "AI business intelligence for SMEs" are emerging keyword clusters. Databook already has AI at its core (the natural language report generation). Building content around this positions Databook for growing search demand.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  </div><!-- /tab-strategy -->
+
+  <!-- ══ TAB: EXECUTION ══════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="tab-execution">
+    <div class="tab-panel-header">
+      <h2>Execution Plan</h2>
+      <p>30-day roadmap, tools, RACI matrix, and deliverables</p>
+    </div>
+
+<div class="section" id="tools">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-icon" style="background:#f0fdf4">🛠️</div>
+    <div class="section-title">
+      <h2>Tools & Resource Requirements</h2>
+      <p>Every tool, account, and access needed — with justification and expected outcome</p>
+    </div>
+    <div class="section-toggle">▼</div>
+  </div>
+  <div class="section-body">
+    <div class="tool-grid">
+      <div class="tool-card">
+        <div class="tool-name">Profound (AEO Tracking)</div>
+        <div class="tool-priority" style="color:var(--orange)">🟠 P1 — ~$320/mo — Month 2</div>
+        <div class="tool-desc">AI citation and share-of-voice tracking across ChatGPT, Perplexity, Claude. Identifies which domains AI cites for Cin7Core queries. Source: 2026 Roadmap DOCX tooling table.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">Slate (Programmatic Pages)</div>
+        <div class="tool-priority" style="color:var(--yellow)">🟡 P2 — ~$150/mo — Month 2+</div>
+        <div class="tool-desc">Programmatic page builder for integration landing pages (/integrations/*) and use-case pages without loading dev backlog. Source: 2026 Roadmap DOCX.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">Wink (BI / Reporting)</div>
+        <div class="tool-priority" style="color:var(--yellow)">🟡 P2 — ~$90/mo — Month 2</div>
+        <div class="tool-desc">Connects GSC data to pipeline metrics. Saves 10+ hours/week on custom SEO reporting. Enables MCP-style pipeline queries. Source: 2026 Roadmap DOCX.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">Google Search Console</div>
+        <div class="tool-priority" style="color:var(--red)">🔴 P0 — Free — Immediate</div>
+        <div class="tool-desc">Required to submit sitemap, monitor indexation, track organic impressions/clicks, identify crawl errors, and verify domain ownership. <strong>Cannot run SEO without this.</strong></div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">Google Analytics 4</div>
+        <div class="tool-priority" style="color:var(--red)">🔴 P0 — Free — Immediate</div>
+        <div class="tool-desc">Track organic traffic, conversion events (signups from organic), page performance, and user behavior. Without GA4, SEO success is unmeasurable. Add GA4 script to __root.tsx.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">Screaming Frog SEO Spider</div>
+        <div class="tool-priority" style="color:var(--orange)">🟠 P1 — Free (500 URLs) / £259/yr</div>
+        <div class="tool-desc">Technical site crawl to verify robots.txt, sitemap, noindex tags, canonical tags, and metadata implementation. Run immediately after fixes are deployed to confirm correct implementation.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">Ahrefs or Semrush</div>
+        <div class="tool-priority" style="color:var(--orange)">🟠 P1 — $99–$129/month</div>
+        <div class="tool-desc">Keyword research, competitor analysis, backlink monitoring, rank tracking, and content gap analysis. Essential for the keyword strategy work and ongoing competitive intelligence. Ahrefs recommended for new domains.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">Rank Tracking Tool</div>
+        <div class="tool-priority" style="color:var(--yellow)">🟡 P2 — $29–$99/month</div>
+        <div class="tool-desc">Track keyword position changes weekly for core Cin7Core keywords. Can use Semrush or a dedicated tool (STAT, SerpWatcher). Start tracking from Day 1 to establish baseline.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">Google Business Profile</div>
+        <div class="tool-priority" style="color:var(--yellow)">🟡 P2 — Free</div>
+        <div class="tool-desc">Establish Databook as a verified entity in Google's Knowledge Graph. Important for brand search results, map visibility (if office location), and entity trust signals. Set up even without a physical office.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">Schema Markup Validator</div>
+        <div class="tool-priority" style="color:var(--yellow)">🟡 P2 — Free (Google Rich Results Test)</div>
+        <div class="tool-desc">Validate all JSON-LD schema implementations (Organization, SoftwareApplication, FAQPage, Offer) after they're added to the codebase. Use Google's Rich Results Test and Schema.org validator.</div>
+      </div>
+      <!-- <div class="tool-card">
+        <div class="tool-name">Cloudflare Analytics</div>
+        <div class="tool-priority" style="color:var(--yellow)">🟡 P2 — Included with Cloudflare Workers</div>
+        <div class="tool-desc">Basic traffic analytics already available since site is on Cloudflare Workers. Use as a sanity check alongside GA4 for total request monitoring.</div>
+      </div> -->
+      <div class="tool-card">
+        <div class="tool-name">Content Writing Tools (AI-Assisted)</div>
+        <div class="tool-priority" style="color:var(--green)">🟢 P3 — Varies</div>
+        <div class="tool-desc">For scaling blog content production. Use AI tools for research, outline, and drafts — but all content must be reviewed by someone with Cin7Core domain knowledge to ensure technical accuracy and authenticity.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">Brand Monitoring (Google Alerts)</div>
+        <div class="tool-priority" style="color:var(--green)">🟢 P3 — Free</div>
+        <div class="tool-desc">Set Google Alerts for "Databook", "Cin7Core reporting", and competitor mentions. Enables timely responses to brand mentions for link reclamation and community engagement.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 10: RESPONSIBILITY MATRIX                                      -->
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!-- <div class="section" id="raci">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-icon" style="background:#fdf4ff">👥</div>
+    <div class="section-title">
+      <h2>Responsibility Matrix (RACI)</h2>
+      <p>Who Responsible, Accountable, Consulted, and Informed for every initiative</p>
+    </div>
+    <div class="section-toggle">▼</div>
+  </div>
+  <div class="section-body">
+
+    <div class="info-box note">
+      <div class="info-box-icon">ℹ️</div>
+      <div><strong>Legend:</strong> <span class="raci-r">R</span> = Responsible (does the work) | <span class="raci-a">A</span> = Accountable (signs off) | <span class="raci-c" style="font-weight:600">C</span> = Consulted (provides input) | <span class="raci-i" style="font-weight:600">I</span> = Informed (kept updated)</div>
+    </div>
+
+    <div class="tbl-wrap">
+      <table class="raci">
+        <thead>
+          <tr>
+            <th style="width:30%">Initiative</th>
+            <th>SEO Specialist</th>
+            <th>Owner</th>
+            <th>Developer</th>
+            <th>Designer</th>
+            <th>Content Writer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Fix twitter:title / twitter:site / OG image (C-04, C-05, C-06)</td><td class="raci-r">R</td><td class="raci-a">A</td><td class="raci-r">R</td><td class="raci-r">R</td><td>—</td></tr>
+          <tr><td>Create robots.txt (C-01)</td><td class="raci-r">R</td><td class="raci-i">I</td><td class="raci-r">R</td><td>—</td><td>—</td></tr>
+          <tr><td>Add noindex to auth routes (C-03)</td><td class="raci-r">R</td><td class="raci-i">I</td><td class="raci-r">R</td><td>—</td><td>—</td></tr>
+          <tr><td>Build sitemap.xml API route (C-02)</td><td class="raci-c">C</td><td class="raci-a">A</td><td class="raci-r">R</td><td>—</td><td>—</td></tr>
+          <tr><td>Optimize homepage head() metadata (H-01)</td><td class="raci-r">R</td><td class="raci-a">A</td><td class="raci-r">R</td><td>—</td><td>—</td></tr>
+          <tr><td>Optimize pricing page metadata (H-02)</td><td class="raci-r">R</td><td class="raci-a">A</td><td class="raci-r">R</td><td>—</td><td>—</td></tr>
+          <tr><td>Implement JSON-LD Schema (H-03)</td><td class="raci-r">R</td><td class="raci-a">A</td><td class="raci-r">R</td><td>—</td><td>—</td></tr>
+          <tr><td>Add canonical tags (H-04)</td><td class="raci-r">R</td><td class="raci-i">I</td><td class="raci-r">R</td><td>—</td><td>—</td></tr>
+          <tr><td>Create site footer component (H-05)</td><td class="raci-c">C</td><td class="raci-a">A</td><td class="raci-r">R</td><td class="raci-c">C</td><td>—</td></tr>
+          <tr><td>Add favicon (M-04)</td><td class="raci-c">C</td><td class="raci-a">A</td><td class="raci-r">R</td><td class="raci-r">R</td><td>—</td></tr>
+          <tr><td>Set up Google Search Console</td><td class="raci-r">R</td><td class="raci-a">A</td><td class="raci-c">C</td><td>—</td><td>—</td></tr>
+          <tr><td>Set up GA4 tracking</td><td class="raci-r">R</td><td class="raci-a">A</td><td class="raci-r">R</td><td>—</td><td>—</td></tr>
+          <tr><td>Create /cin7core-reporting landing page</td><td class="raci-r">R</td><td class="raci-a">A</td><td class="raci-r">R</td><td class="raci-c">C</td><td class="raci-r">R</td></tr>
+          <tr><td>Create /cin7core-export landing page</td><td class="raci-r">R</td><td class="raci-a">A</td><td class="raci-r">R</td><td class="raci-c">C</td><td class="raci-r">R</td></tr>
+          <tr><td>Create /features page</td><td class="raci-r">R</td><td class="raci-a">A</td><td class="raci-r">R</td><td class="raci-r">R</td><td class="raci-r">R</td></tr>
+          <tr><td>Blog content production (8 articles)</td><td class="raci-r">R</td><td class="raci-a">A</td><td>—</td><td>—</td><td class="raci-r">R</td></tr>
+          <tr><td>Privacy Policy + Terms pages</td><td class="raci-i">I</td><td class="raci-a">A</td><td class="raci-r">R</td><td>—</td><td>—</td></tr>
+          <tr><td>Cin7Core community engagement</td><td class="raci-r">R</td><td class="raci-a">A</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td>Review platform submissions (G2, Capterra)</td><td class="raci-r">R</td><td class="raci-c">C</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td>Monthly SEO reporting</td><td class="raci-r">R</td><td class="raci-a">A</td><td class="raci-i">I</td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div> -->
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 11: 30-DAY EXECUTION PLAN                                      -->
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="30day">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-icon" style="background:#fff7ed">📅</div>
+    <div class="section-title">
+      <h2>30-Day Execution Plan</h2>
+      <p>Week-by-week task list with priorities, owners, deliverables, and expected outcomes</p>
+    </div>
+    <div class="section-toggle">▼</div>
+  </div>
+  <div class="section-body">
+
+    <div class="timeline">
+
+      <div class="timeline-week">
+        <div class="timeline-week-label">⚡ Week 1 — Emergency Technical Fixes (Days 1–7)</div>
+        <p style="font-size:13px;color:var(--gray-600);margin-bottom:12px;"><strong>Objective:</strong> Stop the bleeding. Fix all critical technical issues that are actively harming indexation and brand trust. These are all developer tasks that should ship in a single PR.</p>
+        <ul class="task-list">
+          <li class="task-item"><span class="priority p0">P0</span><div><strong>[Dev]</strong> Fix twitter:title from "Lumen" → "Databook" in __root.tsx line 40 — <em>5 minutes</em></div></li>
+          <li class="task-item"><span class="priority p0">P0</span><div><strong>[Dev]</strong> Fix twitter:site from @Lovable → Databook handle (or remove) in __root.tsx line 39 — <em>5 minutes</em></div></li>
+          <li class="task-item"><span class="priority p0">P0</span><div><strong>[Dev]</strong> Change twitter:card to summary_large_image in __root.tsx line 38 — <em>5 minutes</em></div></li>
+          <li class="task-item"><span class="priority p0">P0</span><div><strong>[Dev]</strong> Create public/robots.txt with Disallow for all auth/app routes + Sitemap declaration — <em>15 minutes</em></div></li>
+          <li class="task-item"><span class="priority p0">P0</span><div><strong>[Dev]</strong> Add noindex,nofollow meta to /signin, /signup, /onboarding, /connect routes — <em>30 minutes</em></div></li>
+          <li class="task-item"><span class="priority p0">P0</span><div><strong>[Dev]</strong> Add noindex,nofollow meta to all /app/* routes (5 files) — <em>20 minutes</em></div></li>
+          <li class="task-item"><span class="priority p0">P0</span><div><strong>[Dev + Designer]</strong> Create proper 1200×630px OG image, upload to Databook CDN, update __root.tsx — <em>1 hour</em></div></li>
+          <li class="task-item"><span class="priority p1">P1</span><div><strong>[SEO + Dev]</strong> Add keyword-optimized head() to homepage (/, routes/index.tsx) — <em>20 minutes</em></div></li>
+          <li class="task-item"><span class="priority p1">P1</span><div><strong>[SEO + Dev]</strong> Add conversion-optimized head() to pricing page (/pricing, routes/pricing.tsx) — <em>15 minutes</em></div></li>
+          <li class="task-item"><span class="priority p1">P1</span><div><strong>[SEO]</strong> Set up Google Search Console — verify domain, submit sitemap (once built) — <em>30 minutes</em></div></li>
+          <li class="task-item"><span class="priority p2">P2</span><div><strong>[SEO]</strong> Install GA4 on the site (add gtag script to __root.tsx) — <em>1 hour dev</em></div></li>
+          <li class="task-item"><span class="priority p2">P2</span><div><strong>[DevOps]</strong> Rename wrangler.jsonc worker name from "super-duper-chainsaw" → "databook" — <em>5 minutes</em></div></li>
+        </ul>
+        <div style="margin-top:12px;padding:10px 14px;background:var(--green-pale);border-radius:6px;font-size:12px;color:var(--green);">
+          <strong>Expected Outcome Week 1:</strong> Brand integrity restored (Lumen/Lovable references removed). Auth pages protected from indexation. Homepage and pricing page properly optimized. GSC connected and monitoring.
+        </div>
+      </div>
+
+      <div class="timeline-week">
+        <div class="timeline-week-label">🔧 Week 2 — Technical Foundation (Days 8–14)</div>
+        <p style="font-size:13px;color:var(--gray-600);margin-bottom:12px;"><strong>Objective:</strong> Build the core technical SEO infrastructure — sitemap, schema, canonical tags, and analytics — so that Google correctly understands and values Databook's indexable pages.</p>
+        <ul class="task-list">
+          <li class="task-item"><span class="priority p1">P1</span><div><strong>[Dev]</strong> Build sitemap.xml API route in TanStack Start (src/routes/api/sitemap.xml.ts) — list /, /pricing — <em>2 hours</em></div></li>
+          <li class="task-item"><span class="priority p1">P1</span><div><strong>[Dev]</strong> Add canonical link tags to / and /pricing in their head() functions — <em>30 minutes</em></div></li>
+          <li class="task-item"><span class="priority p1">P1</span><div><strong>[SEO + Dev]</strong> Implement Organization + WebSite + SoftwareApplication JSON-LD schema on homepage — <em>2 hours</em></div></li>
+          <li class="task-item"><span class="priority p1">P1</span><div><strong>[SEO + Dev]</strong> Create FAQ section on homepage + implement FAQPage JSON-LD schema — <em>3 hours</em></div></li>
+          <li class="task-item"><span class="priority p1">P1</span><div><strong>[SEO + Dev]</strong> Implement Offer/Product schema on /pricing page — <em>1 hour</em></div></li>
+          <li class="task-item"><span class="priority p1">P1</span><div><strong>[Designer + Dev]</strong> Add favicon (favicon.ico + Apple touch icon + SVG) to __root.tsx — <em>1 hour</em></div></li>
+          <li class="task-item"><span class="priority p1">P1</span><div><strong>[SEO]</strong> Validate all schema with Google Rich Results Test — confirm no errors — <em>30 minutes</em></div></li>
+          <li class="task-item"><span class="priority p2">P2</span><div><strong>[Dev]</strong> Add og:site_name="Databook" and per-route og:url to root + public routes — <em>10 minutes</em></div></li>
+          <li class="task-item"><span class="priority p2">P2</span><div><strong>[Dev]</strong> Verify Cloudflare Workers SSR returns proper HTTP 404 status for unknown routes — <em>1 hour</em></div></li>
+          <li class="task-item"><span class="priority p2">P2</span><div><strong>[SEO]</strong> Crawl site with Screaming Frog to verify all Week 1 + Week 2 implementations — <em>1 hour</em></div></li>
+          <li class="task-item"><span class="priority p2">P2</span><div><strong>[SEO]</strong> Submit sitemap.xml in Google Search Console — request indexation for / and /pricing — <em>15 minutes</em></div></li>
+        </ul>
+        <div style="margin-top:12px;padding:10px 14px;background:var(--green-pale);border-radius:6px;font-size:12px;color:var(--green);">
+          <strong>Expected Outcome Week 2:</strong> Site achieves 7/10 Technical SEO score. Google can discover and properly index Databook's pages. Schema makes the site eligible for rich results. Sitemap submitted for priority crawling.
+        </div>
+      </div>
+
+      <div class="timeline-week">
+        <div class="timeline-week-label">📄 Week 3 — Content & Landing Pages (Days 15–21)</div>
+        <p style="font-size:13px;color:var(--gray-600);margin-bottom:12px;"><strong>Objective:</strong> Begin creating the keyword-targeted landing pages that will drive organic traffic. Start the first blog articles targeting high-intent awareness keywords.</p>
+        <ul class="task-list">
+          <li class="task-item"><span class="priority p1">P1</span><div><strong>[SEO + Content]</strong> Write and publish /cin7core-reporting landing page (target: "cin7core reporting tool") — <em>2 days</em></div></li>
+          <li class="task-item"><span class="priority p1">P1</span><div><strong>[SEO + Content]</strong> Write and publish /cin7core-export landing page (target: "cin7core export to excel") — <em>2 days</em></div></li>
+          <li class="task-item"><span class="priority p1">P1</span><div><strong>[Dev]</strong> Create Privacy Policy page (/privacy) — use standard SaaS privacy template — <em>1 day (legal review)</em></div></li>
+          <li class="task-item"><span class="priority p1">P1</span><div><strong>[Dev]</strong> Create Terms of Service page (/terms) — <em>1 day (legal review)</em></div></li>
+          <li class="task-item"><span class="priority p1">P1</span><div><strong>[SEO + Dev]</strong> Update site footer component to include links to /pricing, /privacy, /terms, /contact, /features — <em>2 hours</em></div></li>
+          <li class="task-item"><span class="priority p1">P1</span><div><strong>[Content]</strong> Write Blog Article 1: "How to Export Inventory Reports from Cin7Core (The Easy Way)" — <em>3 days</em></div></li>
+          <li class="task-item"><span class="priority p2">P2</span><div><strong>[SEO]</strong> Set up rank tracking for 10 core keywords — establish baseline positions — <em>1 hour</em></div></li>
+          <li class="task-item"><span class="priority p2">P2</span><div><strong>[SEO]</strong> Create Databook profile on G2, Capterra, and ProductHunt — request first 5 reviews — <em>3 hours</em></div></li>
+          <li class="task-item"><span class="priority p2">P2</span><div><strong>[SEO]</strong> Join Cin7Core user communities (Facebook, LinkedIn groups) and begin helpful participation — <em>ongoing</em></div></li>
+        </ul>
+        <div style="margin-top:12px;padding:10px 14px;background:var(--green-pale);border-radius:6px;font-size:12px;color:var(--green);">
+          <strong>Expected Outcome Week 3:</strong> First keyword-targeted landing pages live and indexed. First blog article published. Legal pages deployed (compliance). Databook visible on major review platforms. Community presence established.
+        </div>
+      </div>
+
+      <div class="timeline-week">
+        <div class="timeline-week-label">📈 Week 4 — Amplify & Analyze (Days 22–30)</div>
+        <p style="font-size:13px;color:var(--gray-600);margin-bottom:12px;"><strong>Objective:</strong> Review what's working, amplify content across channels, analyze early performance data, and set the roadmap for Month 2.</p>
+        <ul class="task-list">
+          <li class="task-item"><span class="priority p1">P1</span><div><strong>[Content]</strong> Publish Blog Article 2: "Cin7Core Stock on Hand Report: Step-by-Step Guide" — <em>3 days</em></div></li>
+          <li class="task-item"><span class="priority p1">P1</span><div><strong>[SEO + Owner]</strong> Share new landing pages + blog articles on Founder LinkedIn with product context — <em>2 hours</em></div></li>
+          <li class="task-item"><span class="priority p1">P1</span><div><strong>[SEO]</strong> Reach out to 5 Cin7Core consultants/partners for introduction + link opportunities — <em>3 hours</em></div></li>
+          <li class="task-item"><span class="priority p2">P2</span><div><strong>[SEO]</strong> First GSC data check — impressions, clicks, indexed pages, any crawl errors — <em>30 minutes</em></div></li>
+          <li class="task-item"><span class="priority p2">P2</span><div><strong>[SEO]</strong> First GA4 data check — organic traffic sources, landing pages, conversion events — <em>30 minutes</em></div></li>
+          <li class="task-item"><span class="priority p2">P2</span><div><strong>[SEO]</strong> Begin /features page brief and design planning — <em>2 hours</em></div></li>
+          <li class="task-item"><span class="priority p2">P2</span><div><strong>[SEO + Content]</strong> Plan Month 2 content calendar: 6 more blog articles + /integrations/cin7core page — <em>2 hours</em></div></li>
+          <li class="task-item"><span class="priority p2">P2</span><div><strong>[SEO]</strong> Create Month 1 SEO performance report for owner — <em>2 hours</em></div></li>
+          <li class="task-item"><span class="priority p3">P3</span><div><strong>[SEO]</strong> Apply to Cin7Core's integration marketplace / partner program if available — <em>1 hour</em></div></li>
+          <li class="task-item"><span class="priority p3">P3</span><div><strong>[SEO + Dev]</strong> Self-host Google Fonts investigation — brief for Month 2 sprint — <em>2 hours scoping</em></div></li>
+        </ul>
+        <div style="margin-top:12px;padding:10px 14px;background:var(--green-pale);border-radius:6px;font-size:12px;color:var(--green);">
+          <strong>Expected Outcome Week 4:</strong> 2 blog articles live. Community and partner outreach underway. First performance data available. Month 2 roadmap planned. Owner presented with 30-day results report.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 12: DELIVERABLES                                               -->
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="deliverables">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-icon" style="background:#f0fdf4">📦</div>
+    <div class="section-title">
+      <h2>Deliverables</h2>
+      <p>Exactly what I will produce as the SEO Specialist in Month 1</p>
+    </div>
+    <div class="section-toggle">▼</div>
+  </div>
+  <div class="section-body">
+    <div class="deliverable-grid">
+      <div class="deliverable-item">
+        <div class="deliverable-icon">⚙️</div>
+        <div>
+          <div class="deliverable-name">Technical SEO Action Plan</div>
+          <div class="deliverable-desc">Prioritized list of 28 technical fixes with file locations, code examples, and owners. Handed to developer for sprint planning.</div>
+        </div>
+      </div>
+      <div class="deliverable-item">
+        <div class="deliverable-icon">🗺️</div>
+        <div>
+          <div class="deliverable-name">Keyword Map</div>
+          <div class="deliverable-desc">Complete keyword universe organized by intent cluster, funnel stage, and target page. Includes title/description recommendations for each key page.</div>
+        </div>
+      </div>
+      <div class="deliverable-item">
+        <div class="deliverable-icon">📅</div>
+        <div>
+          <div class="deliverable-name">Content Calendar (Month 1–2)</div>
+          <div class="deliverable-desc">10 blog article topics with primary keywords, target word counts, CTAs, and internal linking plan. Ready for content writer briefing.</div>
+        </div>
+      </div>
+      <div class="deliverable-item">
+        <div class="deliverable-icon">📋</div>
+        <div>
+          <div class="deliverable-name">Content Briefs (5 Priority Pages)</div>
+          <div class="deliverable-desc">Detailed briefs for /cin7core-reporting, /cin7core-export, /features, /integrations/cin7core, and Blog Article 1. Each includes keyword, structure, and examples.</div>
+        </div>
+      </div>
+      <div class="deliverable-item">
+        <div class="deliverable-icon">🔗</div>
+        <div>
+          <div class="deliverable-name">Internal Linking Plan</div>
+          <div class="deliverable-desc">Map of which pages link to which, with anchor text recommendations. Ensures new landing pages and blog articles strengthen the conversion funnel.</div>
+        </div>
+      </div>
+      <div class="deliverable-item">
+        <div class="deliverable-icon">📊</div>
+        <div>
+          <div class="deliverable-name">Analytics Tracking Setup</div>
+          <div class="deliverable-desc">GSC configured + sitemap submitted. GA4 installed with conversion event tracking for organic signups. Rank tracking dashboard for 10 core keywords.</div>
+        </div>
+      </div>
+      <div class="deliverable-item">
+        <div class="deliverable-icon">📈</div>
+        <div>
+          <div class="deliverable-name">Monthly SEO Report (End of Month 1)</div>
+          <div class="deliverable-desc">GSC data (impressions, clicks, indexed pages), GA4 organic sessions, keyword position changes, pages published, technical fixes completed, Month 2 priorities.</div>
+        </div>
+      </div>
+      <div class="deliverable-item">
+        <div class="deliverable-icon">🏆</div>
+        <div>
+          <div class="deliverable-name">Competitive Analysis</div>
+          <div class="deliverable-desc">Keyword gap analysis vs top 3 ranking pages for Cin7Core reporting terms. Content gap analysis. Backlink opportunity identification.</div>
+        </div>
+      </div>
+      <div class="deliverable-item">
+        <div class="deliverable-icon">🔽</div>
+        <div>
+          <div class="deliverable-name">Funnel Maps (Visual)</div>
+          <div class="deliverable-desc">Visual funnel diagrams for Funnel A (problem searcher) and Funnel B (brand direct). Shows path from keyword → content → page → conversion event.</div>
+        </div>
+      </div>
+      <div class="deliverable-item">
+        <div class="deliverable-icon">📰</div>
+        <div>
+          <div class="deliverable-name">2 Published Blog Articles</div>
+          <div class="deliverable-desc">Article 1: "How to Export Inventory Reports from Cin7Core". Article 2: "Cin7Core Stock on Hand Report: Step-by-Step Guide". Both keyword-optimized and published by Day 25.</div>
+        </div>
+      </div>
+      <div class="deliverable-item">
+        <div class="deliverable-icon">🏗️</div>
+        <div>
+          <div class="deliverable-name">2 Landing Pages Live</div>
+          <div class="deliverable-desc">/cin7core-reporting and /cin7core-export — both fully optimized with schema, proper metadata, internal links, and conversion CTAs.</div>
+        </div>
+      </div>
+      <div class="deliverable-item">
+        <div class="deliverable-icon">👔</div>
+        <div>
+          <div class="deliverable-name">Owner Presentation (This Document)</div>
+          <div class="deliverable-desc">Complete SEO strategy, findings, 30-day plan, resource requirements, and expected outcomes. Updated monthly with performance data.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div><!-- /tab-execution -->
+
+  <!-- ══ TAB: OWNER REPORT ══════════════════════════════════════════════ -->
+  <div class="tab-panel" id="tab-owner">
+    <div class="tab-panel-header">
+      <h2>Executive Summary for Owner</h2>
+      <p>Clear, non-technical summary — where we are, what we're doing, and what to expect</p>
+    </div>
+
+<div class="section" id="owner">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-icon" style="background:#fef3c7">👔</div>
+    <div class="section-title">
+      <h2>Executive Summary for Owner</h2>
+      <p>Clear, non-technical summary of where we are, what we're doing, and what to expect</p>
+    </div>
+    <div class="section-toggle">▼</div>
+  </div>
+  <div class="section-body">
+
+    <div class="info-box warning">
+      <div class="info-box-icon">⚡</div>
+      <div><strong>The Most Important Thing You Need to Know:</strong> Databook's website currently has several critical SEO issues that are causing real brand damage and blocking Google from finding your pages. The good news: most of these are 5-minute fixes. We can repair all critical issues in the first week.</div>
+    </div>
+
+    <div class="section-divider">Where We Are Today</div>
+    <div class="two-col mb-6">
+      <div>
+        <h3>🚨 What's Broken Right Now</h3>
+        <ul>
+          <li>Every Twitter/X share of Databook shows <strong>"Lumen"</strong> as the title — this is the old name of your product. Your brand appears as the wrong company.</li>
+          <li>The Twitter card attributes the product to <strong>"@Lovable"</strong> (the AI tool used to build it) — not to Databook.</li>
+          <li>Google can access your sign-in page, sign-up page, internal app dashboard, and an internal debug tool called "/app/brain" — none of which should appear in search results.</li>
+          <li>There is no sitemap.xml — Google doesn't know your main pages exist.</li>
+          <li>There is no robots.txt — Google has no crawl instructions whatsoever.</li>
+          <li>Your homepage and pricing page have basic metadata but are not keyword-optimized for Cin7Core searches — and root-level Twitter cards still show the wrong brand on social shares.</li>
+          <li>The social sharing image for any Databook link points to a temporary URL that may stop working.</li>
+          <li>There are zero privacy policy or terms of service pages — a legal compliance gap.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>✅ What's Working</h3>
+        <ul>
+          <li>Clean, modern URL structure — no technical debt in the routing system.</li>
+          <li>Server-side rendering (SSR) via Cloudflare Workers — Google can read all page content correctly.</li>
+          <li>The homepage has good content: hero section, how-it-works, features, testimonial, pricing teaser, and contact form — all strong SEO content once properly indexed.</li>
+          <li>Font loading is properly configured with preconnect hints.</li>
+          <li>The product itself is genuinely differentiated and solves a real problem — which is the foundation every good SEO strategy needs.</li>
+          <li>The /pricing page has a clear value proposition and pricing that is competitive ($29/month).</li>
+          <li>Contact email (hello@databook.io) is publicly accessible in the homepage footer — good for trust.</li>
+          <li>Homepage already has title + description in head() (index.tsx) — foundation exists, needs keyword upgrade.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-divider">What Opportunities Exist</div>
+    <div class="info-box success">
+      <div class="info-box-icon">🎯</div>
+      <div><strong>The Big SEO Opportunity:</strong> Nobody owns the "cin7core reporting tool" keyword cluster in search. Because this is a niche B2B tool, there are very few competitors investing in SEO for these specific keywords. With the right content and technical foundation, Databook can realistically rank on Page 1 of Google for Cin7Core-specific search terms within 60–90 days of launching proper SEO work.</div>
+    </div>
+
+    <div class="section-divider">What I Will Be Doing (Month 1)</div>
+    <div class="tbl-wrap mb-6">
+      <table>
+        <thead><tr><th>Week</th><th>Focus</th><th>Key Outputs</th><th>Support I Need from You</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Week 1</strong></td>
+            <td>Emergency fixes — brand integrity + indexation protection</td>
+            <td>robots.txt, noindex on auth pages, fix "Lumen" references, OG image, GSC setup</td>
+            <td>5 minutes of developer time for 5-minute code fixes. Designer for OG image (1200×630px).</td>
+          </tr>
+          <tr>
+            <td><strong>Week 2</strong></td>
+            <td>Technical foundation — sitemap, schema, canonical tags, analytics</td>
+            <td>sitemap.xml live, JSON-LD schema on homepage + pricing, GA4 installed</td>
+            <td>2 hours of developer time. No content input needed this week.</td>
+          </tr>
+          <tr>
+            <td><strong>Week 3</strong></td>
+            <td>Content creation — first keyword-targeted landing pages + blog article</td>
+            <td>/cin7core-reporting page, /cin7core-export page, Blog Article 1, Privacy/Terms pages</td>
+            <td>Content writer for 3 pages (if you have one) OR I write them myself. Legal review for privacy/terms.</td>
+          </tr>
+          <tr>
+            <td><strong>Week 4</strong></td>
+            <td>Amplify + analyze — share content, build relationships, review data</td>
+            <td>Blog Article 2, LinkedIn promotion, partner outreach, first performance report</td>
+            <td>5 LinkedIn posts from founder account about new content and Cin7Core pain points.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-divider">What Tools Are Needed</div>
+    <div class="tbl-wrap mb-6">
+      <table>
+        <thead><tr><th>Tool</th><th>Cost</th><th>Why It's Needed</th></tr></thead>
+        <tbody>
+          <tr><td>Google Search Console</td><td><strong>Free</strong></td><td>Monitor what Google sees. Required for SEO to function.</td></tr>
+          <tr><td>Google Analytics 4</td><td><strong>Free</strong></td><td>Track traffic and sign-ups from organic search. Required for ROI measurement.</td></tr>
+          <tr><td>Screaming Frog (basic)</td><td><strong>Free</strong></td><td>Verify technical fixes were implemented correctly.</td></tr>
+          <tr><td>Ahrefs or Semrush</td><td>~$99–129/month</td><td>Keyword research, competitor analysis, rank tracking. Investment pays back with first organic signup.</td></tr>
+          <tr><td>Profound (AEO)</td><td>~$320/month</td><td>Track Databook citations in ChatGPT, Perplexity, Claude. Month 2 priority.</td></tr>
+          <tr><td>Slate (Programmatic SEO)</td><td>~$150/month</td><td>Scale integration landing pages without dev backlog. Month 2+.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-divider">What Success Looks Like — Day 30</div>
+    <div class="kpi-grid" style="margin-bottom:24px">
+      <div class="kpi-card primary">
+        <div class="kpi-label">Technical Issues Resolved</div>
+        <div class="kpi-value">28</div>
+        <div class="kpi-note">All critical + high + medium findings fixed</div>
+      </div>
+      <div class="kpi-card primary">
+        <div class="kpi-label">Pages Properly Indexed</div>
+        <div class="kpi-value">4+</div>
+        <div class="kpi-note">/ + /pricing + /cin7core-reporting + /cin7core-export</div>
+      </div>
+      <div class="kpi-card primary">
+        <div class="kpi-label">Blog Articles Published</div>
+        <div class="kpi-value">2</div>
+        <div class="kpi-note">Both targeting high-intent Cin7Core keywords</div>
+      </div>
+      <div class="kpi-card primary">
+        <div class="kpi-label">Schema Implementations</div>
+        <div class="kpi-value">5</div>
+        <div class="kpi-note">Organization, WebSite, SoftwareApplication, FAQPage, Offer</div>
+      </div>
+      <div class="kpi-card success">
+        <div class="kpi-label">GSC Impressions (baseline)</div>
+        <div class="kpi-value">200+</div>
+        <div class="kpi-note">Starting to appear in search results</div>
+      </div>
+      <div class="kpi-card success">
+        <div class="kpi-label">Technical SEO Score</div>
+        <div class="kpi-value">8/10</div>
+        <div class="kpi-note">Up from current 2.5/10</div>
+      </div>
+    </div>
+
+    <div class="info-box success">
+      <div class="info-box-icon">📢</div>
+      <div>
+        <strong>The 60-Day Picture:</strong> After Month 1's technical foundation, Month 2 accelerates with more content (6 more blog articles, /features page, /integrations/cin7core), link building from Cin7Core's ecosystem, and community presence. By Day 60, Databook should start appearing in Google results for core Cin7Core keywords — bringing in the first organic trial signups with zero paid acquisition cost.
+      </div>
+    </div>
+
+    <div class="section-divider">What I Need From You (Owner Actions)</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Request</th><th>Timeline</th><th>Effort Required</th><th>Why It Matters</th></tr></thead>
+        <tbody>
+          <tr><td>Provide access to GSC and GA4 (or create accounts)</td><td>Day 1</td><td>30 minutes</td><td>Cannot run SEO without measurement</td></tr>
+          <tr><td>Approve developer time for Week 1 critical fixes</td><td>Day 1</td><td>3 hours developer</td><td>These are blocking brand integrity right now</td></tr>
+          <tr><td>Commission a proper OG social sharing image (1200×630px)</td><td>Day 2</td><td>1 hour designer</td><td>All social shares show wrong/broken image currently</td></tr>
+          <tr><td>Share Databook's Twitter/X handle (or confirm there isn't one yet)</td><td>Day 1</td><td>5 minutes</td><td>Required to fix critical twitter:site bug</td></tr>
+          <tr><td>Provide 5 LinkedIn posts on Cin7Core pain points and product updates</td><td>Week 4</td><td>30 minutes/post</td><td>LinkedIn is the highest-ROI amplification channel for B2B SaaS</td></tr>
+          <tr><td>Request first 5 reviews from known customers on G2/Capterra</td><td>Week 3</td><td>5 customer emails</td><td>Reviews build authority and appear in Google search results</td></tr>
+          <tr><td>Approve privacy policy and terms of service (legal review)</td><td>Week 3</td><td>2 hours legal</td><td>Legal compliance + trust signals for SEO</td></tr>
+          <tr><td>Investigate Cin7Core integration marketplace application</td><td>Week 4</td><td>1 hour</td><td>Could provide the highest-authority backlink possible</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+  </div><!-- /tab-owner -->
+
+<!-- FOOTER -->
+<div style="text-align:center;padding:28px 0 0;border-top:1px solid var(--gray-200);margin-top:32px;">
+  <p style="font-family:'Fraunces',serif;font-size:18px;font-weight:700;color:var(--plum);margin-bottom:6px;">Databook — SEO Growth Plan & Execution Blueprint</p>
+  <p style="font-size:12px;color:var(--gray-500);">Prepared by: SEO Specialist | Date: June 25, 2026 | Version: 1.0 | Horizon: 30 Days</p>
+  <p style="font-size:11px;color:var(--gray-400);margin-top:8px;">All findings traceable to: seos/seo_audit.md, src/routes/__root.tsx, src/routes/index.tsx, src/routes/pricing.tsx, src/routes/app.index.tsx, wrangler.jsonc</p>
+</div>
+
+  </main>
+</div><!-- /.app-layout -->
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!-- JAVASCRIPT                                                             -->
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<script>
+  // ── Tab switching ───────────────────────────────────────────
+  function switchTab(tabId) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    const panel = document.getElementById('tab-' + tabId);
+    if (panel) {
+      panel.classList.add('active');
+      document.querySelectorAll('.tab-btn[data-tab="' + tabId + '"]').forEach(b => b.classList.add('active'));
+      document.querySelector('.main-content').scrollTop = 0;
+      window.scrollTo(0, 0);
+    }
+  }
+
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => switchTab(btn.getAttribute('data-tab')));
+  });
+
+  // ── Section toggle (kept for compatibility) ─────────────────
+  function toggleSection(header) {
+    const body = header.nextElementSibling;
+    const toggle = header.querySelector('.section-toggle');
+    if (!body || !toggle || toggle.style.display === 'none') return;
+    if (body.classList.contains('collapsed')) {
+      body.classList.remove('collapsed');
+      toggle.textContent = '▼';
+    } else {
+      body.classList.add('collapsed');
+      toggle.textContent = '▶';
+    }
+  }
+
+  // ── Progress / scroll-to-top ────────────────────────────────
+  const progress = document.createElement('div');
+  progress.className = 'progress-ring';
+  progress.title = 'Scroll to top';
+  progress.textContent = '↑';
+  progress.onclick = () => document.querySelector('.main-content').scrollTo({ top: 0, behavior: 'smooth' });
+  document.body.appendChild(progress);
+
+  const mainEl = document.querySelector('.main-content');
+  if (mainEl) {
+    mainEl.addEventListener('scroll', () => {
+      const pct = Math.round((mainEl.scrollTop / (mainEl.scrollHeight - mainEl.clientHeight)) * 100) || 0;
+      progress.textContent = pct > 5 ? pct + '%' : '↑';
+      progress.style.opacity = pct > 5 ? '1' : '0.5';
+    });
+  }
+</script>
+
+</body>
+</html>
