@@ -5,6 +5,7 @@ import ProgressStats from './components/ProgressStats';
 import TaskCard from './components/TaskCard';
 import TaskDetailsModal from './components/TaskDetailsModal';
 import CreateTaskModal from './components/CreateTaskModal';
+import FilterMultiSelect from './components/FilterMultiSelect';
 import {
   Plus,
   Search,
@@ -16,6 +17,35 @@ import {
   FileSpreadsheet
 } from 'lucide-react';
 
+const ROLE_FILTER_OPTIONS: { value: TeamRole; label: string }[] = [
+  { value: 'Developer', label: 'Developer (Technical)' },
+  { value: 'SEO Lead', label: 'SEO Lead (Search)' },
+  { value: 'Founder', label: 'Founder (Advisory)' },
+  { value: 'Operations', label: 'Operations / Marketing' },
+];
+
+const WEEK_FILTER_OPTIONS: { value: TaskWeek; label: string }[] = [
+  { value: 'Week 1', label: 'Week 1 (Foundations)' },
+  { value: 'Week 2', label: 'Week 2 (Funnel Deployment)' },
+  { value: 'Week 3', label: 'Week 3 (Optimization/Schema)' },
+  { value: 'Week 4', label: 'Week 4 (Reporting/Indexing)' },
+  { value: 'Suggested/Optional', label: 'Suggested / Optional' },
+];
+
+const CATEGORY_FILTER_OPTIONS: { value: TaskCategory; label: string }[] = [
+  { value: 'Technical', label: 'Technical SEO' },
+  { value: 'On-Page', label: 'On-Page Optimization' },
+  { value: 'Local SEO', label: 'Local SEO / GEO Mapping' },
+  { value: 'Content', label: 'Content & Socials' },
+  { value: 'Strategy', label: 'Strategic Business Gaps' },
+];
+
+const STATUS_FILTER_OPTIONS: { value: TaskStatus; label: string }[] = [
+  { value: 'Pending', label: 'Pending' },
+  { value: 'In Progress', label: 'In Progress' },
+  { value: 'Completed', label: 'Completed' },
+];
+
 export default function App() {
   // Application state
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -25,12 +55,12 @@ export default function App() {
   const [program, setProgram] = useState<'kthp' | 'symconverge' | 'databook'>('kthp');
   const [exporting, setExporting] = useState(false);
 
-  // Filters state
+  // Filters state (empty array = no filter / show all)
   const [searchTerm, setSearchTerm] = useState('');
-  const [filterRole, setFilterRole] = useState<TeamRole | 'All'>('All');
-  const [filterWeek, setFilterWeek] = useState<TaskWeek | 'All'>('All');
-  const [filterCategory, setFilterCategory] = useState<TaskCategory | 'All'>('All');
-  const [filterStatus, setFilterStatus] = useState<TaskStatus | 'All'>('All');
+  const [filterRoles, setFilterRoles] = useState<TeamRole[]>([]);
+  const [filterWeeks, setFilterWeeks] = useState<TaskWeek[]>([]);
+  const [filterCategories, setFilterCategories] = useState<TaskCategory[]>([]);
+  const [filterStatuses, setFilterStatuses] = useState<TaskStatus[]>([]);
   const [showOnlySuggested, setShowOnlySuggested] = useState(false);
 
   // Modals state
@@ -621,10 +651,10 @@ export default function App() {
       task.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       task.description.toLowerCase().includes(searchTerm.toLowerCase());
 
-    const matchesRole = filterRole === 'All' || task.role === filterRole;
-    const matchesWeek = filterWeek === 'All' || task.week === filterWeek;
-    const matchesCategory = filterCategory === 'All' || task.category === filterCategory;
-    const matchesStatus = filterStatus === 'All' || task.status === filterStatus;
+    const matchesRole = filterRoles.length === 0 || filterRoles.includes(task.role);
+    const matchesWeek = filterWeeks.length === 0 || filterWeeks.includes(task.week);
+    const matchesCategory = filterCategories.length === 0 || filterCategories.includes(task.category);
+    const matchesStatus = filterStatuses.length === 0 || filterStatuses.includes(task.status);
     const matchesSuggested = !showOnlySuggested || !!task.isOptional;
 
     return matchesSearch && matchesRole && matchesWeek && matchesCategory && matchesStatus && matchesSuggested;
@@ -763,69 +793,40 @@ export default function App() {
             </div>
 
             {/* Filter by Role */}
-            <div>
-              <select
-                id="filter-role-select"
-                value={filterRole}
-                onChange={(e) => setFilterRole(e.target.value as any)}
-                className="w-full text-xs border-2 border-slate-900 rounded-none p-2.5 outline-none bg-white text-slate-900 font-bold cursor-pointer"
-              >
-                <option value="All">Filter by Owner (All)</option>
-                <option value="Developer">Developer (Technical)</option>
-                <option value="SEO Lead">SEO Lead (Search)</option>
-                <option value="Founder">Founder (Advisory)</option>
-                <option value="Operations">Operations / Marketing</option>
-              </select>
-            </div>
+            <FilterMultiSelect
+              id="filter-role-select"
+              label="Owner"
+              options={ROLE_FILTER_OPTIONS}
+              selected={filterRoles}
+              onChange={setFilterRoles}
+            />
 
             {/* Filter by Timeline */}
-            <div>
-              <select
-                id="filter-timeline-select"
-                value={filterWeek}
-                onChange={(e) => setFilterWeek(e.target.value as any)}
-                className="w-full text-xs border-2 border-slate-900 rounded-none p-2.5 outline-none bg-white text-slate-900 font-bold cursor-pointer"
-              >
-                <option value="All">Filter by Timeline (All)</option>
-                <option value="Week 1">Week 1 (Foundations)</option>
-                <option value="Week 2">Week 2 (Funnel Deployment)</option>
-                <option value="Week 3">Week 3 (Optimization/Schema)</option>
-                <option value="Week 4">Week 4 (Reporting/Indexing)</option>
-                <option value="Suggested/Optional">Suggested / Optional</option>
-              </select>
-            </div>
+            <FilterMultiSelect
+              id="filter-timeline-select"
+              label="Timeline"
+              options={WEEK_FILTER_OPTIONS}
+              selected={filterWeeks}
+              onChange={setFilterWeeks}
+            />
 
             {/* Filter by Category */}
-            <div>
-              <select
-                id="filter-category-select"
-                value={filterCategory}
-                onChange={(e) => setFilterCategory(e.target.value as any)}
-                className="w-full text-xs border-2 border-slate-900 rounded-none p-2.5 outline-none bg-white text-slate-900 font-bold cursor-pointer"
-              >
-                <option value="All">Filter by Category (All)</option>
-                <option value="Technical">Technical SEO</option>
-                <option value="On-Page">On-Page Optimization</option>
-                <option value="Local SEO">Local SEO / GEO Mapping</option>
-                <option value="Content">Content &amp; Socials</option>
-                <option value="Strategy">Strategic Business Gaps</option>
-              </select>
-            </div>
+            <FilterMultiSelect
+              id="filter-category-select"
+              label="Category"
+              options={CATEGORY_FILTER_OPTIONS}
+              selected={filterCategories}
+              onChange={setFilterCategories}
+            />
 
             {/* Filter by Status */}
-            <div>
-              <select
-                id="filter-status-select"
-                value={filterStatus}
-                onChange={(e) => setFilterStatus(e.target.value as any)}
-                className="w-full text-xs border-2 border-slate-900 rounded-none p-2.5 outline-none bg-white text-slate-900 font-bold cursor-pointer"
-              >
-                <option value="All">Filter by Status (All)</option>
-                <option value="Pending">Pending</option>
-                <option value="In Progress">In Progress</option>
-                <option value="Completed">Completed</option>
-              </select>
-            </div>
+            <FilterMultiSelect
+              id="filter-status-select"
+              label="Status"
+              options={STATUS_FILTER_OPTIONS}
+              selected={filterStatuses}
+              onChange={setFilterStatuses}
+            />
           </div>
 
           {/* Suggested Toggle Row */}
